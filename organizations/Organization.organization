@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1" name="Organization">
+  <customUserInfoDefinitions/>
+  <users>
+    <user userName="User1">
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+  </users>
+  <roles>
+    <role name="Role1">
+      <displayName>Role1</displayName>
+    </role>
+  </roles>
+  <groups/>
+  <memberships/>
+</organization:Organization>
