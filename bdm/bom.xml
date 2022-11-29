@@ -12,7 +12,7 @@
             <queries/>
             <indexes/>
         </businessObject>
-        <businessObject qualifiedName="com.company.model.CandidateRegReq">
+        <businessObject qualifiedName="com.company.model.CandidateRegistrationRequest">
             <fields>
                 <field type="STRING" length="255" name="firstName" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="lastName" nullable="false" collection="false"/>
@@ -22,8 +22,6 @@
                 <field type="STRING" length="255" name="address" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="phone" nullable="false" collection="false"/>
                 <relationField type="COMPOSITION" reference="com.company.model.Education" fetchType="LAZY" name="education" nullable="true" collection="true"/>
-                <field type="STRING" length="255" name="cv" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="coverLetter" nullable="false" collection="false"/>
                 <relationField type="AGGREGATION" reference="com.company.model.RequestStatus" fetchType="LAZY" name="status" nullable="true" collection="false"/>
                 <relationField type="COMPOSITION" reference="com.company.model.Experience" fetchType="LAZY" name="experience" nullable="true" collection="true"/>
             </fields>
@@ -31,7 +29,22 @@
             <queries/>
             <indexes/>
         </businessObject>
-        <businessObject qualifiedName="com.company.model.CompanyRegReq">
+        <businessObject qualifiedName="com.company.model.Company">
+            <fields>
+                <field type="STRING" length="255" name="name" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="username" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="password" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="address" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="pib" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="foundingDate" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="email" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="phone" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.CompanyRegistrationRequest">
             <fields>
                 <field type="STRING" length="255" name="name" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="username" nullable="false" collection="false"/>
@@ -64,10 +77,11 @@
         <businessObject qualifiedName="com.company.model.EmploymentPackage">
             <fields>
                 <field type="STRING" length="255" name="workingPosition" nullable="true" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.company.model.Experience" fetchType="LAZY" name="experience" nullable="true" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.company.model.Education" fetchType="LAZY" name="education" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.RequestedExperience" fetchType="LAZY" name="experience" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="education" nullable="true" collection="false"/>
                 <field type="DOUBLE" length="255" name="maxBudget" nullable="true" collection="false"/>
                 <field type="INTEGER" length="255" name="numOfCandidates" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Offer" fetchType="LAZY" name="offer" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -87,9 +101,9 @@
         <businessObject qualifiedName="com.company.model.Interview">
             <fields>
                 <field type="OFFSETDATETIME" length="255" name="appointmentDate" nullable="true" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.company.model.PremiumEmployment" fetchType="LAZY" name="premimEmployment" nullable="true" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.company.model.CompanyRegReq" fetchType="LAZY" name="company" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Company" fetchType="LAZY" name="company" nullable="true" collection="false"/>
                 <relationField type="COMPOSITION" reference="com.company.model.CandidateEvalutaion" fetchType="LAZY" name="evaluation" nullable="true" collection="true"/>
+                <field type="BOOLEAN" length="255" name="successful" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -97,9 +111,9 @@
         </businessObject>
         <businessObject qualifiedName="com.company.model.Offer">
             <fields>
-                <relationField type="AGGREGATION" reference="com.company.model.CandidateRegReq" fetchType="LAZY" name="candidates" nullable="true" collection="false"/>
                 <field type="DOUBLE" length="255" name="price" nullable="true" collection="false"/>
                 <field type="BOOLEAN" length="255" name="accepted" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="candidate_usernames" nullable="true" collection="true"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -107,9 +121,8 @@
         </businessObject>
         <businessObject qualifiedName="com.company.model.PremiumEmployment">
             <fields>
-                <relationField type="AGGREGATION" reference="com.company.model.CandidateRegReq" fetchType="LAZY" name="candidate" nullable="false" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.company.model.CompanyRegReq" fetchType="LAZY" name="company" nullable="true" collection="true"/>
-                <relationField type="AGGREGATION" reference="com.company.model.PremiumStatus" fetchType="LAZY" name="status" nullable="true" collection="true"/>
+                <relationField type="AGGREGATION" reference="com.company.model.PremiumStatus" fetchType="LAZY" name="status" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Interview" fetchType="LAZY" name="interviews" nullable="true" collection="true"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -117,7 +130,7 @@
         </businessObject>
         <businessObject qualifiedName="com.company.model.PremiumStatus">
             <fields>
-                <field type="STRING" length="255" name="attribute" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="status" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -126,6 +139,15 @@
         <businessObject qualifiedName="com.company.model.RequestStatus">
             <fields>
                 <field type="STRING" length="255" name="status" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.RequestedExperience">
+            <fields>
+                <field type="STRING" length="255" name="workingPosition" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="years" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
