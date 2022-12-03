@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
-  <process:MainProcess xmi:id="_8CABwHMvEe2Nouoe8jRiJg" name="MyDiagram" bonitaModelVersion="7.12.0-004">
+  <process:MainProcess xmi:id="_8CABwHMvEe2Nouoe8jRiJg" name="CandidateRegistration" bonitaModelVersion="7.12.0-004">
     <elements xmi:type="process:Pool" xmi:id="_8CAo0HMvEe2Nouoe8jRiJg" name="Candidate registration" displayName="Candidate registration">
       <elements xmi:type="process:Lane" xmi:id="_8CAo0XMvEe2Nouoe8jRiJg" name="Employee lane" actor="_JqIrYHMwEe2Nouoe8jRiJg">
         <elements xmi:type="process:StartEvent" xmi:id="_8CAo0nMvEe2Nouoe8jRiJg" name="Start1" outgoing="_8CAo53MvEe2Nouoe8jRiJg">
@@ -8,11 +8,11 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_8CAo1HMvEe2Nouoe8jRiJg" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_8CAo1XMvEe2Nouoe8jRiJg" name="" content="" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:Task" xmi:id="_qqeYcHMzEe2Nouoe8jRiJg" name="AcceptRegistration" outgoing="_puN1cHM8Ee2oauLEblQ05A" incoming="_8CAo53MvEe2Nouoe8jRiJg" type="PARALLEL" collectionDataToMultiInstantiate="_ALBWgHM5Ee2Nouoe8jRiJg" outputData="_NejCEHM5Ee2Nouoe8jRiJg" listDataContainingOutputResults="_ALBWgHM5Ee2Nouoe8jRiJg" storeOutput="true" actor="_JqIrYHMwEe2Nouoe8jRiJg" overrideActorsOfTheLane="false">
+        <elements xmi:type="process:Task" xmi:id="_qqeYcHMzEe2Nouoe8jRiJg" name="AcceptRegistration" outgoing="_puN1cHM8Ee2oauLEblQ05A" incoming="_8CAo53MvEe2Nouoe8jRiJg" type="PARALLEL" collectionDataToMultiInstantiate="_ALBWgHM5Ee2Nouoe8jRiJg" outputData="_NejCEHM5Ee2Nouoe8jRiJg" listDataContainingOutputResults="_ALBWgHM5Ee2Nouoe8jRiJg" storeOutput="true" actor="_JqIrYHMwEe2Nouoe8jRiJg">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_8CAo13MvEe2Nouoe8jRiJg" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_8CAo2HMvEe2Nouoe8jRiJg" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_8CAo2XMvEe2Nouoe8jRiJg" name="" content="" returnTypeFixed="true"/>
-          <data xmi:type="process:JavaObjectData" xmi:id="_NejCEHM5Ee2Nouoe8jRiJg" name="status" dataType="_8CApAXMvEe2Nouoe8jRiJg" className="java.lang.String">
+          <data xmi:type="process:JavaObjectData" xmi:id="_NejCEHM5Ee2Nouoe8jRiJg" name="singleStatus" dataType="_8CApAXMvEe2Nouoe8jRiJg" className="java.lang.String">
             <defaultValue xmi:type="expression:Expression" xmi:id="_NejCEXM5Ee2Nouoe8jRiJg" content="" type="TYPE_READ_ONLY_SCRIPT"/>
           </data>
           <operations xmi:type="expression:Operation" xmi:id="_ht_hcHM6Ee2Nouoe8jRiJg">
@@ -117,8 +117,8 @@
             </operator>
           </operations>
           <operations xmi:type="expression:Operation" xmi:id="_uDQN8HM6Ee2Nouoe8jRiJg">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_uDQN8XM6Ee2Nouoe8jRiJg" name="status" content="status" type="TYPE_VARIABLE">
-              <referencedElements xmi:type="process:JavaObjectData" xmi:id="_16BV4HM6Ee2Nouoe8jRiJg" name="status" dataType="_8CApAXMvEe2Nouoe8jRiJg" className="java.lang.String"/>
+            <leftOperand xmi:type="expression:Expression" xmi:id="_uDQN8XM6Ee2Nouoe8jRiJg" name="singleStatus" content="singleStatus" type="TYPE_VARIABLE">
+              <referencedElements xmi:type="process:JavaObjectData" xmi:id="_y8C18HNHEe2oauLEblQ05A" name="singleStatus" dataType="_8CApAXMvEe2Nouoe8jRiJg" className="java.lang.String"/>
             </leftOperand>
             <rightOperand xmi:type="expression:Expression" xmi:id="_uDQN8nM6Ee2Nouoe8jRiJg" name="status" content="status" type="TYPE_CONTRACT_INPUT">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_DYxaAHM7Ee2Nouoe8jRiJg" name="status">
@@ -132,10 +132,10 @@
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_8CAo3HMvEe2Nouoe8jRiJg" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_8CAo3XMvEe2Nouoe8jRiJg" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.util.List" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_8CAo3nMvEe2Nouoe8jRiJg" name="earlyCompletionCondition()" content="int approvedNum=0;&#xD;&#xA;int notApprovedNum=0;&#xD;&#xA;for (String vote:  statuses){&#xD;&#xA;&#x9;if(vote.equals(&quot;ACCEPTED&quot;)) {&#xD;&#xA;&#x9;&#x9;approvedNum++;&#xD;&#xA;&#x9;} else if (vote.equals(&quot;REJECTED&quot;)){&#xD;&#xA;&#x9;&#x9;notApprovedNum++;&#xD;&#xA;&#x9;}&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;if (notApprovedNum == 2 || approvedNum == 2){&#xD;&#xA;&#x9;return true;&#xD;&#xA;}else{&#xD;&#xA;&#x9;return false;&#xD;&#xA;}" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
-            <referencedElements xmi:type="process:JavaObjectData" xmi:id="_Rs5cYHM6Ee2Nouoe8jRiJg" name="statuses" multiple="true" dataType="_8CApAXMvEe2Nouoe8jRiJg" className="java.util.List"/>
+            <referencedElements xmi:type="process:JavaObjectData" xmi:id="__-RBAHNFEe2oauLEblQ05A" name="statuses" multiple="true" dataType="_8CApAXMvEe2Nouoe8jRiJg" className="java.util.List"/>
           </completionCondition>
           <formMapping xmi:type="process:FormMapping" xmi:id="_qqe_iXMzEe2Nouoe8jRiJg">
-            <targetForm xmi:type="expression:Expression" xmi:id="_KzFIEHM-Ee2oauLEblQ05A" name="RegistrationCandidateForm" content="7bf77bd3-dc7a-4681-a8ad-88d90a8d4ac6" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_ZF5pQHNFEe2oauLEblQ05A" name="AcceptRegistrationRequest" content="1d5dc466-4d83-451f-9f2b-6b07f8d830fc" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_qqe_iHMzEe2Nouoe8jRiJg">
             <inputs xmi:type="process:ContractInput" xmi:id="_ht-6YHM6Ee2Nouoe8jRiJg" name="registrationReguestInput" type="COMPLEX" dataReference="registrationReguest" createMode="false">
@@ -218,7 +218,10 @@
         </elements>
       </elements>
       <data xmi:type="process:BusinessObjectData" xmi:id="_6r-0kHMwEe2Nouoe8jRiJg" name="registrationReguest" dataType="_8CApA3MvEe2Nouoe8jRiJg" className="com.company.model.CandidateRegistrationRequest">
-        <defaultValue xmi:type="expression:Expression" xmi:id="_6r_boHMwEe2Nouoe8jRiJg" name="init_registrationReguest()" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.CandidateRegistrationRequest"/>
+        <defaultValue xmi:type="expression:Expression" xmi:id="_6r_boHMwEe2Nouoe8jRiJg" name="init_registrationReguest()" content="import com.company.model.CandidateRegistrationRequest&#xD;&#xA;import com.company.model.RequestStatus&#xD;&#xA;&#xD;&#xA;def regRequest = new CandidateRegistrationRequest();&#xD;&#xA;regRequest.firstName = registrationReguestInput?.firstName&#xD;&#xA;regRequest.lastName = registrationReguestInput?.lastName&#xD;&#xA;regRequest.username = registrationReguestInput?.username&#xD;&#xA;regRequest.password = registrationReguestInput?.password&#xD;&#xA;regRequest.email = registrationReguestInput?.email&#xD;&#xA;regRequest.address = registrationReguestInput?.address&#xD;&#xA;regRequest.phone = registrationReguestInput?.phone&#xD;&#xA;regRequest.education = registrationReguestInput?.education&#xD;&#xA;regRequest.experience = registrationReguestInput?.experience&#xD;&#xA;regRequest.status = requestStatusDAO.findByPersistenceId(1)&#xD;&#xA;return regRequest" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.CandidateRegistrationRequest">
+          <referencedElements xmi:type="process:ContractInput" xmi:id="_TgwbIHNEEe2oauLEblQ05A" name="registrationReguestInput" type="COMPLEX"/>
+          <referencedElements xmi:type="expression:Expression" xmi:id="_TgwbIXNEEe2oauLEblQ05A" name="requestStatusDAO" content="requestStatusDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.company.model.RequestStatusDAO" returnTypeFixed="true"/>
+        </defaultValue>
       </data>
       <data xmi:type="process:JavaObjectData" xmi:id="_ALBWgHM5Ee2Nouoe8jRiJg" name="statuses" multiple="true" dataType="_8CApAXMvEe2Nouoe8jRiJg" className="java.util.List">
         <defaultValue xmi:type="expression:Expression" xmi:id="_ALBWgXM5Ee2Nouoe8jRiJg" name="init_statuses()" content="List&lt;String> statuses = new ArrayList&lt;String>();&#xD;&#xA;statuses.add(&quot;PENDING&quot;);&#xD;&#xA;statuses.add(&quot;PENDING&quot;);&#xD;&#xA;statuses.add(&quot;PENDING&quot;);&#xD;&#xA;&#xD;&#xA;return statuses;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List"/>
@@ -227,7 +230,7 @@
         <targetForm xmi:type="expression:Expression" xmi:id="_SxF98HMyEe2Nouoe8jRiJg" name="RegistrationCandidateForm" content="7bf77bd3-dc7a-4681-a8ad-88d90a8d4ac6" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_8CAo5XMvEe2Nouoe8jRiJg">
-        <targetForm xmi:type="expression:Expression" xmi:id="_8CAo5nMvEe2Nouoe8jRiJg" name="newForm1" content="fdb4ab6a-a6cd-468e-a9b2-208e3e2e59de" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_8CAo5nMvEe2Nouoe8jRiJg" name="RegistrationCandidateForm" content="7bf77bd3-dc7a-4681-a8ad-88d90a8d4ac6" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </overviewFormMapping>
       <connections xmi:type="process:SequenceFlow" xmi:id="_8CAo53MvEe2Nouoe8jRiJg" target="_qqeYcHMzEe2Nouoe8jRiJg" source="_8CAo0nMvEe2Nouoe8jRiJg">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_8CAo6HMvEe2Nouoe8jRiJg"/>
@@ -235,7 +238,7 @@
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_puN1cHM8Ee2oauLEblQ05A" target="_oZAWAHM8Ee2oauLEblQ05A" source="_qqeYcHMzEe2Nouoe8jRiJg">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_puN1cXM8Ee2oauLEblQ05A"/>
-        <condition xmi:type="expression:Expression" xmi:id="_puN1cnM8Ee2oauLEblQ05A" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        <condition xmi:type="expression:Expression" xmi:id="_puN1cnM8Ee2oauLEblQ05A" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_JqIrYHMwEe2Nouoe8jRiJg" name="guest" initiator="true"/>
       <contract xmi:type="process:Contract" xmi:id="_8CAo63MvEe2Nouoe8jRiJg">
@@ -357,14 +360,14 @@
               <children xmi:type="notation:DecorationNode" xmi:id="_oZRbwnM8Ee2oauLEblQ05A" type="5025">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_oZSC0HM8Ee2oauLEblQ05A" y="5"/>
               </children>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oZRbwXM8Ee2oauLEblQ05A" x="441" y="68"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oZRbwXM8Ee2oauLEblQ05A" x="593" y="68"/>
             </children>
           </children>
           <styles xmi:type="notation:DescriptionStyle" xmi:id="_8CApEnMvEe2Nouoe8jRiJg"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_8CApE3MvEe2Nouoe8jRiJg" fontName="Segoe UI"/>
           <styles xmi:type="notation:LineStyle" xmi:id="_8CApFHMvEe2Nouoe8jRiJg"/>
           <styles xmi:type="notation:FillStyle" xmi:id="_8CApFXMvEe2Nouoe8jRiJg"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8CApFnMvEe2Nouoe8jRiJg"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8CApFnMvEe2Nouoe8jRiJg" x="48" y="10" width="1297" height="400"/>
         </children>
       </children>
       <styles xmi:type="notation:DescriptionStyle" xmi:id="_8CApF3MvEe2Nouoe8jRiJg"/>
