@@ -76,12 +76,12 @@
         </businessObject>
         <businessObject qualifiedName="com.company.model.EmploymentPackage">
             <fields>
-                <field type="STRING" length="255" name="workingPosition" nullable="true" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.company.model.RequestedExperience" fetchType="LAZY" name="experience" nullable="true" collection="false"/>
-                <field type="STRING" length="255" name="education" nullable="true" collection="false"/>
-                <field type="DOUBLE" length="255" name="maxBudget" nullable="true" collection="false"/>
-                <field type="INTEGER" length="255" name="numOfCandidates" nullable="true" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.company.model.Offer" fetchType="LAZY" name="offer" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="workingPosition" nullable="false" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.RequestedExperience" fetchType="LAZY" name="experience" nullable="true" collection="true"/>
+                <field type="STRING" length="255" name="education" nullable="true" collection="true"/>
+                <field type="DOUBLE" length="255" name="maxBudget" nullable="false" collection="false"/>
+                <field type="INTEGER" length="255" name="numOfCandidates" nullable="false" collection="false"/>
+                <relationField type="COMPOSITION" reference="com.company.model.Offer" fetchType="LAZY" name="offer" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -113,7 +113,7 @@
             <fields>
                 <field type="DOUBLE" length="255" name="price" nullable="true" collection="false"/>
                 <field type="BOOLEAN" length="255" name="accepted" nullable="true" collection="false"/>
-                <field type="STRING" length="255" name="candidate_usernames" nullable="true" collection="true"/>
+                <field type="LONG" length="255" name="candidateIds" nullable="true" collection="true"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
