@@ -342,5 +342,25 @@
       <groupName>ProjectSector</groupName>
       <groupParentPath>/Company</groupParentPath>
     </membership>
+    <membership>
+      <userName>business.chief</userName>
+      <roleName>Chief</roleName>
+      <groupName>Employee</groupName>
+    </membership>
+    <membership>
+      <userName>business.member</userName>
+      <roleName>Chief</roleName>
+      <groupName>Employee</groupName>
+    </membership>
+    <membership>
+      <userName>premium.chief</userName>
+      <roleName>Chief</roleName>
+      <groupName>Employee</groupName>
+    </membership>
+    <membership>
+      <userName>premium.member</userName>
+      <roleName>Chief</roleName>
+      <groupName>Employee</groupName>
+    </membership>
   </memberships>
 </organization:Organization>

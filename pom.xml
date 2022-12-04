@@ -94,6 +94,16 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
+      <groupId>org.bonitasoft.connectors</groupId>
+      <artifactId>bonita-connector-groovy</artifactId>
+      <version>1.1.4</version>
+    </dependency>
+    <dependency>
+      <groupId>org.bonitasoft.actorfilter</groupId>
+      <artifactId>bonita-actorfilter-single-user</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+    <dependency>
       <groupId>com.company.model</groupId>
       <artifactId>bdm-client</artifactId>
       <version>1.0.0</version>
