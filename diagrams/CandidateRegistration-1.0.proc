@@ -473,7 +473,10 @@
                 <expression xmi:type="expression:Expression" xmi:id="_NoqblXPiEe2rY-pzSPyxIQ" returnType="java.util.List" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_NoqblnPiEe2rY-pzSPyxIQ" key="fakeScriptExpression">
-                <expression xmi:type="expression:Expression" xmi:id="_Noqbl3PiEe2rY-pzSPyxIQ" name="newScript()" content="return true;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_Noqbl3PiEe2rY-pzSPyxIQ" name="newScript()" content="registrationReguest.status = requestStatusDAO.findByPersistenceId(2);&#xD;&#xA;return true;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_gHv7IHPkEe2rY-pzSPyxIQ" name="registrationReguest" dataType="_8CApA3MvEe2Nouoe8jRiJg" className="com.company.model.CandidateRegistrationRequest"/>
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_gHv7IXPkEe2rY-pzSPyxIQ" name="requestStatusDAO" content="requestStatusDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.company.model.RequestStatusDAO" returnTypeFixed="true"/>
+                </expression>
               </parameters>
             </configuration>
             <outputs xmi:type="expression:Operation" xmi:id="_NoqbmHPiEe2rY-pzSPyxIQ">
@@ -574,9 +577,11 @@
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_3UBHEHPcEe2rY-pzSPyxIQ" target="_nElEAHPcEe2rY-pzSPyxIQ" source="_v53GcHOLEe2motgchP84dQ">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_3UBHEXPcEe2rY-pzSPyxIQ"/>
-        <condition xmi:type="expression:Expression" xmi:id="_3UBuIHPcEe2rY-pzSPyxIQ" name="newScript()" content="if(max3 == 2)&#xD;&#xA;&#x9;return true;&#xD;&#xA;&#xD;&#xA;int numOfRejected = 0;&#xD;&#xA;for(String st: statuses){&#xD;&#xA;&#x9;if (st.equals(&quot;REJECTED&quot;))&#xD;&#xA;&#x9;&#x9;numOfRejected++;&#xD;&#xA;}&#xD;&#xA;if (numOfRejected == 3)&#xD;&#xA;&#x9;return true;&#xD;&#xA;&#x9;&#xD;&#xA;return false;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
-          <referencedElements xmi:type="process:JavaObjectData" xmi:id="_4aGlYHPcEe2rY-pzSPyxIQ" name="statuses" multiple="true" dataType="_8CApAXMvEe2Nouoe8jRiJg" className="java.util.List"/>
-          <referencedElements xmi:type="process:Data" xmi:id="_4aGlYXPcEe2rY-pzSPyxIQ" name="max3" dataType="_8CAo_XMvEe2Nouoe8jRiJg"/>
+        <condition xmi:type="expression:Expression" xmi:id="_3UBuIHPcEe2rY-pzSPyxIQ" name="newScript()" content="if(max3 == 2) {&#xD;&#xA;&#x9;registrationReguest.status = requestStatusDAO.findByPersistenceId(2);&#xD;&#xA;&#x9;return true;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;int numOfRejected = 0;&#xD;&#xA;for(String st: statuses){&#xD;&#xA;&#x9;if (st.equals(&quot;REJECTED&quot;))&#xD;&#xA;&#x9;&#x9;numOfRejected++;&#xD;&#xA;}&#xD;&#xA;if (numOfRejected == 3) {&#xD;&#xA;&#x9;registrationReguest.status = requestStatusDAO.findByPersistenceId(2);&#xD;&#xA;&#x9;return true;&#xD;&#xA;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;&#xD;&#xA;return false;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
+          <referencedElements xmi:type="process:Data" xmi:id="_wD7D8HPkEe2rY-pzSPyxIQ" name="max3" dataType="_8CAo_XMvEe2Nouoe8jRiJg"/>
+          <referencedElements xmi:type="process:JavaObjectData" xmi:id="_wD7D8XPkEe2rY-pzSPyxIQ" name="statuses" multiple="true" dataType="_8CApAXMvEe2Nouoe8jRiJg" className="java.util.List"/>
+          <referencedElements xmi:type="expression:Expression" xmi:id="_wD7D8nPkEe2rY-pzSPyxIQ" name="requestStatusDAO" content="requestStatusDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.company.model.RequestStatusDAO" returnTypeFixed="true"/>
+          <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_wD7D83PkEe2rY-pzSPyxIQ" name="registrationReguest" dataType="_8CApA3MvEe2Nouoe8jRiJg" className="com.company.model.CandidateRegistrationRequest"/>
         </condition>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_DKcigHPdEe2rY-pzSPyxIQ" target="_oZAWAHM8Ee2oauLEblQ05A" source="_DKNR8HPdEe2rY-pzSPyxIQ">

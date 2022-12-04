@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1" name="Organization">
+<organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1" name="Employify">
   <customUserInfoDefinitions/>
   <users>
     <user userName="guest">
@@ -195,29 +195,32 @@
     </role>
   </roles>
   <groups>
-    <group name="Guest">
+    <group name="Guest" parentPath="/Employify">
       <displayName>Guest</displayName>
     </group>
-    <group name="Employee">
+    <group name="Employee" parentPath="/Employify">
       <displayName>Employee</displayName>
     </group>
-    <group name="Candidate">
+    <group name="Candidate" parentPath="/Employify">
       <displayName>Candidate</displayName>
     </group>
-    <group name="Company">
+    <group name="Company" parentPath="/Employify">
       <displayName>Company</displayName>
     </group>
-    <group name="BusinessSector" parentPath="/Employee">
+    <group name="BusinessSector" parentPath="/Employify/Employee">
       <displayName>BusinessSector</displayName>
     </group>
-    <group name="PremiumEmploymentSector" parentPath="/Employee">
+    <group name="PremiumEmploymentSector" parentPath="/Employify/Employee">
       <displayName>PremiumEmploymentSector</displayName>
     </group>
-    <group name="HRSector" parentPath="/Company">
+    <group name="HRSector" parentPath="/Employify/Company">
       <displayName>HRSector</displayName>
     </group>
-    <group name="ProjectSector" parentPath="/Company">
+    <group name="ProjectSector" parentPath="/Employify/Company">
       <displayName>ProjectSector</displayName>
+    </group>
+    <group name="Employify">
+      <displayName>Employify</displayName>
     </group>
   </groups>
   <memberships>
@@ -225,142 +228,151 @@
       <userName>guest</userName>
       <roleName>Chief</roleName>
       <groupName>Guest</groupName>
+      <groupParentPath>/Employify</groupParentPath>
     </membership>
     <membership>
       <userName>business.chief</userName>
       <roleName>Chief</roleName>
       <groupName>BusinessSector</groupName>
-      <groupParentPath>/Employee</groupParentPath>
+      <groupParentPath>/Employify/Employee</groupParentPath>
     </membership>
     <membership>
       <userName>business.member</userName>
       <roleName>Member</roleName>
       <groupName>BusinessSector</groupName>
-      <groupParentPath>/Employee</groupParentPath>
+      <groupParentPath>/Employify/Employee</groupParentPath>
     </membership>
     <membership>
       <userName>premium.chief</userName>
       <roleName>Chief</roleName>
       <groupName>PremiumEmploymentSector</groupName>
-      <groupParentPath>/Employee</groupParentPath>
+      <groupParentPath>/Employify/Employee</groupParentPath>
     </membership>
     <membership>
       <userName>premium.member</userName>
       <roleName>Member</roleName>
       <groupName>PremiumEmploymentSector</groupName>
-      <groupParentPath>/Employee</groupParentPath>
+      <groupParentPath>/Employify/Employee</groupParentPath>
     </membership>
     <membership>
       <userName>candidate</userName>
       <roleName>Chief</roleName>
       <groupName>Candidate</groupName>
+      <groupParentPath>/Employify</groupParentPath>
     </membership>
     <membership>
       <userName>hr.chief1</userName>
       <roleName>Chief</roleName>
       <groupName>HRSector</groupName>
-      <groupParentPath>/Company</groupParentPath>
+      <groupParentPath>/Employify/Company</groupParentPath>
     </membership>
     <membership>
       <userName>hr.member1</userName>
       <roleName>Member</roleName>
       <groupName>HRSector</groupName>
-      <groupParentPath>/Company</groupParentPath>
+      <groupParentPath>/Employify/Company</groupParentPath>
     </membership>
     <membership>
       <userName>project.chief1</userName>
       <roleName>Chief</roleName>
       <groupName>ProjectSector</groupName>
-      <groupParentPath>/Company</groupParentPath>
+      <groupParentPath>/Employify/Company</groupParentPath>
     </membership>
     <membership>
       <userName>project.member1</userName>
       <roleName>Member</roleName>
       <groupName>ProjectSector</groupName>
-      <groupParentPath>/Company</groupParentPath>
+      <groupParentPath>/Employify/Company</groupParentPath>
     </membership>
     <membership>
       <userName>company1</userName>
       <roleName>Chief</roleName>
       <groupName>Company</groupName>
+      <groupParentPath>/Employify</groupParentPath>
     </membership>
     <membership>
       <userName>company2</userName>
       <roleName>Chief</roleName>
       <groupName>Company</groupName>
+      <groupParentPath>/Employify</groupParentPath>
     </membership>
     <membership>
       <userName>hr.chief2</userName>
       <roleName>Chief</roleName>
       <groupName>HRSector</groupName>
-      <groupParentPath>/Company</groupParentPath>
+      <groupParentPath>/Employify/Company</groupParentPath>
     </membership>
     <membership>
       <userName>hr.member2</userName>
       <roleName>Member</roleName>
       <groupName>HRSector</groupName>
-      <groupParentPath>/Company</groupParentPath>
+      <groupParentPath>/Employify/Company</groupParentPath>
     </membership>
     <membership>
       <userName>project.chief2</userName>
       <roleName>Chief</roleName>
       <groupName>ProjectSector</groupName>
-      <groupParentPath>/Company</groupParentPath>
+      <groupParentPath>/Employify/Company</groupParentPath>
     </membership>
     <membership>
       <userName>project.member2</userName>
       <roleName>Member</roleName>
       <groupName>ProjectSector</groupName>
-      <groupParentPath>/Company</groupParentPath>
+      <groupParentPath>/Employify/Company</groupParentPath>
     </membership>
     <membership>
       <userName>company3</userName>
       <roleName>Chief</roleName>
       <groupName>Company</groupName>
+      <groupParentPath>/Employify</groupParentPath>
     </membership>
     <membership>
       <userName>hr.chief3</userName>
       <roleName>Chief</roleName>
       <groupName>HRSector</groupName>
-      <groupParentPath>/Company</groupParentPath>
+      <groupParentPath>/Employify/Company</groupParentPath>
     </membership>
     <membership>
       <userName>hr.member3</userName>
       <roleName>Member</roleName>
       <groupName>HRSector</groupName>
-      <groupParentPath>/Company</groupParentPath>
+      <groupParentPath>/Employify/Company</groupParentPath>
     </membership>
     <membership>
       <userName>project.chief3</userName>
       <roleName>Chief</roleName>
       <groupName>ProjectSector</groupName>
-      <groupParentPath>/Company</groupParentPath>
+      <groupParentPath>/Employify/Company</groupParentPath>
     </membership>
     <membership>
       <userName>project.member3</userName>
       <roleName>Member</roleName>
       <groupName>ProjectSector</groupName>
-      <groupParentPath>/Company</groupParentPath>
+      <groupParentPath>/Employify/Company</groupParentPath>
     </membership>
     <membership>
       <userName>business.chief</userName>
       <roleName>Chief</roleName>
       <groupName>Employee</groupName>
+      <groupParentPath>/Employify</groupParentPath>
     </membership>
     <membership>
       <userName>business.member</userName>
       <roleName>Chief</roleName>
       <groupName>Employee</groupName>
+      <groupParentPath>/Employify</groupParentPath>
     </membership>
     <membership>
       <userName>premium.chief</userName>
       <roleName>Chief</roleName>
       <groupName>Employee</groupName>
+      <groupParentPath>/Employify</groupParentPath>
     </membership>
     <membership>
       <userName>premium.member</userName>
       <roleName>Chief</roleName>
       <groupName>Employee</groupName>
+      <groupParentPath>/Employify</groupParentPath>
     </membership>
   </memberships>
 </organization:Organization>
