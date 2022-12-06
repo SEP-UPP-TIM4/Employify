@@ -691,7 +691,7 @@
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_kXMA8HPtEe2MJvlrpy3Ydg" name="guest" initiator="true"/>
       <actors xmi:type="process:Actor" xmi:id="_C2rP8HPzEe2MJvlrpy3Ydg" name="businessEmployee"/>
-      <actors xmi:type="process:Actor" xmi:id="_qmYQgHWBEe2F-ZuF-QIUGw" name="businessSectorChiefs"/>
+      <actors xmi:type="process:Actor" xmi:id="_qmYQgHWBEe2F-ZuF-QIUGw" name="businessSectorChief"/>
       <contract xmi:type="process:Contract" xmi:id="_aM9BrHPtEe2MJvlrpy3Ydg">
         <inputs xmi:type="process:ContractInput" xmi:id="_9WpIIHPtEe2MJvlrpy3Ydg" name="registrationReguestInput" type="COMPLEX" dataReference="registrationRequest">
           <inputs xmi:type="process:ContractInput" xmi:id="_9WpIIXPtEe2MJvlrpy3Ydg" name="name"/>

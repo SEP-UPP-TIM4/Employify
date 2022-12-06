@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.3",
-  "id" : "RegistrationCompanyRequest",
-  "name" : "RegistrationCompanyRequest",
-  "lastUpdate" : 1670338178550,
+  "id" : "RegistrationCompanyRequestForm",
+  "name" : "RegistrationCompanyRequestForm",
+  "lastUpdate" : 1670352022673,
   "rows" : [
     [
       {

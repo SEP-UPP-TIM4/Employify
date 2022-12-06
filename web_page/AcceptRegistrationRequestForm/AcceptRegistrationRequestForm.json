@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.3",
-  "id" : "AcceptRegistrationRequest",
-  "name" : "AcceptRegistrationRequest",
-  "lastUpdate" : 1670098351163,
+  "id" : "AcceptRegistrationRequestForm",
+  "name" : "AcceptRegistrationRequestForm",
+  "lastUpdate" : 1670352009854,
   "rows" : [
     [
       {
