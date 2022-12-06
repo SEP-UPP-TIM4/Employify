@@ -129,7 +129,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_LnV6KHOMEe2motgchP84dQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_LnV6J3OMEe2motgchP84dQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_LnV6KnOMEe2motgchP84dQ">
-            <targetForm xmi:type="expression:Expression" xmi:id="_GiywQHOOEe2motgchP84dQ" name="newForm" content="decc7614-daa9-4026-bace-6c5a12c906a6" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_TL81IHV7Ee2F-ZuF-QIUGw" name="newForm1" content="b7ecc4a1-8d38-4b42-b479-03bad1afa3e5" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <filters xmi:type="process:ActorFilter" xmi:id="_LqMHkHTxEe2216ut_kr5Tg" name="initiator" definitionId="bonita-actorfilter-initiator" definitionVersion="1.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_LqMHkXTxEe2216ut_kr5Tg" definitionId="bonita-actorfilter-initiator" version="1.0">
@@ -209,12 +209,12 @@
           </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_LnV6LHOMEe2motgchP84dQ" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:XORGateway" xmi:id="_ZJxkYHOMEe2motgchP84dQ" name="Join" outgoing="_ci2_UHVpEe2fxqd-qC8K7w" incoming="_8CAo53MvEe2Nouoe8jRiJg _90zhIHVpEe2fxqd-qC8K7w">
+        <elements xmi:type="process:XORGateway" xmi:id="_ZJxkYHOMEe2motgchP84dQ" name="Join1" outgoing="_ci2_UHVpEe2fxqd-qC8K7w" incoming="_8CAo53MvEe2Nouoe8jRiJg _90zhIHVpEe2fxqd-qC8K7w">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_ZJxkYnOMEe2motgchP84dQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_ZJxkYXOMEe2motgchP84dQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_ZJxkY3OMEe2motgchP84dQ" name="" content="" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:XORGateway" xmi:id="_nElEAHPcEe2rY-pzSPyxIQ" name="Join" outgoing="_D68jwHTMEe2RYfPgSB9enw" incoming="_3UBHEHPcEe2rY-pzSPyxIQ _U7rTAHPeEe2rY-pzSPyxIQ _DthLgHVrEe2fxqd-qC8K7w">
+        <elements xmi:type="process:XORGateway" xmi:id="_nElEAHPcEe2rY-pzSPyxIQ" name="Join2" outgoing="_D68jwHTMEe2RYfPgSB9enw" incoming="_3UBHEHPcEe2rY-pzSPyxIQ _U7rTAHPeEe2rY-pzSPyxIQ _DthLgHVrEe2fxqd-qC8K7w">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_nEsYwHPcEe2rY-pzSPyxIQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_nErxsHPcEe2rY-pzSPyxIQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_nEsYwXPcEe2rY-pzSPyxIQ" name="" content="" returnTypeFixed="true"/>
