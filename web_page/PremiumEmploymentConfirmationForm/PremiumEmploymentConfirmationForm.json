@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "PremiumEmploymentConfirmationForm",
   "name" : "PremiumEmploymentConfirmationForm",
-  "lastUpdate" : 1670175190573,
+  "lastUpdate" : 1670562914113,
   "rows" : [
     [
       {
@@ -166,7 +166,7 @@
                   },
                   "targetUrlOnSuccess" : {
                     "type" : "interpolation",
-                    "value" : "/bonita"
+                    "value" : "http://localhost:4200/getting-started/1"
                   },
                   "action" : {
                     "type" : "constant",
@@ -189,6 +189,27 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable"
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable"
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
                   }
                 },
                 "reference" : "a9481c94-0c86-4df6-b418-1bb9df235864",
