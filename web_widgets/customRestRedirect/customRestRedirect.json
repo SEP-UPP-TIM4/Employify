@@ -35,7 +35,7 @@
   ],
   "id" : "customRestRedirect",
   "name" : "RestRedirect",
-  "lastUpdate" : 1670570286887,
+  "lastUpdate" : 1670724647619,
   "template" : "@customRestRedirect.tpl.html",
   "controller" : "@customRestRedirect.ctrl.js",
   "custom" : true,

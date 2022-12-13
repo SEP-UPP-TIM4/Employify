@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "newForm",
   "name" : "newForm",
-  "lastUpdate" : 1670570301263,
+  "lastUpdate" : 1670769555765,
   "rows" : [
     [
       {
@@ -427,22 +427,77 @@
                     "type" : "constant",
                     "value" : false
                   },
-                  "value" : {
+                  "disabled" : {
                     "type" : "constant",
-                    "value" : "This is the initial value"
+                    "value" : false
                   },
-                  "color" : {
+                  "allowHTML" : {
                     "type" : "constant",
-                    "value" : "RebeccaPurple"
+                    "value" : false
                   },
-                  "background" : {
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "Submit"
+                  },
+                  "alignment" : {
                     "type" : "constant",
-                    "value" : "Yellow"
+                    "value" : "left"
+                  },
+                  "buttonStyle" : {
+                    "type" : "constant",
+                    "value" : "default"
+                  },
+                  "action" : {
+                    "type" : "constant",
+                    "value" : "Submit task"
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable"
+                  },
+                  "dataToSend" : {
+                    "type" : "constant"
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable"
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "dataFromError" : {
+                    "type" : "variable"
+                  },
+                  "targetUrlOnSuccess" : {
+                    "type" : "interpolation"
+                  },
+                  "collectionToModify" : {
+                    "type" : "variable"
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "collectionPosition" : {
+                    "type" : "constant",
+                    "value" : "Last"
+                  },
+                  "valueToAdd" : {
+                    "type" : "constant"
+                  },
+                  "removeItem" : {
+                    "type" : "variable"
                   }
                 },
-                "reference" : "606ddb51-ae1b-4104-b1aa-214370a09500",
+                "reference" : "30f671ef-f2f3-4503-a1ef-1063d0b8197f",
                 "hasValidationError" : false,
-                "id" : "customRestRedirect"
+                "id" : "customButtonTest"
               }
             ],
             [
