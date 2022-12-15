@@ -1,83 +1,9 @@
 {
   "modelVersion" : "2.3",
-  "id" : "newForm4",
-  "name" : "newForm4",
-  "lastUpdate" : 1671119247646,
+  "id" : "newForm5",
+  "name" : "newForm5",
+  "lastUpdate" : 1671119081104,
   "rows" : [
-    [
-      {
-        "type" : "container",
-        "dimension" : {
-          "xs" : 12
-        },
-        "propertyValues" : {
-          "cssClasses" : {
-            "type" : "constant",
-            "value" : ""
-          },
-          "hidden" : {
-            "type" : "constant",
-            "value" : false
-          },
-          "repeatedCollection" : {
-            "type" : "variable"
-          }
-        },
-        "reference" : "24781b49-12ad-4e46-8f26-4be4109b9944",
-        "hasValidationError" : false,
-        "id" : "pbContainer",
-        "rows" : [
-          [
-            {
-              "type" : "component",
-              "dimension" : {
-                "md" : 12,
-                "sm" : 12,
-                "xs" : 12,
-                "lg" : 12
-              },
-              "propertyValues" : {
-                "allowHtml" : {
-                  "type" : "constant",
-                  "value" : true
-                },
-                "labelHidden" : {
-                  "type" : "constant",
-                  "value" : true
-                },
-                "hidden" : {
-                  "type" : "constant",
-                  "value" : false
-                },
-                "cssClasses" : {
-                  "type" : "constant",
-                  "value" : ""
-                },
-                "label" : {
-                  "type" : "interpolation"
-                },
-                "text" : {
-                  "type" : "interpolation",
-                  "value" : "{{ task.displayDescription }}"
-                },
-                "alignment" : {
-                  "type" : "constant",
-                  "value" : "left"
-                },
-                "dimension" : {
-                  "type" : "constant",
-                  "value" : 12
-                }
-              },
-              "reference" : "892db514-d6b1-49c2-a246-24bfe7a57cf9",
-              "hasValidationError" : false,
-              "id" : "pbText",
-              "description" : ""
-            }
-          ]
-        ]
-      }
-    ],
     [
       {
         "type" : "formContainer",
@@ -94,7 +20,7 @@
             "value" : false
           }
         },
-        "reference" : "1ae7755a-ddd9-4b04-9da5-e6c9d85124fc",
+        "reference" : "fb322373-1a1d-46a0-b302-08e03a5ad885",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -103,7 +29,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "a02aa879-e4f8-4ea7-9293-13948764b081",
+          "reference" : "e90eded3-fc77-4019-9934-6146a94113ca",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -125,22 +51,130 @@
                     "type" : "constant",
                     "value" : false
                   },
-                  "value" : {
+                  "allowHTML" : {
                     "type" : "constant",
-                    "value" : "This is the initial value"
+                    "value" : false
                   },
-                  "color" : {
-                    "type" : "constant",
-                    "value" : "RebeccaPurple"
+                  "text" : {
+                    "type" : "interpolation",
+                    "value" : "Terms and Conditions"
                   },
-                  "background" : {
+                  "level" : {
                     "type" : "constant",
-                    "value" : "Yellow"
+                    "value" : "Level 2"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "center"
                   }
                 },
-                "reference" : "ba72bbb7-79f2-4534-9ee8-f9925b6df3a9",
+                "reference" : "41aa57b5-9b4b-4a42-8d4b-b2591ebfb23b",
                 "hasValidationError" : false,
-                "id" : "customTextBasedOnURL"
+                "id" : "pbTitle"
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "Default label"
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 4
+                  },
+                  "text" : {
+                    "type" : "interpolation",
+                    "value" : "I agree to the terms and conditions."
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "center"
+                  }
+                },
+                "reference" : "a1978a9e-849b-4fa3-98fd-a06bc8f24ff7",
+                "hasValidationError" : false,
+                "id" : "pbText"
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "Default label"
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 4
+                  },
+                  "text" : {
+                    "type" : "interpolation",
+                    "value" : "Payment value: 10 000"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "center"
+                  }
+                },
+                "reference" : "5ab00669-ab19-471d-a6e8-e18a266164d1",
+                "hasValidationError" : false,
+                "id" : "pbText"
               }
             ],
             [
@@ -197,7 +231,7 @@
                   },
                   "action" : {
                     "type" : "constant",
-                    "value" : "Submit task"
+                    "value" : "Start process"
                   },
                   "collectionToModify" : {
                     "type" : "variable"
@@ -239,7 +273,7 @@
                     "value" : ""
                   }
                 },
-                "reference" : "e759789d-3f47-4494-a028-7791150b206d",
+                "reference" : "359f52d1-b0a4-4799-a939-64e55f390bf5",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -291,7 +325,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "d8d1ac92-78c6-4496-b139-12d223a5405d",
+                "reference" : "a700c72f-e1e8-4eac-ba88-8d1de399e541",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -304,14 +338,14 @@
   ],
   "assets" : [
     {
-      "id" : "9da9b39d-1567-4776-9c36-36b45c193275",
+      "id" : "97286508-9412-481e-bc25-46cf95d77703",
       "name" : "style.css",
       "type" : "css",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "455b7bcd-6b05-4c93-a5f8-93d2a61dc8f7",
+      "id" : "fa4ac9bd-1fde-4885-a34b-e1c617b47876",
       "name" : "localization.json",
       "type" : "json",
       "order" : 0,
@@ -320,10 +354,12 @@
   ],
   "inactiveAssets" : [ ],
   "variables" : {
-    "task" : {
-      "type" : "url",
+    "formInput" : {
+      "type" : "json",
       "value" : [
-        "../API/bpm/userTask/{{taskId}}"
+        "{\r",
+        "  \"amountInput\" : \"\"\r",
+        "}"
       ],
       "exposed" : false
     },
@@ -346,28 +382,14 @@
       "type" : "expression",
       "value" : [
         "return {",
-        "",
+        "\tamountInput: $data.formInput.amountInput",
         "}"
-      ],
-      "exposed" : false
-    },
-    "context" : {
-      "type" : "url",
-      "value" : [
-        "../API/bpm/userTask/{{taskId}}/context"
-      ],
-      "exposed" : false
-    },
-    "taskId" : {
-      "type" : "urlparameter",
-      "value" : [
-        "id"
       ],
       "exposed" : false
     }
   },
   "hasValidationError" : false,
-  "uuid" : "97503f74-a188-4a87-ab19-5cc952068fcd",
+  "uuid" : "e1a18dc8-89c4-41e9-aebf-c93a7fbd9fa7",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }
