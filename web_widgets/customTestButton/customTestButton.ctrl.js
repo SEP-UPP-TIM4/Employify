@@ -3,6 +3,7 @@ function PbButtonCtrl($scope, $http, $location, $log, $window, localStorageServi
   'use strict';
 
   var vm = this;
+  var caseIdTemp = '';
 
   this.action = function action() {
     if ($scope.properties.action === 'Remove from collection') {
@@ -23,7 +24,7 @@ function PbButtonCtrl($scope, $http, $location, $log, $window, localStorageServi
     } else if ($scope.properties.action === 'Start process') {
       startProcess();
     } else if ($scope.properties.action === 'Submit task') {
-      submitTask();
+      if(!getUrlParam('code')) submitTask();
     } else if ($scope.properties.url) {
       doRequest($scope.properties.action, $scope.properties.url);
     }
@@ -163,8 +164,60 @@ function PbButtonCtrl($scope, $http, $location, $log, $window, localStorageServi
 
   function submitTask() {
     // var x = document.getElementsByName("pbInput0")[0].value;
-    alert(document.getElementsByName("pbInput0")[0].value);
-    console.log(x)
+    //alert(document.getElementsByName("pbInput0")[0].value);
+  
+     doRequestRewritten('GET', '../API/bpm/task/' + getUrlParam('id')).then(function() {
+        console.log("Success1");
+        doRequestRewritten1('GET', '../API/bpm/caseVariable/' + caseIdTemp + '/externalURL').then(function() {
+        console.log("Success2");
+        
+      });
+      });
+  }
+  
+    function doRequestRewritten(method, url, params) {
+    var req = {
+      method: method,
+      url: url,
+      data: angular.copy($scope.properties.dataToSend),
+      params: params
+    };
+
+    return $http(req)
+      .success(function(data, status) {
+        // $scope.properties.dataFromSuccess = data;
+        // $scope.properties.responseStatusCode = status;
+        caseIdTemp = data.caseId;
+        console.log(data);
+      })
+      .error(function(data, status) {
+        console.log(data);
+      })
+      .finally(function() {
+       
+      });
+  }
+  
+      function doRequestRewritten1(method, url, params) {
+    var req = {
+      method: method,
+      url: url,
+      data: angular.copy($scope.properties.dataToSend),
+      params: params
+    };
+
+    return $http(req)
+      .success(function(data, status) {
+        // $scope.properties.dataFromSuccess = data;
+        // $scope.properties.responseStatusCode = status;
+        window.top.location.href = data.value;
+      })
+      .error(function(data, status) {
+        console.log(data);
+      })
+      .finally(function() {
+       
+      });
   }
 
 }
