@@ -280,7 +280,7 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_7xjK4XPzEe2MJvlrpy3Ydg" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_7xjK43PzEe2MJvlrpy3Ydg" name="" content="" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:Task" xmi:id="_zueP0HP0Ee2MJvlrpy3Ydg" name="ReviewEmployeeDecision" outgoing="_GRv9wHP1Ee2MJvlrpy3Ydg" incoming="_iy1O8HVxEe2E04xJMUznyA" overrideActorsOfTheLane="false">
+        <elements xmi:type="process:Task" xmi:id="_zueP0HP0Ee2MJvlrpy3Ydg" name="ReviewEmployeeDecision" outgoing="_GRv9wHP1Ee2MJvlrpy3Ydg" incoming="_iy1O8HVxEe2E04xJMUznyA" actor="_qmYQgHWBEe2F-ZuF-QIUGw">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_zue24XP0Ee2MJvlrpy3Ydg" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_zue24HP0Ee2MJvlrpy3Ydg" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_zue24nP0Ee2MJvlrpy3Ydg" name="" content="" returnTypeFixed="true"/>
@@ -403,11 +403,12 @@
           <formMapping xmi:type="process:FormMapping" xmi:id="_zue26XP0Ee2MJvlrpy3Ydg">
             <targetForm xmi:type="expression:Expression" xmi:id="_aN5kAHVyEe2E04xJMUznyA" name="ReviewCompanyReqistrationRequestForm" content="01d8e16f-6658-4b6b-9164-ba9e482eb799" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
-          <filters xmi:type="process:ActorFilter" xmi:id="_Nx9NcHWCEe2F-ZuF-QIUGw" name="chiefId" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
-            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_Nx9NcXWCEe2F-ZuF-QIUGw" definitionId="bonita-actorfilter-single-user" version="1.0.0">
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_Nx9NcnWCEe2F-ZuF-QIUGw" key="userId">
-                <expression xmi:type="expression:Expression" xmi:id="_Nx9Nc3WCEe2F-ZuF-QIUGw" name="userId()" content="return chiefId;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
-                  <referencedElements xmi:type="process:Data" xmi:id="_Nx9NdHWCEe2F-ZuF-QIUGw" name="chiefId" dataType="_aM9Bv3PtEe2MJvlrpy3Ydg"/>
+          <filters xmi:type="process:ActorFilter" xmi:id="_A0ZxcIIxEe2VLNwwjfrDTQ" documentation="&#x9;&#x9;" name="chief" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_A0ZxcYIxEe2VLNwwjfrDTQ" definitionId="bonita-actorfilter-single-user" version="1.0.0">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_A0ZxcoIxEe2VLNwwjfrDTQ" key="userId">
+                <expression xmi:type="expression:Expression" xmi:id="_A0Zxc4IxEe2VLNwwjfrDTQ" name="userId()" content="return apiAccessor.identityAPI.getUser(chosenUser).getManagerUserId();" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Data" xmi:id="_A0ZxdIIxEe2VLNwwjfrDTQ" name="chosenUser" dataType="_aM9Bv3PtEe2MJvlrpy3Ydg"/>
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_A0ZxdYIxEe2VLNwwjfrDTQ" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
                 </expression>
               </parameters>
             </configuration>
@@ -702,8 +703,8 @@
       <connections xmi:type="process:SequenceFlow" xmi:id="_iy1O8HVxEe2E04xJMUznyA" name="Employee rejected" target="_zueP0HP0Ee2MJvlrpy3Ydg" source="_Enj_oHVwEe2E04xJMUznyA">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_iy1O8XVxEe2E04xJMUznyA"/>
         <condition xmi:type="expression:Expression" xmi:id="_iy1O8nVxEe2E04xJMUznyA" name="newScript()" content="return registrationRequest.getStatus().getStatus().equals(&quot;REJECTED&quot;) &amp;&amp; chosenUser != null" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
-          <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_pAwJwHVxEe2E04xJMUznyA" name="registrationRequest" dataType="_aM9BxHPtEe2MJvlrpy3Ydg" className="com.company.model.CompanyRegistrationRequest"/>
-          <referencedElements xmi:type="process:Data" xmi:id="_pAwJwXVxEe2E04xJMUznyA" name="chosenUser" dataType="_aM9Bv3PtEe2MJvlrpy3Ydg"/>
+          <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_zv7gcIIuEe2VLNwwjfrDTQ" name="registrationRequest" dataType="_aM9BxHPtEe2MJvlrpy3Ydg" className="com.company.model.CompanyRegistrationRequest"/>
+          <referencedElements xmi:type="process:Data" xmi:id="_zv8HgIIuEe2VLNwwjfrDTQ" name="chosenUser" dataType="_aM9Bv3PtEe2MJvlrpy3Ydg"/>
         </condition>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_hYOU4IIkEe2YHO9Hw_vfzg" target="_9b8eUIIkEe2YHO9Hw_vfzg" source="_eCAPIHVvEe2E04xJMUznyA">
