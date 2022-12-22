@@ -15,7 +15,9 @@
       <firstName>Business</firstName>
       <lastName>Chief</lastName>
       <personalData/>
-      <professionalData/>
+      <professionalData>
+        <email>businesschief@localhost</email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
@@ -24,7 +26,9 @@
       <lastName>Member</lastName>
       <manager>business.chief</manager>
       <personalData/>
-      <professionalData/>
+      <professionalData>
+        <email>businessmember@localhost</email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
