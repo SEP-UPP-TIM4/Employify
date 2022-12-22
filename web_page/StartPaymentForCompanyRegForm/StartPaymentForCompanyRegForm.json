@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.3",
-  "id" : "selectReviewerForm",
-  "name" : "selectReviewerForm",
-  "lastUpdate" : 1671724254665,
+  "id" : "StartPaymentForCompanyRegForm",
+  "name" : "StartPaymentForCompanyRegForm",
+  "lastUpdate" : 1671734395512,
   "rows" : [
     [
       {
@@ -10,8 +10,20 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : { },
-        "reference" : "6cd58d42-c8af-4f31-8be0-9829aa95b6b5",
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable"
+          }
+        },
+        "reference" : "70ce5c17-5080-405b-9ae8-a24f4df4d608",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -19,41 +31,40 @@
             {
               "type" : "component",
               "dimension" : {
-                "md" : 12,
-                "sm" : 12,
                 "xs" : 12,
-                "lg" : 12
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 6
               },
               "propertyValues" : {
-                "hidden" : {
-                  "type" : "constant",
-                  "value" : false
-                },
-                "level" : {
-                  "type" : "constant",
-                  "value" : "Level 1"
-                },
                 "cssClasses" : {
                   "type" : "constant",
                   "value" : ""
                 },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : false
+                },
                 "text" : {
                   "type" : "interpolation",
-                  "value" : "{{ task.displayName }}"
+                  "value" : "Start payment"
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 2"
                 },
                 "alignment" : {
                   "type" : "constant",
                   "value" : "center"
-                },
-                "dimension" : {
-                  "type" : "constant",
-                  "value" : 12
                 }
               },
-              "reference" : "bc206b87-fada-47ed-9b66-791a27fe9013",
+              "reference" : "12f2fda0-7b36-44a7-a563-ddc2f1ed231d",
               "hasValidationError" : false,
-              "id" : "pbTitle",
-              "description" : ""
+              "id" : "pbTitle"
             }
           ],
           [
@@ -87,18 +98,30 @@
                 },
                 "text" : {
                   "type" : "interpolation",
-                  "value" : "{{ task.displayDescription }}"
+                  "value" : "I aggree to terms and conditions"
                 },
                 "alignment" : {
                   "type" : "constant",
-                  "value" : "left"
+                  "value" : "center"
                 },
                 "dimension" : {
                   "type" : "constant",
                   "value" : 12
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
                 }
               },
-              "reference" : "4047d761-d768-4a2f-90eb-b6d3389a9172",
+              "reference" : "91bc5dbf-656d-4e3e-8c5e-e5049d9b8ad5",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -113,8 +136,17 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : { },
-        "reference" : "7c0b2324-95cc-452a-b6fc-fef7a7598d9f",
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "43f96275-c44d-48f7-a526-c817d5549720",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -123,151 +155,10 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "e2c6bde1-b222-4c46-9c22-a4e2dfadf403",
+          "reference" : "b857bd6d-ebbd-4b9e-9115-4ef1a45b6cdd",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
-            [
-              {
-                "type" : "component",
-                "dimension" : {
-                  "xs" : 12,
-                  "sm" : 12,
-                  "md" : 12,
-                  "lg" : 12
-                },
-                "propertyValues" : {
-                  "cssClasses" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "hidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "disabled" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "required" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "allowHTML" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "labelHidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "label" : {
-                    "type" : "interpolation",
-                    "value" : "Select"
-                  },
-                  "labelPosition" : {
-                    "type" : "constant",
-                    "value" : "top"
-                  },
-                  "labelWidth" : {
-                    "type" : "constant",
-                    "value" : 4
-                  },
-                  "placeholder" : {
-                    "type" : "interpolation",
-                    "value" : "Select an option"
-                  },
-                  "availableValues" : {
-                    "type" : "expression",
-                    "value" : "options"
-                  },
-                  "displayedKey" : {
-                    "type" : "constant"
-                  },
-                  "returnedKey" : {
-                    "type" : "constant"
-                  },
-                  "value" : {
-                    "type" : "variable",
-                    "value" : "selected"
-                  }
-                },
-                "reference" : "d1a9b933-7071-44c4-8cbb-4791d98732bb",
-                "hasValidationError" : false,
-                "id" : "pbSelect"
-              }
-            ],
-            [
-              {
-                "type" : "component",
-                "dimension" : {
-                  "xs" : 12,
-                  "sm" : 12,
-                  "md" : 12,
-                  "lg" : 12
-                },
-                "propertyValues" : {
-                  "cssClasses" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "hidden" : {
-                    "type" : "expression",
-                    "value" : "selected != \"Choose another employee\""
-                  },
-                  "disabled" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "required" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "allowHTML" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "labelHidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "label" : {
-                    "type" : "interpolation",
-                    "value" : "Select"
-                  },
-                  "labelPosition" : {
-                    "type" : "constant",
-                    "value" : "top"
-                  },
-                  "labelWidth" : {
-                    "type" : "constant",
-                    "value" : 4
-                  },
-                  "placeholder" : {
-                    "type" : "interpolation",
-                    "value" : "Select an option"
-                  },
-                  "availableValues" : {
-                    "type" : "expression",
-                    "value" : "groups"
-                  },
-                  "displayedKey" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "returnedKey" : {
-                    "type" : "constant"
-                  },
-                  "value" : {
-                    "type" : "variable",
-                    "value" : "chosenEmployee"
-                  }
-                },
-                "reference" : "d06b3d25-a9cb-4440-97f0-ccf9a9c00741",
-                "hasValidationError" : false,
-                "id" : "pbSelect"
-              }
-            ],
             [
               {
                 "type" : "component",
@@ -364,7 +255,7 @@
                     "value" : ""
                   }
                 },
-                "reference" : "f856be5e-b605-47ad-9bab-0ddc33c87584",
+                "reference" : "a7d2dc76-1505-4125-a6ba-337efa14a752",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -416,7 +307,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "fe6200c1-c18d-4968-b1a9-1616c270d4ea",
+                "reference" : "17854f85-5470-4740-86ec-e0bb9a6105cd",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -429,16 +320,16 @@
   ],
   "assets" : [
     {
-      "id" : "657d1f44-f975-4c03-a664-d2b2b164dcda",
-      "name" : "style.css",
-      "type" : "css",
+      "id" : "359c6030-18ea-495d-a29f-df9465694204",
+      "name" : "localization.json",
+      "type" : "json",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "ce85bf0b-aa81-4c43-91ee-453f53287953",
-      "name" : "localization.json",
-      "type" : "json",
+      "id" : "908fdd98-80e8-4c77-92d6-97a5481ce702",
+      "name" : "style.css",
+      "type" : "css",
       "order" : 0,
       "external" : false
     }
@@ -471,7 +362,7 @@
       "type" : "expression",
       "value" : [
         "return {",
-        "   \"chosenEmployee\": $data.chosenEmployee",
+        "",
         "}"
       ],
       "exposed" : false
@@ -489,49 +380,10 @@
         "id"
       ],
       "exposed" : false
-    },
-    "options" : {
-      "type" : "json",
-      "value" : [
-        "[\"Choose yourself\", \"Choose another employee\"]"
-      ],
-      "exposed" : false
-    },
-    "selected" : {
-      "type" : "constant",
-      "value" : [
-        "Choose yourself"
-      ],
-      "exposed" : false
-    },
-    "groupId" : {
-      "type" : "url",
-      "value" : [
-        "../API/bpm/caseVariable/{{task.caseId}}/businessSectorGroupId"
-      ],
-      "exposed" : false
-    },
-    "groups" : {
-      "type" : "url",
-      "value" : [
-        "../API/identity/user?p=0&c=100&f=group_id=18"
-      ],
-      "exposed" : false
-    },
-    "chosenEmployee" : {
-      "type" : "json",
-      "value" : [
-        "{\r",
-        "    \"chosenEmployee\" : {\r",
-        "    \"id\" : \"-1\"\r",
-        "  }\r",
-        "} "
-      ],
-      "exposed" : false
     }
   },
   "hasValidationError" : false,
-  "uuid" : "382f5528-0b9b-4b91-ada5-e3f53929c3bd",
+  "uuid" : "4146f013-5b13-43e3-8860-f8624831e0fa",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }
