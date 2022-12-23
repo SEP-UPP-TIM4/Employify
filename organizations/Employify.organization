@@ -189,6 +189,14 @@
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
+    <user userName="candidate2">
+      <firstName>Candidate2FN</firstName>
+      <lastName>Candidate2LN</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
   </users>
   <roles>
     <role name="Chief">
@@ -376,6 +384,12 @@
       <userName>premium.member</userName>
       <roleName>Chief</roleName>
       <groupName>Employee</groupName>
+      <groupParentPath>/Employify</groupParentPath>
+    </membership>
+    <membership>
+      <userName>candidate2</userName>
+      <roleName>Chief</roleName>
+      <groupName>Candidate</groupName>
       <groupParentPath>/Employify</groupParentPath>
     </membership>
   </memberships>
