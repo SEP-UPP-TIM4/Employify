@@ -97,7 +97,9 @@
       <firstName>Company</firstName>
       <lastName>First</lastName>
       <personalData/>
-      <professionalData/>
+      <professionalData>
+        <email>company1@localhost</email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
@@ -105,7 +107,9 @@
       <firstName>Company</firstName>
       <lastName>Second</lastName>
       <personalData/>
-      <professionalData/>
+      <professionalData>
+        <email>company2@localhost</email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
@@ -149,7 +153,9 @@
       <firstName>Company</firstName>
       <lastName>Third</lastName>
       <personalData/>
-      <professionalData/>
+      <professionalData>
+        <email>company3@localhost</email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
