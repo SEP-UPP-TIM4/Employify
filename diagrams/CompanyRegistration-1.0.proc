@@ -55,16 +55,16 @@
             </rightOperand>
             <operator xmi:type="expression:Operator" xmi:id="_TpMjE3WBEe2F-ZuF-QIUGw" type="ASSIGNMENT"/>
           </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_NREQ0IINEe2YHO9Hw_vfzg">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_NREQ0YINEe2YHO9Hw_vfzg" name="chosenUser" content="chosenUser" type="TYPE_VARIABLE" returnType="java.lang.Long">
-              <referencedElements xmi:type="process:Data" xmi:id="_OLZLEIINEe2YHO9Hw_vfzg" name="chosenUser" dataType="_aM9Bv3PtEe2MJvlrpy3Ydg"/>
+          <operations xmi:type="expression:Operation" xmi:id="_mOBc0II9Ee27wcIM8rivyQ">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_mOBc0YI9Ee27wcIM8rivyQ" name="chosenUser" content="chosenUser" type="TYPE_VARIABLE" returnType="java.lang.Long">
+              <referencedElements xmi:type="process:Data" xmi:id="_mntIIII9Ee27wcIM8rivyQ" name="chosenUser" dataType="_aM9Bv3PtEe2MJvlrpy3Ydg"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_NREQ0oINEe2YHO9Hw_vfzg" name="newScript()" content="if(chosenEmployee.get(&quot;id&quot;) == -1)&#xD;&#xA;&#x9;return null&#xD;&#xA;return chosenEmployee.get(&quot;id&quot;)" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_HpFNQIIQEe2YHO9Hw_vfzg" name="chosenEmployee" type="COMPLEX">
-                <mapping xmi:type="process:ContractInputMapping" xmi:id="_HpFNQYIQEe2YHO9Hw_vfzg"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_mOBc0oI9Ee27wcIM8rivyQ" name="newScript()" content="return chosenUserInput.get(&quot;id&quot;);" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_vFpk0II9Ee27wcIM8rivyQ" name="chosenUserInput" type="COMPLEX">
+                <mapping xmi:type="process:ContractInputMapping" xmi:id="_vFpk0YI9Ee27wcIM8rivyQ"/>
               </referencedElements>
             </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_NREQ04INEe2YHO9Hw_vfzg" type="ASSIGNMENT"/>
+            <operator xmi:type="expression:Operator" xmi:id="_mOBc04I9Ee27wcIM8rivyQ" type="ASSIGNMENT"/>
           </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_aM9Bm3PtEe2MJvlrpy3Ydg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_aM9BnHPtEe2MJvlrpy3Ydg" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
@@ -72,7 +72,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_aM9BnnPtEe2MJvlrpy3Ydg" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_aM9Bn3PtEe2MJvlrpy3Ydg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_aM9BoHPtEe2MJvlrpy3Ydg">
-            <targetForm xmi:type="expression:Expression" xmi:id="_0AMNAIINEe2YHO9Hw_vfzg" name="selectReviewerForm" content="382f5528-0b9b-4b91-ada5-e3f53929c3bd" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_Bp1hoIJSEe27wcIM8rivyQ" name="newForm9" content="6e5f6e35-b05d-4991-9dc3-c90ffd660b76" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <filters xmi:type="process:ActorFilter" xmi:id="_0qv30IILEe2YHO9Hw_vfzg" name="bussnessChief" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_0qv30YILEe2YHO9Hw_vfzg" definitionId="bonita-actorfilter-single-user" version="1.0.0">
@@ -84,7 +84,7 @@
             </configuration>
           </filters>
           <contract xmi:type="process:Contract" xmi:id="_aM9BonPtEe2MJvlrpy3Ydg">
-            <inputs xmi:type="process:ContractInput" xmi:id="_SWM-oIINEe2YHO9Hw_vfzg" name="chosenEmployee" type="COMPLEX">
+            <inputs xmi:type="process:ContractInput" xmi:id="_SWM-oIINEe2YHO9Hw_vfzg" name="chosenUserInput" type="COMPLEX">
               <mapping xmi:type="process:ContractInputMapping" xmi:id="_SWM-oYINEe2YHO9Hw_vfzg"/>
               <inputs xmi:type="process:ContractInput" xmi:id="_WUq_UIINEe2YHO9Hw_vfzg" name="id" type="INTEGER">
                 <mapping xmi:type="process:ContractInputMapping" xmi:id="_WUq_UYINEe2YHO9Hw_vfzg"/>
@@ -106,9 +106,8 @@
                 <expression xmi:type="expression:Expression" xmi:id="_JB4zdYI1Ee2CePdZ1gGbAQ" returnType="java.util.List" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_JB4zdoI1Ee2CePdZ1gGbAQ" key="fakeScriptExpression">
-                <expression xmi:type="expression:Expression" xmi:id="_JB4zd4I1Ee2CePdZ1gGbAQ" name="newScript()" content="import org.slf4j.Logger;&#xD;&#xA;import org.slf4j.LoggerFactory;&#xD;&#xA;&#xD;&#xA;Logger logger = LoggerFactory.getLogger(&quot;org.bonitasoft.groovy.script.randEmployeeScript&quot;);&#xD;&#xA;logger.warn(&quot;Prop user: {}&quot;,apiAccessor.getIdentityAPI().getUserContactData(chosenUser, false).email);&#xD;&#xA;&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object" returnTypeFixed="true">
-                  <referencedElements xmi:type="expression:Expression" xmi:id="_SWRTcII2Ee2CePdZ1gGbAQ" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
-                  <referencedElements xmi:type="process:Data" xmi:id="_SWRTcYI2Ee2CePdZ1gGbAQ" name="chosenUser" dataType="_aM9Bv3PtEe2MJvlrpy3Ydg"/>
+                <expression xmi:type="expression:Expression" xmi:id="_JB4zd4I1Ee2CePdZ1gGbAQ" name="newScript()" content="import org.slf4j.Logger;&#xD;&#xA;import org.slf4j.LoggerFactory;&#xD;&#xA;&#xD;&#xA;Logger logger = LoggerFactory.getLogger(&quot;org.bonitasoft.groovy.script.randEmployeeScript&quot;);&#xD;&#xA;logger.warn(&quot;Chosen user: {}&quot;, chosenUser);&#xD;&#xA;&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Data" xmi:id="_zQM3sIJTEe27wcIM8rivyQ" name="chosenUser" dataType="_aM9Bv3PtEe2MJvlrpy3Ydg"/>
                 </expression>
               </parameters>
             </configuration>
@@ -656,7 +655,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_Q8a7R3P2Ee2MJvlrpy3Ydg" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_Q8a7SHP2Ee2MJvlrpy3Ydg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <BoundaryIntermediateEvents xmi:type="process:BoundaryTimerEvent" xmi:id="_Q8a7SXP2Ee2MJvlrpy3Ydg" name="1 day" outgoing="_CpvIYHVtEe2fxqd-qC8K7w">
-            <condition xmi:type="expression:Expression" xmi:id="_Q8a7SnP2Ee2MJvlrpy3Ydg" name="1 Days 00:00:00" content="86400000L" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long"/>
+            <condition xmi:type="expression:Expression" xmi:id="_Q8a7SnP2Ee2MJvlrpy3Ydg" name="01:00:00" content="3600000L" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long"/>
           </BoundaryIntermediateEvents>
           <formMapping xmi:type="process:FormMapping" xmi:id="_Q8a7S3P2Ee2MJvlrpy3Ydg">
             <targetForm xmi:type="expression:Expression" xmi:id="_XclFwIIREe2YHO9Hw_vfzg" name="newForm7" content="fc80e82f-b9ea-47a7-a261-a67a503ee4ee" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -794,6 +793,13 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_EnN20XVvEe2E04xJMUznyA" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_EnN20HVvEe2E04xJMUznyA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_EnN20nVvEe2E04xJMUznyA" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_kMr-kII6Ee2pVKWLOkZSJw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_kMr-kYI6Ee2pVKWLOkZSJw" name="chosenUser" content="chosenUser" type="TYPE_VARIABLE" returnType="java.lang.Long">
+              <referencedElements xmi:type="process:Data" xmi:id="_kx0r8II6Ee2pVKWLOkZSJw" name="chosenUser" dataType="_aM9Bv3PtEe2MJvlrpy3Ydg"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_kMr-koI6Ee2pVKWLOkZSJw" name="newScript()" content="null" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long"/>
+            <operator xmi:type="expression:Operator" xmi:id="_kMr-k4I6Ee2pVKWLOkZSJw" type="ASSIGNMENT"/>
+          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_EnN203VvEe2E04xJMUznyA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_EnN21HVvEe2E04xJMUznyA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_EnN21XVvEe2E04xJMUznyA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
