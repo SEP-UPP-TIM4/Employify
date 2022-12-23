@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "newForm15",
   "name" : "newForm15",
-  "lastUpdate" : 1671811773793,
+  "lastUpdate" : 1671832701306,
   "rows" : [
     [
       {
@@ -1323,7 +1323,7 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "if( $data.employmentPackage && $data.employmentPackage_offer && $data.employmentPackage_employmentItem && $data.employmentPackage_offer.candidateIds.length === new Set($data.employmentPackage_offer.candidateIds).size ){",
+        "if( $data.employmentPackage && $data.employmentPackage_offer && $data.employmentPackage_employmentItem && $data.employmentPackage.numOfCandidates == new Set($data.employmentPackage_offer.candidateIds).size ){",
         "\t//attach lazy references variables to parent variables",
         "\t$data.employmentPackage.offer = $data.employmentPackage_offer;",
         "\t$data.employmentPackage.employmentItem = $data.employmentPackage_employmentItem;",
