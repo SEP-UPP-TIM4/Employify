@@ -109,7 +109,7 @@
         <businessObject qualifiedName="com.company.model.Interview">
             <fields>
                 <field type="OFFSETDATETIME" length="255" name="appointmentDate" nullable="false" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.company.model.Company" fetchType="LAZY" name="company" nullable="false" collection="false"/>
+                <field type="LONG" length="255" name="companyId" nullable="false" collection="false"/>
                 <relationField type="COMPOSITION" reference="com.company.model.CandidateEvalutaion" fetchType="LAZY" name="evaluation" nullable="true" collection="true"/>
                 <field type="BOOLEAN" length="255" name="successful" nullable="true" collection="false"/>
             </fields>
@@ -130,7 +130,7 @@
         <businessObject qualifiedName="com.company.model.PremiumEmployment">
             <fields>
                 <relationField type="AGGREGATION" reference="com.company.model.PremiumStatus" fetchType="LAZY" name="status" nullable="true" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.company.model.Interview" fetchType="LAZY" name="interviews" nullable="true" collection="true"/>
+                <relationField type="COMPOSITION" reference="com.company.model.Interview" fetchType="EAGER" name="interviews" nullable="true" collection="true"/>
             </fields>
             <uniqueConstraints/>
             <queries/>

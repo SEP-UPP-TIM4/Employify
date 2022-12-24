@@ -53,7 +53,9 @@
       <firstName>CandidateFN</firstName>
       <lastName>CandidateLN</lastName>
       <personalData/>
-      <professionalData/>
+      <professionalData>
+        <email>candidate@localhost</email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
@@ -199,7 +201,9 @@
       <firstName>Candidate2FN</firstName>
       <lastName>Candidate2LN</lastName>
       <personalData/>
-      <professionalData/>
+      <professionalData>
+        <email>candidate2@localhost</email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
