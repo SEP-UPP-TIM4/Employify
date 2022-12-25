@@ -110,7 +110,7 @@
             <fields>
                 <field type="LOCALDATETIME" length="255" name="appointmentDate" nullable="false" collection="false"/>
                 <field type="LONG" length="255" name="companyId" nullable="false" collection="false"/>
-                <relationField type="COMPOSITION" reference="com.company.model.CandidateEvalutaion" fetchType="LAZY" name="evaluation" nullable="true" collection="true"/>
+                <relationField type="COMPOSITION" reference="com.company.model.CandidateEvalutaion" fetchType="EAGER" name="evaluation" nullable="true" collection="true"/>
                 <field type="BOOLEAN" length="255" name="successful" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>

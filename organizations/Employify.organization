@@ -36,7 +36,9 @@
       <firstName>Premium</firstName>
       <lastName>Chief</lastName>
       <personalData/>
-      <professionalData/>
+      <professionalData>
+        <email>premium.chief@localhost</email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
@@ -45,7 +47,9 @@
       <lastName>Member</lastName>
       <manager>premium.chief</manager>
       <personalData/>
-      <professionalData/>
+      <professionalData>
+        <email>premium.member@localhost</email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
@@ -64,7 +68,9 @@
       <lastName>Chief1</lastName>
       <manager>company1</manager>
       <personalData/>
-      <professionalData/>
+      <professionalData>
+        <email>hr.chief1@localhost</email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
@@ -73,7 +79,9 @@
       <lastName>Member1</lastName>
       <manager>hr.chief1</manager>
       <personalData/>
-      <professionalData/>
+      <professionalData>
+        <email>hr.member1@localhost</email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
@@ -120,7 +128,9 @@
       <lastName>Chief2</lastName>
       <manager>company2</manager>
       <personalData/>
-      <professionalData/>
+      <professionalData>
+        <email>hr.chief2@localhost</email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
@@ -129,7 +139,9 @@
       <lastName>Member2</lastName>
       <manager>hr.chief2</manager>
       <personalData/>
-      <professionalData/>
+      <professionalData>
+        <email>hr.member2@localhost</email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
@@ -166,7 +178,9 @@
       <lastName>Chief3</lastName>
       <manager>company3</manager>
       <personalData/>
-      <professionalData/>
+      <professionalData>
+        <email>hr.chief3@localhost</email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
@@ -175,7 +189,9 @@
       <lastName>Member3</lastName>
       <manager>hr.chief3</manager>
       <personalData/>
-      <professionalData/>
+      <professionalData>
+        <email>hr.member3@localhost</email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>

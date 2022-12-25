@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.3",
-  "id" : "newForm27",
-  "name" : "newForm27",
-  "lastUpdate" : 1671991465718,
+  "id" : "newForm31",
+  "name" : "newForm31",
+  "lastUpdate" : 1671996818353,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "750cae81-8d9f-463e-8d4b-f5a0a25676a9",
+        "reference" : "5235296a-b9a6-4dd7-8fc5-72047b4d8cde",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -50,7 +50,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "f96a0be3-403d-44ba-8f60-9e80c0444067",
+              "reference" : "90c1e5b8-76d3-477a-a478-d2d5320d8200",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -98,7 +98,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "21da1db6-cda0-4cdb-b6e9-e603a00f75a0",
+              "reference" : "33f83e8c-8b82-45d5-9907-293a6bf2a264",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -114,7 +114,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "43b04ef3-ef37-418c-b4e5-f8a4c1cab755",
+        "reference" : "68b6ab90-ecc3-4888-a90f-d1790cd07c34",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -123,7 +123,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "291728a8-169a-4304-99c5-c35fbcf85a53",
+          "reference" : "854545bb-d9dd-46b7-8d32-6b6b7918a2a1",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -131,9 +131,9 @@
               {
                 "type" : "component",
                 "dimension" : {
-                  "md" : 12,
-                  "sm" : 12,
                   "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
                   "lg" : 12
                 },
                 "propertyValues" : {
@@ -142,58 +142,29 @@
                     "value" : ""
                   },
                   "hidden" : {
-                    "type" : "expression",
-                    "value" : "formInput.candidateGaveUpInput"
-                  },
-                  "disabled" : {
                     "type" : "constant",
                     "value" : false
-                  },
-                  "required" : {
-                    "type" : "constant",
-                    "value" : true
                   },
                   "allowHTML" : {
                     "type" : "constant",
                     "value" : false
                   },
-                  "labelHidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "label" : {
+                  "text" : {
                     "type" : "interpolation",
-                    "value" : "Selected Appointment"
+                    "value" : "Candidate name: {{candidateFullName.value}}"
                   },
-                  "labelPosition" : {
+                  "level" : {
                     "type" : "constant",
-                    "value" : "top"
+                    "value" : "Level 2"
                   },
-                  "labelWidth" : {
+                  "alignment" : {
                     "type" : "constant",
-                    "value" : 1
-                  },
-                  "placeholder" : {
-                    "type" : "interpolation"
-                  },
-                  "availableValues" : {
-                    "type" : "expression",
-                    "value" : "possibleDates.value"
-                  },
-                  "displayedKey" : {
-                    "type" : "constant"
-                  },
-                  "returnedKey" : {
-                    "type" : "constant"
-                  },
-                  "value" : {
-                    "type" : "variable",
-                    "value" : "selectedDate"
+                    "value" : "center"
                   }
                 },
-                "reference" : "82dc7926-55df-4ea6-999c-4598aa1c5d13",
+                "reference" : "c213013a-88bf-4d4a-9e59-272d46b8b739",
                 "hasValidationError" : false,
-                "id" : "pbSelect"
+                "id" : "pbTitle"
               }
             ],
             [
@@ -224,7 +195,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Give up"
+                    "value" : "Employ candidate"
                   },
                   "dimension" : {
                     "type" : "constant",
@@ -232,7 +203,7 @@
                   },
                   "value" : {
                     "type" : "variable",
-                    "value" : "formInput.candidateGaveUpInput"
+                    "value" : "formInput.employedInput"
                   },
                   "required" : {
                     "type" : "constant",
@@ -243,7 +214,7 @@
                     "value" : false
                   }
                 },
-                "reference" : "60e4cf21-a1b4-4c8b-be16-200bceb36de4",
+                "reference" : "04e58c3e-f56c-45e3-b37e-bf1d74b11fb3",
                 "hasValidationError" : false,
                 "id" : "pbCheckbox",
                 "description" : ""
@@ -324,7 +295,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "37372bb1-dc9f-4f4a-870d-fc54576326a1",
+                "reference" : "fcb4fe4d-9791-46fd-a31c-d2ae1e083757",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -376,7 +347,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "56523e21-ccc6-4c57-aaf7-9481baae2633",
+                "reference" : "a81b0f4e-09ba-41b8-9681-51643703164c",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -389,16 +360,16 @@
   ],
   "assets" : [
     {
-      "id" : "7ae86bd9-a491-4dbf-8850-38f1f74ba536",
-      "name" : "style.css",
-      "type" : "css",
+      "id" : "8fe44a0c-87d1-4b8e-b12e-28eea161224b",
+      "name" : "localization.json",
+      "type" : "json",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "355c8275-4fd8-4702-871c-7a9e2a0ef411",
-      "name" : "localization.json",
-      "type" : "json",
+      "id" : "c889aa85-9950-49b9-bb66-ec9bf1abc796",
+      "name" : "style.css",
+      "type" : "css",
       "order" : 0,
       "external" : false
     }
@@ -416,8 +387,7 @@
       "type" : "json",
       "value" : [
         "{\r",
-        "  \"selectedAppointment\" : \"\",\r",
-        "  \"candidateGaveUpInput\" : false\r",
+        "  \"employedInput\" : false\r",
         "}"
       ],
       "exposed" : false
@@ -440,9 +410,8 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "return {\r",
-        "\tselectedAppointment: $data.selectedDate,\r",
-        "\tcandidateGaveUpInput: $data.formInput.candidateGaveUpInput\r",
+        "return {",
+        "\temployedInput: $data.formInput.employedInput",
         "}"
       ],
       "exposed" : false
@@ -461,31 +430,16 @@
       ],
       "exposed" : false
     },
-    "possibleDates" : {
+    "candidateFullName" : {
       "type" : "url",
       "value" : [
-        "../API/bpm/caseVariable/{{task.caseId}}/interviewAppointments"
+        "../API/bpm/caseVariable/{{task.caseId}}/candidateFullName"
       ],
-      "exposed" : false
-    },
-    "convertStringToArray" : {
-      "type" : "expression",
-      "value" : [
-        "var stringWithoutBrackets = $data.possibleDates.value.substring(1, $data.possibleDates.value.length-1)\r",
-        "stringWithoutBrackets = stringWithoutBrackets.replaceAll(' ', '');\r",
-        "var dates = stringWithoutBrackets.split(',');\r",
-        "$data.possibleDates.value = dates;\r",
-        "console.log($data.possibleDates)"
-      ],
-      "exposed" : false
-    },
-    "selectedDate" : {
-      "type" : "constant",
       "exposed" : false
     }
   },
   "hasValidationError" : false,
-  "uuid" : "a509579e-9c7c-4d2c-abff-b815fe914ed3",
+  "uuid" : "d7c78608-e16e-442f-938e-b3ac92fa4b3a",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }
