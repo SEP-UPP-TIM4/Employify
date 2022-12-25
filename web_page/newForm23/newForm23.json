@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "newForm23",
   "name" : "newForm23",
-  "lastUpdate" : 1671917606343,
+  "lastUpdate" : 1671968998327,
   "rows" : [
     [
       {
@@ -163,7 +163,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Hr Interviewer Id Input"
+                    "value" : "Hr Interviewers"
                   },
                   "labelPosition" : {
                     "type" : "constant",
@@ -177,13 +177,16 @@
                     "type" : "interpolation"
                   },
                   "availableValues" : {
-                    "type" : "constant"
+                    "type" : "expression",
+                    "value" : "hrInterviewers"
                   },
                   "displayedKey" : {
-                    "type" : "constant"
+                    "type" : "expression",
+                    "value" : "userName"
                   },
                   "returnedKey" : {
-                    "type" : "constant"
+                    "type" : "constant",
+                    "value" : "id"
                   },
                   "value" : {
                     "type" : "variable",
@@ -219,7 +222,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "Project Interviewer Ids Input"
+                    "value" : "Project Interviewers"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -228,6 +231,10 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : false
                   }
                 },
                 "reference" : "075ea1e4-ddee-43f8-b579-cdf7faf647f9",
@@ -277,58 +284,65 @@
                         "lg" : 12
                       },
                       "propertyValues" : {
-                        "labelHidden" : {
+                        "cssClasses" : {
                           "type" : "constant",
-                          "value" : true
+                          "value" : ""
                         },
                         "hidden" : {
                           "type" : "constant",
                           "value" : false
                         },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 0
-                        },
-                        "readOnly" : {
+                        "disabled" : {
                           "type" : "constant",
                           "value" : false
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : true
                         },
                         "label" : {
                           "type" : "interpolation",
                           "value" : ""
                         },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 0
+                        },
                         "placeholder" : {
-                          "type" : "constant"
+                          "type" : "interpolation"
                         },
-                        "type" : {
-                          "type" : "constant",
-                          "value" : "number"
+                        "availableValues" : {
+                          "type" : "expression",
+                          "value" : "projectInterviewers"
                         },
-                        "dimension" : {
+                        "displayedKey" : {
                           "type" : "constant",
-                          "value" : 12
+                          "value" : "userName"
+                        },
+                        "returnedKey" : {
+                          "type" : "constant",
+                          "value" : "id"
                         },
                         "value" : {
                           "type" : "variable",
                           "value" : "$item"
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : true
                         }
                       },
-                      "reference" : "c90d2695-61b4-48fe-a745-829b40dc3f4d",
+                      "reference" : "f8957ed7-fe5d-4b49-a47b-44a56cf8b2f7",
                       "hasValidationError" : false,
-                      "id" : "pbInput",
-                      "description" : ""
+                      "id" : "pbSelect"
                     },
                     {
                       "type" : "component",
@@ -478,6 +492,30 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable"
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable"
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "dataFromError" : {
+                    "type" : "variable"
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
                   }
                 },
                 "reference" : "b37ffeea-c280-4e58-83c8-80d88eb96171",
@@ -559,6 +597,27 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable"
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable"
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
                   }
                 },
                 "reference" : "d5a759ba-86b4-44c9-8e06-0567a7398b4d",
@@ -695,6 +754,34 @@
       "type" : "urlparameter",
       "value" : [
         "id"
+      ],
+      "exposed" : false
+    },
+    "hrChiefId" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/caseVariable/{{task.caseId}}/hrChief"
+      ],
+      "exposed" : false
+    },
+    "projectChiefId" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/caseVariable/{{task.caseId}}/projectChief"
+      ],
+      "exposed" : false
+    },
+    "hrInterviewers" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/user?p=0&c=100&f=manager_id={{hrChiefId.value}}"
+      ],
+      "exposed" : false
+    },
+    "projectInterviewers" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/user?p=0&c=100&f=manager_id={{projectChiefId.value}}"
       ],
       "exposed" : false
     }
