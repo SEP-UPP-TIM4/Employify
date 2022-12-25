@@ -207,6 +207,33 @@
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
+    <user userName="project.member12">
+      <firstName>Project12</firstName>
+      <lastName>Member12</lastName>
+      <manager>project.chief1</manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="project.member22">
+      <firstName>Project22</firstName>
+      <lastName>Member22</lastName>
+      <manager>project.chief2</manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="project.member32">
+      <firstName>Project32</firstName>
+      <lastName>Member32</lastName>
+      <manager>project.chief3</manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
   </users>
   <roles>
     <role name="Chief">
@@ -401,6 +428,24 @@
       <roleName>Chief</roleName>
       <groupName>Candidate</groupName>
       <groupParentPath>/Employify</groupParentPath>
+    </membership>
+    <membership>
+      <userName>project.member12</userName>
+      <roleName>Member</roleName>
+      <groupName>ProjectSector</groupName>
+      <groupParentPath>/Employify/Company</groupParentPath>
+    </membership>
+    <membership>
+      <userName>project.member22</userName>
+      <roleName>Member</roleName>
+      <groupName>ProjectSector</groupName>
+      <groupParentPath>/Employify/Company</groupParentPath>
+    </membership>
+    <membership>
+      <userName>project.member32</userName>
+      <roleName>Member</roleName>
+      <groupName>ProjectSector</groupName>
+      <groupParentPath>/Employify/Company</groupParentPath>
     </membership>
   </memberships>
 </organization:Organization>
