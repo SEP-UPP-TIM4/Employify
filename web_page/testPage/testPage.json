@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "testPage",
   "name" : "testPage",
-  "lastUpdate" : 1672092759494,
+  "lastUpdate" : 1672094900248,
   "rows" : [
     [
       {
@@ -74,6 +74,42 @@
         "reference" : "91ad677d-8fb6-46be-965d-8eae8b9d1c35",
         "hasValidationError" : false,
         "id" : "customCompanyMaxPremiumEmp"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "value" : {
+            "type" : "constant",
+            "value" : "This is the initial value"
+          },
+          "color" : {
+            "type" : "constant",
+            "value" : "RebeccaPurple"
+          },
+          "background" : {
+            "type" : "constant",
+            "value" : "Yellow"
+          }
+        },
+        "reference" : "4b0114fd-1b5b-4f0c-a3bd-a0e8691b317f",
+        "hasValidationError" : false,
+        "id" : "customCityMaxEmpReq"
       }
     ]
   ],

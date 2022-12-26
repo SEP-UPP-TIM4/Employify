@@ -9,7 +9,8 @@
  */
 function ($scope, $location, $http) {
     var white = 'white';
-    var cases = [];
+    var archivedCases = [];
+     var cases = [];
     var chosenEmployeeId;
     var employeeMap = new Object();
     var winnerEmployee;
@@ -31,16 +32,19 @@ function ($scope, $location, $http) {
         }
     };
     
-        this.getCompany = function() {
+        this.getCity = function() {
             
          doRequestRewritten('GET', '../API/bpm/archivedCase?f=name=Premium Employment').then(function() {
-        //console.log(cases);
-        for (let i = 0; i < cases.length; i++) {
+              console.log("Archived cases: " + archivedCases);
+             doRequestRewritten1('GET', '../API/bpm/case?f=name=Premium Employment').then(function() {
+                 console.log("Cases" + cases);
+
+                      for (let i = 0; i < cases.length; i++) {
             
             const fetchPromise = new Promise(function(resolve, reject) {
       // Standard XHR to load an image
       var request = new XMLHttpRequest();
-      request.open('GET', '../API/bpm/archivedCaseVariable/' + cases[i] + '/winnerCompany');
+      request.open('GET', '../API/bpm/caseVariable/' + cases[i] + '/city');
       //request.responseType = 'application/json';
       request.setRequestHeader("Content-Type", "application/json");
       // When the request loads, check whether it was successful
@@ -66,14 +70,51 @@ function ($scope, $location, $http) {
             pList.push(fetchPromise);
 
         }
-        Promise.all(pList) // provide array of promises to Promise.all
+
+
+                        for (let i = 0; i < archivedCases.length; i++) {
+            
+            const fetchPromise = new Promise(function(resolve, reject) {
+      // Standard XHR to load an image
+      var request = new XMLHttpRequest();
+      request.open('GET', '../API/bpm/archivedCaseVariable/' + archivedCases[i] + '/city');
+      //request.responseType = 'application/json';
+      request.setRequestHeader("Content-Type", "application/json");
+      // When the request loads, check whether it was successful
+      request.onload = function() {
+        if (request.status === 200) {
+        // If successful, resolve the promise by passing back the request response
+          resolve(request.response);
+        } else {
+        // If it fails, reject the promise with a error message
+          reject(Error('Image didn\'t load successfully; error code:' + request.statusText));
+        }
+      };
+      request.onerror = function() {
+      // Also deal with the case when the entire request fails to begin with
+      // This is probably a network error, so reject the promise with an appropriate message
+          reject(Error('There was a network error.'));
+      };
+      // Send the request
+      request.send();
+    });
+    
+    
+            pList.push(fetchPromise);
+
+        }
+
+
+
+              Promise.all(pList) // provide array of promises to Promise.all
   .then(function(results) { // receive resolved results, they should be even numbers from 0*2 to 99*2
 
 
        for (let i = 0; i < results.length; i++) {
         let tempValue = JSON.parse(results[i])
+        console.log("Temp value: " + tempValue.value)
         if(tempValue.value != null) {
-            //console.log(typeof tempValue.value);
+            console.log(typeof tempValue.value);
             if (employeeMap.hasOwnProperty(tempValue.value)) employeeMap[tempValue.value] ++;
         else employeeMap[tempValue.value] = 1;
         
@@ -93,23 +134,21 @@ function ($scope, $location, $http) {
                }
             }
         
-             //console.log(numberOneEmployee);
-            
-                    doRequestRewritten1('GET', '../API/identity/user/' + numberOneEmployee).then(function() {
-        
-         $scope.shownText += finalUser.firstname + ' ' + finalUser.lastname;
-        
-      });
+             console.log(numberOneEmployee);
+
+             $scope.shownText += numberOneEmployee;          
+  
 
    
    
   })
-    //     doRequestRewritten1('PUT', '../API/bpm/caseVariable/' + caseIdTemp + '/statusCode', { 'type': "java.lang.Integer", 'value': codeValue }).then(function() {
-    //     console.log("Success2");
+
+
+
         
-    //   });
-      });
-         
+        
+       });
+       });
     };
     
     function doRequestRewritten(method, url) {
@@ -125,7 +164,7 @@ function ($scope, $location, $http) {
         // $scope.properties.dataFromSuccess = data;
         // $scope.properties.responseStatusCode = status;
         for (let i = 0; i < data.length; i++) {
-            cases.push(data[i].rootCaseId);
+            archivedCases.push(data[i].rootCaseId);
         }
        
         //console.log(data);
@@ -150,7 +189,9 @@ function ($scope, $location, $http) {
       .success(function(data, status) {
         // $scope.properties.dataFromSuccess = data;
         // $scope.properties.responseStatusCode = status;
-        finalUser = data;
+        for (let i = 0; i < data.length; i++) {
+            cases.push(data[i].rootCaseId);
+        }
         //console.log(chosenEmployeeId);
       })
       .error(function(data, status) {
@@ -160,4 +201,6 @@ function ($scope, $location, $http) {
        
       });
   }
+
+  
 }

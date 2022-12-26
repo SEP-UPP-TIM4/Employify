@@ -59,6 +59,7 @@
       <personalData/>
       <professionalData>
         <email>candidate@localhost</email>
+        <city>San Fransisco</city>
       </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
@@ -219,6 +220,7 @@
       <personalData/>
       <professionalData>
         <email>candidate2@localhost</email>
+        <city>San Fransisco</city>
       </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>

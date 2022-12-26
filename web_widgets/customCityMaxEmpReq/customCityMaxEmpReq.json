@@ -33,11 +33,11 @@
       "bond" : "expression"
     }
   ],
-  "id" : "customCompanyMaxPremiumEmp",
-  "name" : "companyMaxPremiumEmp",
-  "lastUpdate" : 1672095696183,
-  "template" : "@customCompanyMaxPremiumEmp.tpl.html",
-  "controller" : "@customCompanyMaxPremiumEmp.ctrl.js",
+  "id" : "customCityMaxEmpReq",
+  "name" : "cityMaxEmpReq",
+  "lastUpdate" : 1672096353102,
+  "template" : "@customCityMaxEmpReq.tpl.html",
+  "controller" : "@customCityMaxEmpReq.ctrl.js",
   "custom" : true,
   "assets" : [ ],
   "requiredModules" : [ ],
