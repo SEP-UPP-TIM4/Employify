@@ -1,0 +1,46 @@
+{
+  "modelVersion" : "2.3",
+  "properties" : [
+    {
+      "label" : "Value",
+      "name" : "value",
+      "type" : "text",
+      "defaultValue" : "This is the initial value",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Color",
+      "name" : "color",
+      "type" : "choice",
+      "defaultValue" : "RebeccaPurple",
+      "choiceValues" : [
+        "RebeccaPurple",
+        "Chartreuse",
+        "Tomato",
+        "DeepSkyBlue"
+      ],
+      "bond" : "expression"
+    },
+    {
+      "label" : "Background color on click",
+      "name" : "background",
+      "type" : "choice",
+      "defaultValue" : "Yellow",
+      "choiceValues" : [
+        "Yellow",
+        "LightGray"
+      ],
+      "bond" : "expression"
+    }
+  ],
+  "id" : "customCompanyMaxPremiumEmp",
+  "name" : "companyMaxPremiumEmp",
+  "lastUpdate" : 1672093827657,
+  "template" : "@customCompanyMaxPremiumEmp.tpl.html",
+  "controller" : "@customCompanyMaxPremiumEmp.ctrl.js",
+  "custom" : true,
+  "assets" : [ ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

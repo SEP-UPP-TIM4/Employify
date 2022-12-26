@@ -1,0 +1,102 @@
+{
+  "modelVersion" : "2.3",
+  "id" : "testPage",
+  "name" : "testPage",
+  "lastUpdate" : 1672092759494,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "value" : {
+            "type" : "constant",
+            "value" : "This is the initial value"
+          },
+          "color" : {
+            "type" : "constant",
+            "value" : "RebeccaPurple"
+          },
+          "background" : {
+            "type" : "constant",
+            "value" : "Yellow"
+          }
+        },
+        "reference" : "80413451-3a00-4d7e-8b60-7e1cc0745e0a",
+        "hasValidationError" : false,
+        "id" : "customEmployeeMaxPremiumSuccess"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "value" : {
+            "type" : "constant",
+            "value" : "This is the initial value"
+          },
+          "color" : {
+            "type" : "constant",
+            "value" : "RebeccaPurple"
+          },
+          "background" : {
+            "type" : "constant",
+            "value" : "Yellow"
+          }
+        },
+        "reference" : "91ad677d-8fb6-46be-965d-8eae8b9d1c35",
+        "hasValidationError" : false,
+        "id" : "customCompanyMaxPremiumEmp"
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "ee2a494e-7f01-4776-a0f1-83310ae974d8",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "748f01be-c90a-499c-b941-8801ae91537f",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : { },
+  "hasValidationError" : false,
+  "uuid" : "6688652c-7a59-4c21-a066-0e460e895f33",
+  "type" : "page",
+  "description" : "Page generated with Bonita UI designer"
+}
