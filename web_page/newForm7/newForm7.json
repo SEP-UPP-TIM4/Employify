@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "newForm7",
   "name" : "newForm7",
-  "lastUpdate" : 1671724661544,
+  "lastUpdate" : 1672139227640,
   "rows" : [
     [
       {
@@ -724,47 +724,6 @@
                   ],
                   [
                     {
-                      "type" : "component",
-                      "dimension" : {
-                        "md" : 12,
-                        "sm" : 12,
-                        "xs" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "level" : {
-                          "type" : "constant",
-                          "value" : "Level 4"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "text" : {
-                          "type" : "interpolation",
-                          "value" : "Status"
-                        },
-                        "alignment" : {
-                          "type" : "constant",
-                          "value" : "left"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        }
-                      },
-                      "reference" : "6eed7416-f69d-4820-91b2-5a834c760c05",
-                      "hasValidationError" : false,
-                      "id" : "pbTitle",
-                      "description" : ""
-                    }
-                  ],
-                  [
-                    {
                       "type" : "container",
                       "dimension" : {
                         "md" : 12,
@@ -803,119 +762,38 @@
                               "lg" : 12
                             },
                             "propertyValues" : {
-                              "labelHidden" : {
+                              "cssClasses" : {
                                 "type" : "constant",
-                                "value" : false
+                                "value" : ""
                               },
                               "hidden" : {
                                 "type" : "constant",
                                 "value" : false
                               },
-                              "labelPosition" : {
+                              "disabled" : {
                                 "type" : "constant",
-                                "value" : "top"
-                              },
-                              "cssClasses" : {
-                                "type" : "constant",
-                                "value" : ""
-                              },
-                              "availableValues" : {
-                                "type" : "expression",
-                                "value" : "requestStatus_query"
-                              },
-                              "labelWidth" : {
-                                "type" : "constant",
-                                "value" : 1
-                              },
-                              "label" : {
-                                "type" : "interpolation",
-                                "value" : "Status"
-                              },
-                              "placeholder" : {
-                                "type" : "constant",
-                                "value" : "Select a Status"
-                              },
-                              "dimension" : {
-                                "type" : "constant",
-                                "value" : 12
-                              },
-                              "value" : {
-                                "type" : "variable",
-                                "value" : "registrationRequest_status"
+                                "value" : false
                               },
                               "required" : {
                                 "type" : "constant",
                                 "value" : false
-                              }
-                            },
-                            "reference" : "5b38fdf0-c5f9-46c0-b030-fd0e82518290",
-                            "hasValidationError" : false,
-                            "id" : "pbSelect",
-                            "description" : ""
-                          }
-                        ],
-                        [
-                          {
-                            "type" : "component",
-                            "dimension" : {
-                              "md" : 12,
-                              "sm" : 12,
-                              "xs" : 12,
-                              "lg" : 12
-                            },
-                            "propertyValues" : {
-                              "labelHidden" : {
-                                "type" : "constant",
-                                "value" : false
                               },
-                              "hidden" : {
-                                "type" : "constant",
-                                "value" : false
-                              },
-                              "labelPosition" : {
-                                "type" : "constant",
-                                "value" : "top"
-                              },
-                              "cssClasses" : {
-                                "type" : "constant",
-                                "value" : ""
-                              },
-                              "labelWidth" : {
-                                "type" : "constant",
-                                "value" : 1
-                              },
-                              "readOnly" : {
+                              "allowHTML" : {
                                 "type" : "constant",
                                 "value" : false
                               },
                               "label" : {
                                 "type" : "interpolation",
-                                "value" : "Status"
-                              },
-                              "placeholder" : {
-                                "type" : "constant"
-                              },
-                              "type" : {
-                                "type" : "constant",
-                                "value" : "text"
-                              },
-                              "dimension" : {
-                                "type" : "constant",
-                                "value" : 12
+                                "value" : "Approve"
                               },
                               "value" : {
                                 "type" : "variable",
-                                "value" : "registrationRequest_status.status"
-                              },
-                              "required" : {
-                                "type" : "constant",
-                                "value" : true
+                                "value" : "approved"
                               }
                             },
-                            "reference" : "6ab096e6-f0ca-4528-80e3-e7fb128bd547",
+                            "reference" : "61487728-d39d-4734-a8e2-2c4f8b314cf9",
                             "hasValidationError" : false,
-                            "id" : "pbInput",
-                            "description" : ""
+                            "id" : "pbCheckbox"
                           }
                         ]
                       ]
@@ -936,8 +814,8 @@
                           "value" : false
                         },
                         "hidden" : {
-                          "type" : "constant",
-                          "value" : false
+                          "type" : "expression",
+                          "value" : "approved"
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -977,6 +855,28 @@
                         "required" : {
                           "type" : "constant",
                           "value" : false
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "min" : {
+                          "type" : "constant"
+                        },
+                        "max" : {
+                          "type" : "constant"
+                        },
+                        "step" : {
+                          "type" : "constant",
+                          "value" : 1
                         }
                       },
                       "reference" : "e4564099-e6b5-468a-9267-e2152be0b326",
@@ -1061,6 +961,27 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable"
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable"
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
                   }
                 },
                 "reference" : "aa839679-928c-4e8d-b530-e7f5c62b5e59",
@@ -1169,9 +1090,15 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "if( $data.registrationRequest && $data.registrationRequest_status ){",
-        "\t//attach lazy references variables to parent variables",
-        "\t$data.registrationRequest.status = $data.registrationRequest_status;",
+        "\tlet id = 1;",
+        "\tlet statusName = \"PENDING\";",
+        "\tif(!$data.approved) {",
+        "\t    id = 2; ",
+        "\t    statusName = \"REJECTED\";",
+        "\t} else {",
+        "\t    id = 3;",
+        "\t    statusName = \"APPROVED\";",
+        "\t}",
         "\treturn {",
         "\t\t//map registrationRequest variable to expected task contract input",
         "\t\tregistrationRequestInput: {",
@@ -1183,14 +1110,13 @@
         "\t\t\tfoundingDate: $data.registrationRequest.foundingDate !== undefined ? $data.registrationRequest.foundingDate : null,",
         "\t\t\temail: $data.registrationRequest.email !== undefined ? $data.registrationRequest.email : null,",
         "\t\t\tphone: $data.registrationRequest.phone !== undefined ? $data.registrationRequest.phone : null,",
-        "\t\t\tstatus: $data.registrationRequest.status ? {",
-        "\t\t\t\tpersistenceId_string: $data.registrationRequest.status.persistenceId_string !== undefined ? $data.registrationRequest.status.persistenceId_string : null,",
-        "\t\t\t\tstatus: $data.registrationRequest.status.status !== undefined ? $data.registrationRequest.status.status : null",
-        "\t\t\t} : null,",
+        "\t\t\tstatus: {",
+        "\t\t\t\tpersistenceId_string: id,",
+        "\t\t\t\tstatus: statusName",
+        "\t\t\t},",
         "\t\t\treason: $data.registrationRequest.reason !== undefined ? $data.registrationRequest.reason : null",
         "\t\t}",
-        "\t}",
-        "}"
+        "\t}"
       ],
       "exposed" : false
     },
@@ -1226,6 +1152,13 @@
       "type" : "url",
       "value" : [
         "../API/bdm/businessData/com.company.model.RequestStatus?q=find&p=0&c=99"
+      ],
+      "exposed" : false
+    },
+    "approved" : {
+      "type" : "constant",
+      "value" : [
+        "\"false\""
       ],
       "exposed" : false
     }

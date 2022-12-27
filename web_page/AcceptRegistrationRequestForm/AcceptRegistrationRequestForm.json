@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "AcceptRegistrationRequestForm",
   "name" : "AcceptRegistrationRequestForm",
-  "lastUpdate" : 1671897818927,
+  "lastUpdate" : 1672133838099,
   "rows" : [
     [
       {
@@ -508,7 +508,7 @@
                         },
                         "type" : {
                           "type" : "constant",
-                          "value" : "text"
+                          "value" : "password"
                         },
                         "dimension" : {
                           "type" : "constant",
@@ -594,7 +594,7 @@
                         },
                         "type" : {
                           "type" : "constant",
-                          "value" : "text"
+                          "value" : "email"
                         },
                         "dimension" : {
                           "type" : "constant",

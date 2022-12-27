@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "selectReviewerForm",
   "name" : "selectReviewerForm",
-  "lastUpdate" : 1671742878775,
+  "lastUpdate" : 1672137047101,
   "rows" : [
     [
       {
@@ -252,8 +252,8 @@
                     "value" : "groups"
                   },
                   "displayedKey" : {
-                    "type" : "constant",
-                    "value" : ""
+                    "type" : "expression",
+                    "value" : "userName"
                   },
                   "returnedKey" : {
                     "type" : "constant"
