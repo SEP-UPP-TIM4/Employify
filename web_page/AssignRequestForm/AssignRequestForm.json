@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "AssignRequestForm",
   "name" : "AssignRequestForm",
-  "lastUpdate" : 1672153667783,
+  "lastUpdate" : 1672154486921,
   "rows" : [
     [
       {
@@ -102,6 +102,46 @@
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "Company: {{companyName.value}}"
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 2"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "center"
+                }
+              },
+              "reference" : "2810610b-3359-46bc-95a6-8370ce8cf201",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
             }
           ]
         ]
@@ -1035,6 +1075,13 @@
       "type" : "url",
       "value" : [
         "../API/system/session/unusedid"
+      ],
+      "exposed" : false
+    },
+    "companyName" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/caseVariable/{{task.caseId}}/companyName"
       ],
       "exposed" : false
     }

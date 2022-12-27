@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "NewEmploymentPackageForm",
   "name" : "NewEmploymentPackageForm",
-  "lastUpdate" : 1672153612487,
+  "lastUpdate" : 1672154471233,
   "rows" : [
     [
       {
@@ -165,7 +165,8 @@
                           "value" : ""
                         },
                         "min" : {
-                          "type" : "constant"
+                          "type" : "constant",
+                          "value" : 1
                         },
                         "max" : {
                           "type" : "constant"
@@ -251,7 +252,8 @@
                           "value" : ""
                         },
                         "min" : {
-                          "type" : "constant"
+                          "type" : "constant",
+                          "value" : 1
                         },
                         "max" : {
                           "type" : "constant"

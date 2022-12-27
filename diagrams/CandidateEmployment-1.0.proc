@@ -74,7 +74,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_gvrv9nQHEe2IDqAAB9b71w" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_gvrv9XQHEe2IDqAAB9b71w" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_gvrv-HQHEe2IDqAAB9b71w">
-            <targetForm xmi:type="expression:Expression" xmi:id="_hsPvIIMLEe2CmvkKrbkhnQ" name="newForm19" content="984c2145-5221-4303-bd80-a8448afdb963" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_hsPvIIMLEe2CmvkKrbkhnQ" name="AmountWorkersApprovedForm" content="984c2145-5221-4303-bd80-a8448afdb963" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <filters xmi:type="process:ActorFilter" xmi:id="_XwYRAIMNEe2CmvkKrbkhnQ" name="hrChief" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_XwYRAYMNEe2CmvkKrbkhnQ" definitionId="bonita-actorfilter-single-user" version="1.0.0">
@@ -188,7 +188,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_cmWtp3QIEe2IDqAAB9b71w" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_cmWtpnQIEe2IDqAAB9b71w" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_cmWtqXQIEe2IDqAAB9b71w">
-            <targetForm xmi:type="expression:Expression" xmi:id="_WBm_4IL-Ee22oYvoYH6CLQ" name="newForm16" content="3ab2d53c-33ee-4941-ac73-0d512e9af292" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_WBm_4IL-Ee22oYvoYH6CLQ" name="ReviewOfferForm" content="3ab2d53c-33ee-4941-ac73-0d512e9af292" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <filters xmi:type="process:ActorFilter" xmi:id="__8CdcILdEe2St5AkxY6RnQ" name="hrChiefCompany" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="__8CdcYLdEe2St5AkxY6RnQ" definitionId="bonita-actorfilter-single-user" version="1.0.0">
@@ -485,7 +485,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_GJ49GHQHEe2IDqAAB9b71w" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_GJ49F3QHEe2IDqAAB9b71w" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_GJ49GnQHEe2IDqAAB9b71w">
-            <targetForm xmi:type="expression:Expression" xmi:id="_VCN8EILVEe2St5AkxY6RnQ" name="newForm15" content="cfe1faeb-3765-4d5f-acf7-e50b65f2c931" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_VCN8EILVEe2St5AkxY6RnQ" name="CreateOfferForCompanyForm" content="cfe1faeb-3765-4d5f-acf7-e50b65f2c931" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <filters xmi:type="process:ActorFilter" xmi:id="_tdc7kHWSEe2rNYROVFMO1w" name="businessEmployee" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_tdc7kXWSEe2rNYROVFMO1w" definitionId="bonita-actorfilter-single-user" version="1.0.0">
@@ -539,7 +539,7 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_PX1TUXQHEe2IDqAAB9b71w" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_PX1TUHQHEe2IDqAAB9b71w" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_PX1TUnQHEe2IDqAAB9b71w" name="" content="" returnTypeFixed="true"/>
-          <connectors xmi:type="process:Connector" xmi:id="_0z_fQIMPEe2CmvkKrbkhnQ" name="sendEmail" definitionId="email" event="ON_FINISH" definitionVersion="1.2.0">
+          <connectors xmi:type="process:Connector" xmi:id="_0z_fQIMPEe2CmvkKrbkhnQ" name="sendEmail" definitionId="email" event="ON_FINISH" ignoreErrors="true" definitionVersion="1.2.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_0z_fQYMPEe2CmvkKrbkhnQ" definitionId="email" version="1.2.0" modelVersion="7.12.0-004">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_0z_fQoMPEe2CmvkKrbkhnQ" key="smtpHost">
                 <expression xmi:type="expression:Expression" xmi:id="_0z_fQ4MPEe2CmvkKrbkhnQ" name="localhost" content="localhost" returnTypeFixed="true"/>
@@ -632,7 +632,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_53lMB3QIEe2IDqAAB9b71w" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_53lMBnQIEe2IDqAAB9b71w" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_53lMCXQIEe2IDqAAB9b71w">
-            <targetForm xmi:type="expression:Expression" xmi:id="_6A9tsIL_Ee22oYvoYH6CLQ" name="newForm17" content="78cef55e-81ab-494d-9d57-838be9e3fd8e" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_6A9tsIL_Ee22oYvoYH6CLQ" name="CreateInvoiceForm" content="78cef55e-81ab-494d-9d57-838be9e3fd8e" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <filters xmi:type="process:ActorFilter" xmi:id="_7GrxYHWSEe2rNYROVFMO1w" name="businessEmployee" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_7GrxYXWSEe2rNYROVFMO1w" definitionId="bonita-actorfilter-single-user" version="1.0.0">
@@ -674,7 +674,7 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_5CBAYXWREe2rNYROVFMO1w" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_5CBAYHWREe2rNYROVFMO1w" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_5CBAYnWREe2rNYROVFMO1w" name="" content="" returnTypeFixed="true"/>
-          <connectors xmi:type="process:Connector" xmi:id="_D8RbEIMSEe2CmvkKrbkhnQ" name="sendEmails" definitionId="email" event="ON_FINISH" definitionVersion="1.2.0">
+          <connectors xmi:type="process:Connector" xmi:id="_D8RbEIMSEe2CmvkKrbkhnQ" name="sendEmails" definitionId="email" event="ON_FINISH" ignoreErrors="true" definitionVersion="1.2.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_D8RbEYMSEe2CmvkKrbkhnQ" definitionId="email" version="1.2.0" modelVersion="7.12.0-004">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_D8RbEoMSEe2CmvkKrbkhnQ" key="smtpHost">
                 <expression xmi:type="expression:Expression" xmi:id="_D8RbE4MSEe2CmvkKrbkhnQ" name="localhost" content="localhost" returnTypeFixed="true"/>
@@ -813,7 +813,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_FQhMp4LPEe2St5AkxY6RnQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_FQhMpoLPEe2St5AkxY6RnQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_FQhzsYLPEe2St5AkxY6RnQ">
-            <targetForm xmi:type="expression:Expression" xmi:id="_iRdhYILREe2St5AkxY6RnQ" name="newForm14" content="9e1c603c-8376-4e91-970a-134876a32463" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_iRdhYILREe2St5AkxY6RnQ" name="ReviewRequestForm" content="9e1c603c-8376-4e91-970a-134876a32463" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <filters xmi:type="process:ActorFilter" xmi:id="_cdJ14ILQEe2St5AkxY6RnQ" name="chosenEmployee" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_cdJ14YLQEe2St5AkxY6RnQ" definitionId="bonita-actorfilter-single-user" version="1.0.0">
@@ -901,7 +901,10 @@
         <defaultValue xmi:type="expression:Expression" xmi:id="_ZTL9AYMMEe2CmvkKrbkhnQ" name="init_onceRefused()" content="false" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean"/>
       </data>
       <data xmi:type="process:Data" xmi:id="_ew9XYIX4Ee2Nk_3d1FhpJQ" name="companyName" dataType="_7QAxAXQDEe2IDqAAB9b71w">
-        <defaultValue xmi:type="expression:Expression" xmi:id="_ew9XYYX4Ee2Nk_3d1FhpJQ" content=""/>
+        <defaultValue xmi:type="expression:Expression" xmi:id="_ew9XYYX4Ee2Nk_3d1FhpJQ" name="init_companyName()" content="import org.bonitasoft.engine.identity.UserNotFoundException&#xD;&#xA;try{&#xD;&#xA;&#x9;def processInitiator = apiAccessor.getIdentityAPI().getUser(apiAccessor.getProcessAPI()&#xD;&#xA;&#x9;&#x9;&#x9;.getProcessInstance(processInstanceId)&#xD;&#xA;&#x9;&#x9;&#x9;.getStartedBy())&#xD;&#xA;&#x9;&#x9;&#x9;return apiAccessor.getIdentityAPI().getUser(processInitiator.managerUserId).firstName + &quot; &quot; + apiAccessor.getIdentityAPI().getUser(processInitiator.managerUserId).lastName;&#xD;&#xA;}catch(UserNotFoundException e){&#xD;&#xA;&#x9;// Handle UserNotFoundException here&#xD;&#xA;&#x9;// Was the process started by the system (e.g.: a start event) ?&#xD;&#xA;&#x9;// Has the user who started the process instance been deleted ?&#xD;&#xA;}&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+          <referencedElements xmi:type="expression:Expression" xmi:id="_JmMNUIX5Ee2T2P5f0MKugw" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
+          <referencedElements xmi:type="expression:Expression" xmi:id="_JmMNUYX5Ee2T2P5f0MKugw" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+        </defaultValue>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_7QAw5HQDEe2IDqAAB9b71w">
         <targetForm xmi:type="expression:Expression" xmi:id="_lNDIcHWOEe2rNYROVFMO1w" name="NewEmploymentPackageForm" content="865992d9-17cb-4431-b08e-f92c352a98dd" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>

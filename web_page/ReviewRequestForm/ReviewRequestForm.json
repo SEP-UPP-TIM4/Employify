@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.3",
-  "id" : "newForm19",
-  "name" : "newForm19",
-  "lastUpdate" : 1671833334744,
+  "id" : "ReviewRequestForm",
+  "name" : "ReviewRequestForm",
+  "lastUpdate" : 1672154511805,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "f6813311-72d0-48db-85e8-ec89462067fd",
+        "reference" : "41fea608-3c57-4e0b-ab98-ce329d2d8cac",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -50,7 +50,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "5ed463ee-27a4-41d5-8533-5288ca43ba99",
+              "reference" : "82d337c5-1674-4d14-85cc-e45098ab1705",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -98,10 +98,50 @@
                   "value" : 12
                 }
               },
-              "reference" : "4d527221-6e7a-414c-a87d-54c45df41366",
+              "reference" : "8fd62363-ab13-4a5f-9eb8-2d97980c3c2a",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "Company: {{companyName.value}}"
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 2"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "center"
+                }
+              },
+              "reference" : "c28faa4e-63a8-4a8c-bc44-08c45e3dcff6",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
             }
           ]
         ]
@@ -114,7 +154,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "cbf82987-1e3f-4a12-b893-e0a3fc88733c",
+        "reference" : "05618e1f-0796-406b-8253-56f4ce9c1dc8",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -123,7 +163,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "d5935a27-f7c4-44d6-bdc7-de6b8ae37215",
+          "reference" : "c7cefaeb-263d-4b9e-8d99-8bff9e47bb2b",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -162,7 +202,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "69cb39e1-41d6-4356-ad54-ad00f27b4b4a",
+                "reference" : "db329c12-e591-4351-a5e7-5f18ec32e0cd",
                 "hasValidationError" : false,
                 "id" : "pbTitle",
                 "description" : ""
@@ -194,7 +234,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "0f6cf4d5-97cd-42f8-9131-2f51d9939931",
+                "reference" : "0afb530c-5ac3-4f55-9d4e-5f0f0c0d324c",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -278,7 +318,7 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "e182e188-ac9a-4d85-bb98-c9a810397139",
+                      "reference" : "c2200639-a8ee-4ce0-8ad4-a2b333699b3a",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -364,7 +404,7 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "2bafef4e-562e-4a79-a3c5-5196b94e9ae4",
+                      "reference" : "270f1b23-8578-48ba-9cd9-6b6b506e2603",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -405,7 +445,7 @@
                           "value" : 12
                         }
                       },
-                      "reference" : "74c701cc-29ea-403a-8e35-d7649c9799ca",
+                      "reference" : "9ea4a723-3b42-49c2-abc1-eb8ad696b68d",
                       "hasValidationError" : false,
                       "id" : "pbTitle",
                       "description" : ""
@@ -438,7 +478,7 @@
                           "value" : 12
                         }
                       },
-                      "reference" : "31e13c1b-4fff-4837-8746-a4392ac8548b",
+                      "reference" : "4cf0f021-8957-4a50-831c-062058cb25df",
                       "hasValidationError" : false,
                       "id" : "pbContainer",
                       "rows" : [
@@ -522,7 +562,7 @@
                                 "value" : 1
                               }
                             },
-                            "reference" : "6fccdfb1-0ca7-4800-a209-953ef30969cd",
+                            "reference" : "2731573c-168a-48e2-add3-e9d437180f6f",
                             "hasValidationError" : false,
                             "id" : "pbInput",
                             "description" : ""
@@ -608,7 +648,7 @@
                                 "value" : 1
                               }
                             },
-                            "reference" : "4ae5c4b2-1eca-4f5e-a510-e43fb093d41e",
+                            "reference" : "a4ccc64c-e4a3-4ad1-8d13-a1d4c16e6928",
                             "hasValidationError" : false,
                             "id" : "pbInput",
                             "description" : ""
@@ -694,7 +734,7 @@
                                 "value" : 1
                               }
                             },
-                            "reference" : "b6943e98-180e-4368-9fc1-b70d33c4945b",
+                            "reference" : "2762835c-c225-4cd9-8067-afe9d1cba71e",
                             "hasValidationError" : false,
                             "id" : "pbInput",
                             "description" : ""
@@ -704,92 +744,6 @@
                     }
                   ]
                 ]
-              }
-            ],
-            [
-              {
-                "type" : "component",
-                "dimension" : {
-                  "md" : 12,
-                  "sm" : 12,
-                  "xs" : 12,
-                  "lg" : 12
-                },
-                "propertyValues" : {
-                  "labelHidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "hidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "labelPosition" : {
-                    "type" : "constant",
-                    "value" : "top"
-                  },
-                  "cssClasses" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "labelWidth" : {
-                    "type" : "constant",
-                    "value" : 1
-                  },
-                  "readOnly" : {
-                    "type" : "constant",
-                    "value" : true
-                  },
-                  "label" : {
-                    "type" : "interpolation",
-                    "value" : "Available Employees Input"
-                  },
-                  "placeholder" : {
-                    "type" : "constant"
-                  },
-                  "type" : {
-                    "type" : "constant",
-                    "value" : "text"
-                  },
-                  "dimension" : {
-                    "type" : "constant",
-                    "value" : 12
-                  },
-                  "value" : {
-                    "type" : "variable",
-                    "value" : "availableEmployees.value"
-                  },
-                  "required" : {
-                    "type" : "constant",
-                    "value" : true
-                  },
-                  "allowHTML" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "minLength" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "maxLength" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "min" : {
-                    "type" : "constant"
-                  },
-                  "max" : {
-                    "type" : "constant"
-                  },
-                  "step" : {
-                    "type" : "constant",
-                    "value" : 1
-                  }
-                },
-                "reference" : "e35bc76e-9613-4b88-a592-3b89fd68d9ec",
-                "hasValidationError" : false,
-                "id" : "pbInput",
-                "description" : ""
               }
             ],
             [
@@ -820,7 +774,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Chief Approved Decrease Input"
+                    "value" : "Enough Employees"
                   },
                   "dimension" : {
                     "type" : "constant",
@@ -828,7 +782,7 @@
                   },
                   "value" : {
                     "type" : "variable",
-                    "value" : "formInput.chiefApprovedDecreaseInput"
+                    "value" : "formInput.enoughEmployeesInput"
                   },
                   "required" : {
                     "type" : "constant",
@@ -839,9 +793,96 @@
                     "value" : false
                   }
                 },
-                "reference" : "98146df4-7431-4a05-bc90-a51cfa085568",
+                "reference" : "01e8d0f4-2e64-406a-9aae-31845cbed9a9",
                 "hasValidationError" : false,
                 "id" : "pbCheckbox",
+                "description" : ""
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "md" : 12,
+                  "sm" : 12,
+                  "xs" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "hidden" : {
+                    "type" : "expression",
+                    "value" : "formInput.enoughEmployeesInput"
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 1
+                  },
+                  "readOnly" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "Available Employees Input"
+                  },
+                  "placeholder" : {
+                    "type" : "constant"
+                  },
+                  "type" : {
+                    "type" : "constant",
+                    "value" : "number"
+                  },
+                  "dimension" : {
+                    "type" : "constant",
+                    "value" : 12
+                  },
+                  "value" : {
+                    "type" : "variable",
+                    "value" : "formInput.availableEmployeesInput"
+                  },
+                  "required" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "minLength" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "maxLength" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "min" : {
+                    "type" : "constant",
+                    "value" : 0
+                  },
+                  "max" : {
+                    "type" : "constant"
+                  },
+                  "step" : {
+                    "type" : "constant",
+                    "value" : 1
+                  }
+                },
+                "reference" : "90c6f47c-74a7-4333-83f2-21f51b656222",
+                "hasValidationError" : false,
+                "id" : "pbInput",
                 "description" : ""
               }
             ],
@@ -920,7 +961,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "fd7e8611-e665-46d4-867e-240511b6d425",
+                "reference" : "f93e9d59-1a36-4187-bb58-8d692ce687e2",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -972,7 +1013,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "9a065b3b-0ab7-46a0-a06f-5469a80d1595",
+                "reference" : "993e1cc0-6153-4629-af3b-fd06a439b3a0",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -985,16 +1026,16 @@
   ],
   "assets" : [
     {
-      "id" : "ed0492a5-6bd7-47b6-88ed-b8e9e175943c",
-      "name" : "localization.json",
-      "type" : "json",
+      "id" : "71f140ee-ac7a-470a-ba12-230ec87e7ab6",
+      "name" : "style.css",
+      "type" : "css",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "ca6a8d82-5b6b-48ec-ab39-cde45646e753",
-      "name" : "style.css",
-      "type" : "css",
+      "id" : "dd50b973-3e93-4da4-8955-7befc2281be2",
+      "name" : "localization.json",
+      "type" : "json",
       "order" : 0,
       "external" : false
     }
@@ -1013,7 +1054,7 @@
       "value" : [
         "{\r",
         "  \"availableEmployeesInput\" : 0,\r",
-        "  \"chiefApprovedDecreaseInput\" : false\r",
+        "  \"enoughEmployeesInput\" : false\r",
         "}"
       ],
       "exposed" : false
@@ -1066,8 +1107,8 @@
         "\t\t\t\teducation: it.education !== undefined ? it.education : null",
         "\t\t\t}))",
         "\t\t},",
-        "\t\tavailableEmployeesInput: $data.availableEmployees.value,",
-        "\t\tchiefApprovedDecreaseInput: $data.formInput.chiefApprovedDecreaseInput",
+        "\t\tavailableEmployeesInput: $data.formInput.availableEmployeesInput,",
+        "\t\tenoughEmployeesInput: $data.formInput.enoughEmployeesInput",
         "\t}",
         "}"
       ],
@@ -1094,16 +1135,16 @@
       ],
       "exposed" : false
     },
-    "availableEmployees" : {
+    "companyName" : {
       "type" : "url",
       "value" : [
-        "../API/bpm/caseVariable/{{task.caseId}}/availableEmployees"
+        "../API/bpm/caseVariable/{{task.caseId}}/companyName"
       ],
       "exposed" : false
     }
   },
   "hasValidationError" : false,
-  "uuid" : "984c2145-5221-4303-bd80-a8448afdb963",
+  "uuid" : "9e1c603c-8376-4e91-970a-134876a32463",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }
