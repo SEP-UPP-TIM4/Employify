@@ -72,7 +72,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_aM9BnnPtEe2MJvlrpy3Ydg" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_aM9Bn3PtEe2MJvlrpy3Ydg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_aM9BoHPtEe2MJvlrpy3Ydg">
-            <targetForm xmi:type="expression:Expression" xmi:id="_Bp1hoIJSEe27wcIM8rivyQ" name="newForm9" content="6e5f6e35-b05d-4991-9dc3-c90ffd660b76" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_Bp1hoIJSEe27wcIM8rivyQ" name="SelectReviewerForCompanyRegForm" content="6e5f6e35-b05d-4991-9dc3-c90ffd660b76" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <filters xmi:type="process:ActorFilter" xmi:id="_0qv30IILEe2YHO9Hw_vfzg" name="bussnessChief" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_0qv30YILEe2YHO9Hw_vfzg" definitionId="bonita-actorfilter-single-user" version="1.0.0">
@@ -236,7 +236,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_cr0B-HPzEe2MJvlrpy3Ydg" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_cr0B93PzEe2MJvlrpy3Ydg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <BoundaryIntermediateEvents xmi:type="process:BoundaryTimerEvent" xmi:id="_v7eC0HP1Ee2MJvlrpy3Ydg" name="3 days" outgoing="_4f7-QHP1Ee2MJvlrpy3Ydg">
-            <condition xmi:type="expression:Expression" xmi:id="_wgFLwHP1Ee2MJvlrpy3Ydg" name="3 Days 00:00:00" content="259200000L" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long"/>
+            <condition xmi:type="expression:Expression" xmi:id="_wgFLwHP1Ee2MJvlrpy3Ydg" name="00:00:20" content="20000L" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long"/>
           </BoundaryIntermediateEvents>
           <formMapping xmi:type="process:FormMapping" xmi:id="_cr0B-nPzEe2MJvlrpy3Ydg">
             <targetForm xmi:type="expression:Expression" xmi:id="_-YWMQIIQEe2YHO9Hw_vfzg" name="ReviewCompanyReqistrationRequestForm" content="01d8e16f-6658-4b6b-9164-ba9e482eb799" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -766,10 +766,10 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_Q8a7R3P2Ee2MJvlrpy3Ydg" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_Q8a7SHP2Ee2MJvlrpy3Ydg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <BoundaryIntermediateEvents xmi:type="process:BoundaryTimerEvent" xmi:id="_Q8a7SXP2Ee2MJvlrpy3Ydg" name="1 day" outgoing="_CpvIYHVtEe2fxqd-qC8K7w">
-            <condition xmi:type="expression:Expression" xmi:id="_Q8a7SnP2Ee2MJvlrpy3Ydg" name="1 Days 00:00:00" content="86400000L" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long"/>
+            <condition xmi:type="expression:Expression" xmi:id="_Q8a7SnP2Ee2MJvlrpy3Ydg" name="00:00:10" content="10000L" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long"/>
           </BoundaryIntermediateEvents>
           <formMapping xmi:type="process:FormMapping" xmi:id="_Q8a7S3P2Ee2MJvlrpy3Ydg">
-            <targetForm xmi:type="expression:Expression" xmi:id="_iUW6kIXVEe2AtPulPoX1sg" name="newForm7" content="fc80e82f-b9ea-47a7-a261-a67a503ee4ee" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_iUW6kIXVEe2AtPulPoX1sg" name="ShortenedReviewForm" content="fc80e82f-b9ea-47a7-a261-a67a503ee4ee" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <filters xmi:type="process:ActorFilter" xmi:id="_2ZiyAHWAEe2F-ZuF-QIUGw" name="chosenReviewer" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_2ZiyAXWAEe2F-ZuF-QIUGw" definitionId="bonita-actorfilter-single-user" version="1.0.0">
@@ -1313,7 +1313,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_Wkt18XP1Ee2MJvlrpy3Ydg" x="-9" y="-7"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_WktO43P1Ee2MJvlrpy3Ydg" fontName="Segoe UI"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_WktO5HP1Ee2MJvlrpy3Ydg" points="[0, -9, -406, -113]$[406, -9, 0, -113]$[406, 83, 0, -21]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_WktO5HP1Ee2MJvlrpy3Ydg" points="[0, -9, -406, -141]$[406, -9, 0, -141]$[406, 111, 0, -21]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_WkudAHP1Ee2MJvlrpy3Ydg" id="(1.0,0.6976744186046512)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_nwp9gHP1Ee2MJvlrpy3Ydg" type="4001" element="_nwnhQHP1Ee2MJvlrpy3Ydg" source="_F2YQYHP1Ee2MJvlrpy3Ydg" target="_eCBdQHVvEe2E04xJMUznyA" roundedBendpointsRadius="10" routing="Rectilinear">
@@ -1379,7 +1379,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_H2MURHVvEe2E04xJMUznyA" y="-10"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_H2MUQXVvEe2E04xJMUznyA" fontName="Segoe UI"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_H2MUQnVvEe2E04xJMUznyA" points="[-51, -28, 96, 286]$[-51, -151, 96, 163]$[-169, -151, -22, 163]$[-169, -312, -22, 2]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_H2MUQnVvEe2E04xJMUznyA" points="[-51, -28, 96, 286]$[-51, -272, 96, 42]$[-169, -272, -22, 42]$[-169, -312, -22, 2]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_H2OJcHVvEe2E04xJMUznyA" id="(1.0,0.56)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_H2OJcXVvEe2E04xJMUznyA" id="(0.8267716535433071,0.967741935483871)"/>
     </edges>
