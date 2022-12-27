@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.3",
-  "id" : "newForm22",
-  "name" : "newForm22",
-  "lastUpdate" : 1671912930735,
+  "id" : "ReviewCvAndCoverLetterForm",
+  "name" : "ReviewCvAndCoverLetterForm",
+  "lastUpdate" : 1672147696392,
   "rows" : [
     [
       {
@@ -103,6 +103,46 @@
               "id" : "pbText",
               "description" : ""
             }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "Candidate name: {{candidateFullName.value}}"
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 2"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "center"
+                }
+              },
+              "reference" : "7298f288-661f-4121-a067-92aa34c7d0e2",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            }
           ]
         ]
       }
@@ -181,7 +221,7 @@
                         },
                         "text" : {
                           "type" : "interpolation",
-                          "value" : "Candidate C V"
+                          "value" : "Candidate CV"
                         },
                         "alignment" : {
                           "type" : "constant",
@@ -190,6 +230,10 @@
                         "dimension" : {
                           "type" : "constant",
                           "value" : 12
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
                         }
                       },
                       "reference" : "4d16d88d-e398-4b23-9481-34cc2c378f37",
@@ -299,7 +343,7 @@
                         },
                         "text" : {
                           "type" : "interpolation",
-                          "value" : "Candidate Recommendation Letter"
+                          "value" : "Candidate Cover letter"
                         },
                         "alignment" : {
                           "type" : "constant",
@@ -308,6 +352,10 @@
                         "dimension" : {
                           "type" : "constant",
                           "value" : 12
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
                         }
                       },
                       "reference" : "98e3fb56-b957-48a7-83a3-c49bd5a04c50",
@@ -629,6 +677,13 @@
       "type" : "urlparameter",
       "value" : [
         "id"
+      ],
+      "exposed" : false
+    },
+    "candidateFullName" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/caseVariable/{{task.caseId}}/candidateFullName"
       ],
       "exposed" : false
     }

@@ -35,7 +35,7 @@
   ],
   "id" : "customEmployeeMaxPremiumSuccess",
   "name" : "employeeMaxPremiumSuccess",
-  "lastUpdate" : 1672093508620,
+  "lastUpdate" : 1672152887948,
   "template" : "@customEmployeeMaxPremiumSuccess.tpl.html",
   "controller" : "@customEmployeeMaxPremiumSuccess.ctrl.js",
   "custom" : true,

@@ -134,6 +134,8 @@ function ($scope, $location, $http) {
             }
             
             //console.log(numberOneEmployee);
+            if(!numberOneEmployee)
+                return
             
                     doRequestRewritten1('GET', '../API/identity/user/' + numberOneEmployee).then(function() {
         

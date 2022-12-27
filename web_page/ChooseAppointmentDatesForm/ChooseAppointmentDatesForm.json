@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.3",
-  "id" : "newForm30",
-  "name" : "newForm30",
-  "lastUpdate" : 1671995328178,
+  "id" : "ChooseAppointmentDatesForm",
+  "name" : "ChooseAppointmentDatesForm",
+  "lastUpdate" : 1672147550600,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "75cd774b-0ace-4721-95a6-378414fc62d5",
+        "reference" : "ac9351f4-ec00-4a76-bcf3-d7a1a0661e2c",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -50,7 +50,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "37077a54-ba2f-45a8-afee-573a70a2eb81",
+              "reference" : "74d903a8-cefd-45d9-8a13-aaae99791df1",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -98,10 +98,50 @@
                   "value" : 12
                 }
               },
-              "reference" : "72656608-cab3-453a-89c8-42dde33277b4",
+              "reference" : "724d8f1b-a251-435a-95df-a085a83526cf",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "Candidate name: {{candidateFullName.value}}"
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 2"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "center"
+                }
+              },
+              "reference" : "8639e807-bb55-44c8-8550-f854c10c1bc2",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
             }
           ]
         ]
@@ -114,7 +154,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "b0f5c031-f944-446a-8f58-acb5400b9723",
+        "reference" : "cb4460aa-b718-40f6-b6ac-ada3d5fd2892",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -123,7 +163,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "711ed8b7-8a19-471b-a049-d0a3f1444dd5",
+          "reference" : "26a4be78-1c89-4da4-9533-f504ffa33ea2",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -151,11 +191,11 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "Candidate name: {{candidateFullName.value}}"
+                    "value" : "Choose 3 interview appointments"
                   },
                   "alignment" : {
                     "type" : "constant",
-                    "value" : "center"
+                    "value" : "left"
                   },
                   "dimension" : {
                     "type" : "constant",
@@ -166,7 +206,7 @@
                     "value" : false
                   }
                 },
-                "reference" : "61829c1a-23ad-4dfa-8515-beed74f21116",
+                "reference" : "a461e0ea-0caf-4604-9933-618828618c4c",
                 "hasValidationError" : false,
                 "id" : "pbTitle",
                 "description" : ""
@@ -183,7 +223,8 @@
                 },
                 "propertyValues" : {
                   "repeatedCollection" : {
-                    "type" : "variable"
+                    "type" : "variable",
+                    "value" : "formInput.interviewAppointmentsInput"
                   },
                   "hidden" : {
                     "type" : "constant",
@@ -198,7 +239,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "279633ac-d50b-489b-a71f-e23c999ca499",
+                "reference" : "c60b9b7c-bc12-4d42-8f2f-b2baeb0d6799",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -212,17 +253,21 @@
                         "lg" : 12
                       },
                       "propertyValues" : {
-                        "labelHidden" : {
+                        "showNow" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
                         },
                         "hidden" : {
                           "type" : "constant",
                           "value" : false
                         },
-                        "labelPosition" : {
+                        "inlineInput" : {
                           "type" : "constant",
-                          "value" : "top"
+                          "value" : true
+                        },
+                        "dateFormat" : {
+                          "type" : "constant",
+                          "value" : "MM/dd/yyyy"
                         },
                         "cssClasses" : {
                           "type" : "constant",
@@ -230,7 +275,7 @@
                         },
                         "labelWidth" : {
                           "type" : "constant",
-                          "value" : 1
+                          "value" : 0
                         },
                         "readOnly" : {
                           "type" : "constant",
@@ -238,14 +283,46 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Evaluation"
-                        },
-                        "placeholder" : {
-                          "type" : "constant"
+                          "value" : ""
                         },
                         "type" : {
+                          "type" : "constant"
+                        },
+                        "required" : {
                           "type" : "constant",
-                          "value" : "text"
+                          "value" : true
+                        },
+                        "todayLabel" : {
+                          "type" : "constant",
+                          "value" : "Today"
+                        },
+                        "timePlaceholder" : {
+                          "type" : "constant",
+                          "value" : "Enter a time (h:mm:ss a)"
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "showToday" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "timeFormat" : {
+                          "type" : "constant",
+                          "value" : "h:mm:ss a"
+                        },
+                        "placeholder" : {
+                          "type" : "constant",
+                          "value" : "Enter a date (mm/dd/yyyy)"
+                        },
+                        "nowLabel" : {
+                          "type" : "constant",
+                          "value" : "Now"
                         },
                         "dimension" : {
                           "type" : "constant",
@@ -253,20 +330,22 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput.candidateEvaluationInput.evaluation"
+                          "value" : "$item"
                         },
-                        "required" : {
+                        "withTimeZone" : {
                           "type" : "constant",
-                          "value" : true
+                          "value" : false
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
                         }
                       },
-                      "reference" : "2fa67c4d-253d-4ba1-9bda-684a87d4da0d",
+                      "reference" : "3e5a3b5f-04be-4d0a-b7b8-a870da0aa217",
                       "hasValidationError" : false,
-                      "id" : "pbInput",
+                      "id" : "pbDateTimePicker",
                       "description" : ""
-                    }
-                  ],
-                  [
+                    },
                     {
                       "type" : "component",
                       "dimension" : {
@@ -276,170 +355,175 @@
                         "lg" : 12
                       },
                       "propertyValues" : {
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
+                        "removeItem" : {
+                          "type" : "variable",
+                          "value" : "$item"
                         },
                         "hidden" : {
                           "type" : "constant",
                           "value" : false
                         },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
                         "cssClasses" : {
                           "type" : "constant",
                           "value" : ""
                         },
-                        "labelWidth" : {
+                        "buttonStyle" : {
                           "type" : "constant",
-                          "value" : 1
-                        },
-                        "readOnly" : {
-                          "type" : "constant",
-                          "value" : false
+                          "value" : "danger"
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Competence"
+                          "value" : "<span class=\"glyphicon glyphicon-remove\"></span>"
                         },
-                        "placeholder" : {
-                          "type" : "constant"
+                        "dataToSend" : {
+                          "type" : "expression"
                         },
-                        "type" : {
-                          "type" : "constant",
-                          "value" : "number"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "formInput.candidateEvaluationInput.competence"
-                        },
-                        "required" : {
+                        "allowHTML" : {
                           "type" : "constant",
                           "value" : true
-                        }
-                      },
-                      "reference" : "a179aba3-6464-45f7-8b96-99cb54c822f6",
-                      "hasValidationError" : false,
-                      "id" : "pbInput",
-                      "description" : ""
-                    }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "md" : 12,
-                        "sm" : 12,
-                        "xs" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
+                        },
                         "labelHidden" : {
                           "type" : "constant",
                           "value" : false
                         },
-                        "hidden" : {
+                        "collectionPosition" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : "Item"
                         },
-                        "labelPosition" : {
+                        "targetUrlOnSuccess" : {
+                          "type" : "interpolation"
+                        },
+                        "action" : {
                           "type" : "constant",
-                          "value" : "top"
+                          "value" : "Remove from collection"
                         },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 1
-                        },
-                        "readOnly" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Impression"
-                        },
-                        "placeholder" : {
-                          "type" : "constant"
-                        },
-                        "type" : {
-                          "type" : "constant",
-                          "value" : "text"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        },
-                        "value" : {
+                        "collectionToModify" : {
                           "type" : "variable",
-                          "value" : "formInput.candidateEvaluationInput.impression"
+                          "value" : "$collection"
                         },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : true
-                        }
-                      },
-                      "reference" : "6fd9b16f-81a2-4ecf-9f12-0dc5910b22ed",
-                      "hasValidationError" : false,
-                      "id" : "pbInput",
-                      "description" : ""
-                    }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "md" : 12,
-                        "sm" : 12,
-                        "xs" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
+                        "valueToAdd" : {
+                          "type" : "expression"
                         },
                         "disabled" : {
                           "type" : "constant",
                           "value" : false
                         },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Recommendation"
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "right"
                         },
                         "dimension" : {
                           "type" : "constant",
                           "value" : 12
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "formInput.candidateEvaluationInput.recommendation"
                         }
                       },
-                      "reference" : "93e0e995-f31d-4e0c-b235-3cbdfcb18177",
+                      "reference" : "e446ec8d-f18a-46d2-9241-9f69d3d2f758",
                       "hasValidationError" : false,
-                      "id" : "pbCheckbox",
+                      "id" : "pbButton",
                       "description" : ""
                     }
                   ]
                 ]
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "md" : 12,
+                  "sm" : 12,
+                  "xs" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "removeItem" : {
+                    "type" : "variable"
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "buttonStyle" : {
+                    "type" : "constant",
+                    "value" : "primary"
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "<span class=\"glyphicon glyphicon-plus\"></span>"
+                  },
+                  "dataToSend" : {
+                    "type" : "expression"
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "collectionPosition" : {
+                    "type" : "constant"
+                  },
+                  "targetUrlOnSuccess" : {
+                    "type" : "interpolation"
+                  },
+                  "action" : {
+                    "type" : "constant",
+                    "value" : "Add to collection"
+                  },
+                  "collectionToModify" : {
+                    "type" : "variable",
+                    "value" : "formInput.interviewAppointmentsInput"
+                  },
+                  "valueToAdd" : {
+                    "type" : "expression"
+                  },
+                  "disabled" : {
+                    "type" : "expression",
+                    "value" : "numberOfAppointments"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "left"
+                  },
+                  "dimension" : {
+                    "type" : "constant",
+                    "value" : 12
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable"
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable"
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "dataFromError" : {
+                    "type" : "variable"
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
+                  }
+                },
+                "reference" : "04206f45-c5cf-4a4f-9885-949c1e8b9600",
+                "hasValidationError" : false,
+                "id" : "pbButton",
+                "description" : ""
               }
             ],
             [
@@ -517,7 +601,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "a90f5b9e-0982-42b8-ac42-cc77a62648cb",
+                "reference" : "0b81417a-2bad-442d-8b88-5953dc696902",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -569,7 +653,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "4176e2d0-791c-4134-bc63-a306152b5750",
+                "reference" : "b860a77e-0cbf-42d5-bc08-aaebcb732104",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -582,14 +666,14 @@
   ],
   "assets" : [
     {
-      "id" : "b05a23b3-9945-4283-ad49-ac08c162287a",
+      "id" : "58111d48-0b74-4f39-b00a-de692b2ae38d",
       "name" : "localization.json",
       "type" : "json",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "a87ff5d8-f2af-4143-a4b9-65b46f65108c",
+      "id" : "cedc11ae-152f-4924-aa41-32f3de6fa7c4",
       "name" : "style.css",
       "type" : "css",
       "order" : 0,
@@ -609,12 +693,7 @@
       "type" : "json",
       "value" : [
         "{\r",
-        "  \"candidateEvaluationInput\" : {\r",
-        "    \"evaluation\" : \"\",\r",
-        "    \"competence\" : 0,\r",
-        "    \"impression\" : \"\",\r",
-        "    \"recommendation\" : false\r",
-        "  }\r",
+        "  \"interviewAppointmentsInput\" : [ ]\r",
         "}"
       ],
       "exposed" : false
@@ -637,8 +716,10 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "return {",
-        "\tcandidateEvaluationInput: $data.formInput.candidateEvaluationInput",
+        "if($data.formInput.interviewAppointmentsInput.length == 3){",
+        "    return {",
+        "\t    interviewAppointmentsInput: $data.formInput.interviewAppointmentsInput  ",
+        "    }",
         "}"
       ],
       "exposed" : false
@@ -657,6 +738,13 @@
       ],
       "exposed" : false
     },
+    "numberOfAppointments" : {
+      "type" : "expression",
+      "value" : [
+        "return $data.formInput.interviewAppointmentsInput.length == 3;"
+      ],
+      "exposed" : false
+    },
     "candidateFullName" : {
       "type" : "url",
       "value" : [
@@ -666,7 +754,7 @@
     }
   },
   "hasValidationError" : false,
-  "uuid" : "e3e36591-6451-401b-b2e3-375fca523af7",
+  "uuid" : "c3672b53-dc48-4c98-9af5-d0f0802c5535",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }

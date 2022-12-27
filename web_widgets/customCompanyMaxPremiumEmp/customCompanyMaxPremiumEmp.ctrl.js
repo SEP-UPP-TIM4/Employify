@@ -19,7 +19,7 @@ function ($scope, $location, $http) {
     
     // add a new variable in AngularJS scope. It'll be usable in the template directly with {{ backgroudColor }} 
     $scope.backgroudColor = white;
-    $scope.shownText = "Employee which led most successful premium employment proccesses: "
+    $scope.shownText = "Company that has most premium employees: "
     
     // define a function to be used in template with ctrl.toggleBackgroundColor()
     this.toggleBackgroundColor = function() {
@@ -75,13 +75,13 @@ function ($scope, $location, $http) {
         if(tempValue.value != null) {
             //console.log(typeof tempValue.value);
             if (employeeMap.hasOwnProperty(tempValue.value)) employeeMap[tempValue.value] ++;
-        else employeeMap[tempValue.value] = 1;
+            else employeeMap[tempValue.value] = 1;
         
-        var numberOneEmployee = tempValue.value;
-    var mostEmployments = employeeMap[tempValue.value];
+            var numberOneEmployee = tempValue.value;
+            var mostEmployments = employeeMap[tempValue.value];
         }
         
-    }
+        }
 
     
            
@@ -94,6 +94,8 @@ function ($scope, $location, $http) {
             }
         
              //console.log(numberOneEmployee);
+             if(!numberOneEmployee)
+                return
             
                     doRequestRewritten1('GET', '../API/identity/user/' + numberOneEmployee).then(function() {
         

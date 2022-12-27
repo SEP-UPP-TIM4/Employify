@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.3",
-  "id" : "newForm10",
-  "name" : "newForm10",
-  "lastUpdate" : 1671803885526,
+  "id" : "ChooseRequestHandlerForm",
+  "name" : "ChooseRequestHandlerForm",
+  "lastUpdate" : 1672147309064,
   "rows" : [
     [
       {
@@ -131,6 +131,46 @@
               {
                 "type" : "component",
                 "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "text" : {
+                    "type" : "interpolation",
+                    "value" : "Candidate name: {{candidateFullName.value}}"
+                  },
+                  "level" : {
+                    "type" : "constant",
+                    "value" : "Level 2"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "center"
+                  }
+                },
+                "reference" : "fbd513c4-d12e-4ee7-947b-7de68c60757b",
+                "hasValidationError" : false,
+                "id" : "pbTitle"
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
                   "md" : 12,
                   "sm" : 12,
                   "xs" : 12,
@@ -163,7 +203,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Chosen Premium Employee Id Input"
+                    "value" : "Choose employee to handle request"
                   },
                   "labelPosition" : {
                     "type" : "constant",
@@ -419,6 +459,13 @@
       "type" : "url",
       "value" : [
         "../API/identity/user?p=0&c=100&f=manager_id={{sessionInfo.user_id}}"
+      ],
+      "exposed" : false
+    },
+    "candidateFullName" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/caseVariable/{{task.caseId}}/candidateFullName"
       ],
       "exposed" : false
     }

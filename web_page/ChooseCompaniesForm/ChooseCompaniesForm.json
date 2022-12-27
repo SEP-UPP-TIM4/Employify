@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.3",
-  "id" : "newForm25",
-  "name" : "newForm25",
-  "lastUpdate" : 1671977143313,
+  "id" : "ChooseCompaniesForm",
+  "name" : "ChooseCompaniesForm",
+  "lastUpdate" : 1672147624760,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "ac9351f4-ec00-4a76-bcf3-d7a1a0661e2c",
+        "reference" : "c8170c81-1d09-4738-a19b-376d1ca1eb73",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -50,7 +50,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "74d903a8-cefd-45d9-8a13-aaae99791df1",
+              "reference" : "7370e0c6-93af-4360-93c7-bcf802b13546",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -98,10 +98,50 @@
                   "value" : 12
                 }
               },
-              "reference" : "724d8f1b-a251-435a-95df-a085a83526cf",
+              "reference" : "29d3edad-84aa-4fd0-a6cb-6164159a46ba",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "Candidate name: {{candidateFullName.value}}"
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 2"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "center"
+                }
+              },
+              "reference" : "f0d0ff83-d8f9-4d13-9b20-5b7660796427",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
             }
           ]
         ]
@@ -113,8 +153,17 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : { },
-        "reference" : "cb4460aa-b718-40f6-b6ac-ada3d5fd2892",
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "9bc8f6ac-0f7c-46b1-bad5-62112fef1807",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -123,7 +172,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "26a4be78-1c89-4da4-9533-f504ffa33ea2",
+          "reference" : "3c2ef806-d647-414e-ad02-c405ea8364b1",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -151,7 +200,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "Interview Appointments Input"
+                    "value" : "Select 3 companies"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -160,9 +209,13 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : false
                   }
                 },
-                "reference" : "a461e0ea-0caf-4604-9933-618828618c4c",
+                "reference" : "24c1b609-de97-485e-8ac7-0830f8a7d3ee",
                 "hasValidationError" : false,
                 "id" : "pbTitle",
                 "description" : ""
@@ -180,7 +233,7 @@
                 "propertyValues" : {
                   "repeatedCollection" : {
                     "type" : "variable",
-                    "value" : "formInput.interviewAppointmentsInput"
+                    "value" : "formInput.selectedCompaniesInput"
                   },
                   "hidden" : {
                     "type" : "constant",
@@ -195,7 +248,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "c60b9b7c-bc12-4d42-8f2f-b2baeb0d6799",
+                "reference" : "73c79d0f-8bd3-4a60-b6ee-9d24ea15a1db",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -209,98 +262,65 @@
                         "lg" : 12
                       },
                       "propertyValues" : {
-                        "showNow" : {
+                        "cssClasses" : {
                           "type" : "constant",
-                          "value" : true
+                          "value" : ""
                         },
                         "hidden" : {
                           "type" : "constant",
                           "value" : false
                         },
-                        "inlineInput" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "dateFormat" : {
-                          "type" : "constant",
-                          "value" : "MM/dd/yyyy"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 0
-                        },
-                        "readOnly" : {
+                        "disabled" : {
                           "type" : "constant",
                           "value" : false
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : ""
-                        },
-                        "type" : {
-                          "type" : "constant"
                         },
                         "required" : {
                           "type" : "constant",
                           "value" : true
                         },
-                        "todayLabel" : {
+                        "allowHTML" : {
                           "type" : "constant",
-                          "value" : "Today"
-                        },
-                        "timePlaceholder" : {
-                          "type" : "constant",
-                          "value" : "Enter a time (h:mm:ss a)"
+                          "value" : false
                         },
                         "labelHidden" : {
                           "type" : "constant",
                           "value" : true
                         },
-                        "showToday" : {
-                          "type" : "constant",
-                          "value" : true
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : ""
                         },
                         "labelPosition" : {
                           "type" : "constant",
                           "value" : "top"
                         },
-                        "timeFormat" : {
+                        "labelWidth" : {
                           "type" : "constant",
-                          "value" : "h:mm:ss a"
+                          "value" : 0
                         },
                         "placeholder" : {
-                          "type" : "constant",
-                          "value" : "Enter a date (mm/dd/yyyy)"
+                          "type" : "interpolation"
                         },
-                        "nowLabel" : {
-                          "type" : "constant",
-                          "value" : "Now"
+                        "availableValues" : {
+                          "type" : "expression",
+                          "value" : "companies"
                         },
-                        "dimension" : {
+                        "displayedKey" : {
                           "type" : "constant",
-                          "value" : 12
+                          "value" : "userName"
+                        },
+                        "returnedKey" : {
+                          "type" : "constant",
+                          "value" : "id"
                         },
                         "value" : {
                           "type" : "variable",
                           "value" : "$item"
-                        },
-                        "withTimeZone" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "allowHTML" : {
-                          "type" : "constant",
-                          "value" : false
                         }
                       },
-                      "reference" : "3e5a3b5f-04be-4d0a-b7b8-a870da0aa217",
+                      "reference" : "769bf7e2-1a2a-4eda-9545-1d4247d1b193",
                       "hasValidationError" : false,
-                      "id" : "pbDateTimePicker",
-                      "description" : ""
+                      "id" : "pbSelect"
                     },
                     {
                       "type" : "component",
@@ -371,9 +391,33 @@
                         "dimension" : {
                           "type" : "constant",
                           "value" : 12
+                        },
+                        "assign" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "url" : {
+                          "type" : "interpolation"
+                        },
+                        "responseStatusCode" : {
+                          "type" : "variable"
+                        },
+                        "dataFromSuccess" : {
+                          "type" : "variable"
+                        },
+                        "closeOnSuccess" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "dataFromError" : {
+                          "type" : "variable"
+                        },
+                        "modalId" : {
+                          "type" : "constant",
+                          "value" : ""
                         }
                       },
-                      "reference" : "e446ec8d-f18a-46d2-9241-9f69d3d2f758",
+                      "reference" : "20e1a54b-ddd7-4b01-a3e3-c854b41eef5f",
                       "hasValidationError" : false,
                       "id" : "pbButton",
                       "description" : ""
@@ -434,14 +478,14 @@
                   },
                   "collectionToModify" : {
                     "type" : "variable",
-                    "value" : "formInput.interviewAppointmentsInput"
+                    "value" : "formInput.selectedCompaniesInput"
                   },
                   "valueToAdd" : {
                     "type" : "expression"
                   },
                   "disabled" : {
                     "type" : "expression",
-                    "value" : "numberOfAppointments"
+                    "value" : "enoughCompaniesSelected"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -476,7 +520,7 @@
                     "value" : ""
                   }
                 },
-                "reference" : "04206f45-c5cf-4a4f-9885-949c1e8b9600",
+                "reference" : "fcde4468-8196-4f18-bf82-a78aae708432",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -557,7 +601,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "0b81417a-2bad-442d-8b88-5953dc696902",
+                "reference" : "86c41f2c-7888-4f49-bd39-bab77eccae90",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -609,7 +653,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "b860a77e-0cbf-42d5-bc08-aaebcb732104",
+                "reference" : "45b2a0ba-89f1-4d88-9347-29f1f60d19cc",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -622,16 +666,16 @@
   ],
   "assets" : [
     {
-      "id" : "58111d48-0b74-4f39-b00a-de692b2ae38d",
-      "name" : "localization.json",
-      "type" : "json",
+      "id" : "36b8cc05-3da9-401c-a4b9-0823d5342d15",
+      "name" : "style.css",
+      "type" : "css",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "cedc11ae-152f-4924-aa41-32f3de6fa7c4",
-      "name" : "style.css",
-      "type" : "css",
+      "id" : "f1984177-001e-49bf-9a70-dc52f056dd05",
+      "name" : "localization.json",
+      "type" : "json",
       "order" : 0,
       "external" : false
     }
@@ -649,7 +693,7 @@
       "type" : "json",
       "value" : [
         "{\r",
-        "  \"interviewAppointmentsInput\" : [ ]\r",
+        "  \"selectedCompaniesInput\" : [ ]\r",
         "}"
       ],
       "exposed" : false
@@ -672,10 +716,10 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "if($data.formInput.interviewAppointmentsInput.length == 3){",
-        "    return {",
-        "\t    interviewAppointmentsInput: $data.formInput.interviewAppointmentsInput  ",
-        "    }",
+        "if(new Set($data.formInput.selectedCompaniesInput).size === 3){",
+        "return {",
+        "\tselectedCompaniesInput: $data.formInput.selectedCompaniesInput",
+        "}",
         "}"
       ],
       "exposed" : false
@@ -694,16 +738,30 @@
       ],
       "exposed" : false
     },
-    "numberOfAppointments" : {
+    "enoughCompaniesSelected" : {
       "type" : "expression",
       "value" : [
-        "return $data.formInput.interviewAppointmentsInput.length == 3;"
+        "return $data.formInput.selectedCompaniesInput.length === 3;"
+      ],
+      "exposed" : false
+    },
+    "companies" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/user?p=0&c=100&f=group_id=17"
+      ],
+      "exposed" : false
+    },
+    "candidateFullName" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/caseVariable/{{task.caseId}}/candidateFullName"
       ],
       "exposed" : false
     }
   },
   "hasValidationError" : false,
-  "uuid" : "c3672b53-dc48-4c98-9af5-d0f0802c5535",
+  "uuid" : "6db1f83f-dc7e-4c2c-b858-962156a6a374",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }

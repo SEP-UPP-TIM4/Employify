@@ -35,7 +35,7 @@
   ],
   "id" : "customCompanyMaxPremiumEmp",
   "name" : "companyMaxPremiumEmp",
-  "lastUpdate" : 1672095696183,
+  "lastUpdate" : 1672152842693,
   "template" : "@customCompanyMaxPremiumEmp.tpl.html",
   "controller" : "@customCompanyMaxPremiumEmp.ctrl.js",
   "custom" : true,

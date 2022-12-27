@@ -20,7 +20,7 @@ function ($scope, $location, $http) {
     
     // add a new variable in AngularJS scope. It'll be usable in the template directly with {{ backgroudColor }} 
     $scope.backgroudColor = white;
-    $scope.shownText = "Employee which led most successful premium employment proccesses: "
+    $scope.shownText = "City from which most premium employment requests came: "
     
     // define a function to be used in template with ctrl.toggleBackgroundColor()
     this.toggleBackgroundColor = function() {

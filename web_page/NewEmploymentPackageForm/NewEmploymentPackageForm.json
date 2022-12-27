@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "NewEmploymentPackageForm",
   "name" : "NewEmploymentPackageForm",
-  "lastUpdate" : 1670349137237,
+  "lastUpdate" : 1672153612487,
   "rows" : [
     [
       {
@@ -151,6 +151,28 @@
                         "required" : {
                           "type" : "constant",
                           "value" : true
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "min" : {
+                          "type" : "constant"
+                        },
+                        "max" : {
+                          "type" : "constant"
+                        },
+                        "step" : {
+                          "type" : "constant",
+                          "value" : 1
                         }
                       },
                       "reference" : "8fcef9c7-6521-4557-a8f9-da4984dc58fc",
@@ -215,6 +237,28 @@
                         "required" : {
                           "type" : "constant",
                           "value" : true
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "min" : {
+                          "type" : "constant"
+                        },
+                        "max" : {
+                          "type" : "constant"
+                        },
+                        "step" : {
+                          "type" : "constant",
+                          "value" : 1
                         }
                       },
                       "reference" : "40f13959-5faa-4077-b95d-98cd52287fe5",
@@ -351,6 +395,28 @@
                               "required" : {
                                 "type" : "constant",
                                 "value" : false
+                              },
+                              "allowHTML" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "minLength" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "maxLength" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "min" : {
+                                "type" : "constant"
+                              },
+                              "max" : {
+                                "type" : "constant"
+                              },
+                              "step" : {
+                                "type" : "constant",
+                                "value" : 1
                               }
                             },
                             "reference" : "3a4ea5b7-d8ad-4312-b056-11fa72354e5b",
@@ -415,6 +481,28 @@
                               "required" : {
                                 "type" : "constant",
                                 "value" : false
+                              },
+                              "allowHTML" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "minLength" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "maxLength" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "min" : {
+                                "type" : "constant"
+                              },
+                              "max" : {
+                                "type" : "constant"
+                              },
+                              "step" : {
+                                "type" : "constant",
+                                "value" : 1
                               }
                             },
                             "reference" : "d233393d-6e96-4d07-8e1a-8f88cb2510de",
@@ -479,6 +567,28 @@
                               "required" : {
                                 "type" : "constant",
                                 "value" : false
+                              },
+                              "allowHTML" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "minLength" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "maxLength" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "min" : {
+                                "type" : "constant"
+                              },
+                              "max" : {
+                                "type" : "constant"
+                              },
+                              "step" : {
+                                "type" : "constant",
+                                "value" : 1
                               }
                             },
                             "reference" : "a1e4d02d-86ac-4f21-84ec-9ad8386cb288",

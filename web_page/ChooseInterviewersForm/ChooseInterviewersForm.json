@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.3",
-  "id" : "newForm23",
-  "name" : "newForm23",
-  "lastUpdate" : 1671974568110,
+  "id" : "ChooseInterviewersForm",
+  "name" : "ChooseInterviewersForm",
+  "lastUpdate" : 1672152394723,
   "rows" : [
     [
       {
@@ -103,6 +103,46 @@
               "id" : "pbText",
               "description" : ""
             }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "Candidate name: {{candidateFullName.value}}"
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 2"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "center"
+                }
+              },
+              "reference" : "10c9fbd9-c523-4399-85c5-1873f24b5c5b",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            }
           ]
         ]
       }
@@ -163,7 +203,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Hr Interviewers"
+                    "value" : "Hr Interviewer"
                   },
                   "labelPosition" : {
                     "type" : "constant",
@@ -815,6 +855,13 @@
       "type" : "expression",
       "value" : [
         "return $data.formInput.projectInterviewerIdsInput.length === 2;"
+      ],
+      "exposed" : false
+    },
+    "candidateFullName" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/caseVariable/{{task.caseId}}/candidateFullName"
       ],
       "exposed" : false
     }

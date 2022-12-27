@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.3",
-  "id" : "newForm21",
-  "name" : "newForm21",
-  "lastUpdate" : 1671913554664,
+  "id" : "CvAndCoverLetterPersonaliz",
+  "name" : "CvAndCoverLetterPersonaliz",
+  "lastUpdate" : 1672147676391,
   "rows" : [
     [
       {
@@ -190,7 +190,7 @@
                         },
                         "text" : {
                           "type" : "interpolation",
-                          "value" : "Candidate C V"
+                          "value" : "CV"
                         },
                         "alignment" : {
                           "type" : "constant",
@@ -380,7 +380,7 @@
                         },
                         "text" : {
                           "type" : "interpolation",
-                          "value" : "Candidate Recommendation Letter"
+                          "value" : "Cover letter"
                         },
                         "alignment" : {
                           "type" : "constant",
@@ -389,6 +389,10 @@
                         "dimension" : {
                           "type" : "constant",
                           "value" : 12
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
                         }
                       },
                       "reference" : "00e6ed51-10b4-4e13-94eb-4907c2ba0450",

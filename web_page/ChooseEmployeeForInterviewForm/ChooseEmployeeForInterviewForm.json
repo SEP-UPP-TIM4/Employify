@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.3",
-  "id" : "newForm24",
-  "name" : "newForm24",
-  "lastUpdate" : 1671975567944,
+  "id" : "ChooseEmployeeForInterviewForm",
+  "name" : "ChooseEmployeeForInterviewForm",
+  "lastUpdate" : 1672150885757,
   "rows" : [
     [
       {
@@ -103,6 +103,46 @@
               "id" : "pbText",
               "description" : ""
             }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "Candidate name: {{candidateFullName.value}}"
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 2"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "center"
+                }
+              },
+              "reference" : "e96e9973-3f62-47eb-a4ed-5d13fd042c5f",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            }
           ]
         ]
       }
@@ -163,7 +203,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Premium Employee Id Input"
+                    "value" : "Choose employee fro interview"
                   },
                   "labelPosition" : {
                     "type" : "constant",
@@ -419,6 +459,13 @@
       "type" : "url",
       "value" : [
         "../API/identity/user?p=0&c=100&f=manager_id={{premiumChiefId.value}}"
+      ],
+      "exposed" : false
+    },
+    "candidateFullName" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/caseVariable/{{task.caseId}}/candidateFullName"
       ],
       "exposed" : false
     }
