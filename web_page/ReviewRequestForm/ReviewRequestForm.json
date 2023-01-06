@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "ReviewRequestForm",
   "name" : "ReviewRequestForm",
-  "lastUpdate" : 1672154511805,
+  "lastUpdate" : 1673020960827,
   "rows" : [
     [
       {
@@ -463,7 +463,7 @@
                       "propertyValues" : {
                         "repeatedCollection" : {
                           "type" : "variable",
-                          "value" : "employmentPackage_employmentItem"
+                          "value" : "employmentPackage.employmentItem"
                         },
                         "hidden" : {
                           "type" : "constant",
@@ -1059,13 +1059,6 @@
       ],
       "exposed" : false
     },
-    "employmentPackage_employmentItem" : {
-      "type" : "url",
-      "value" : [
-        "{{employmentPackage|lazyRef:'employmentItem'}}"
-      ],
-      "exposed" : false
-    },
     "employmentPackage" : {
       "type" : "url",
       "value" : [
@@ -1091,10 +1084,9 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "if( $data.employmentPackage && $data.employmentPackage_offer && $data.employmentPackage_employmentItem ){",
+        "if( $data.employmentPackage ){",
         "\t//attach lazy references variables to parent variables",
-        "\t$data.employmentPackage.offer = $data.employmentPackage_offer;",
-        "\t$data.employmentPackage.employmentItem = $data.employmentPackage_employmentItem;",
+        "",
         "\treturn {",
         "\t\t//map employmentPackage variable to expected task contract input",
         "\t\temploymentPackageInput: {",

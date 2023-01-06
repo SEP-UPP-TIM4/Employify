@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "CreateOfferForCompanyForm",
   "name" : "CreateOfferForCompanyForm",
-  "lastUpdate" : 1672154964486,
+  "lastUpdate" : 1673021881313,
   "rows" : [
     [
       {
@@ -467,7 +467,7 @@
                       "propertyValues" : {
                         "repeatedCollection" : {
                           "type" : "variable",
-                          "value" : "employmentPackage_employmentItem"
+                          "value" : "employmentPackage.employmentItem"
                         },
                         "hidden" : {
                           "type" : "constant",
@@ -873,7 +873,7 @@
                               },
                               "value" : {
                                 "type" : "variable",
-                                "value" : "employmentPackage_offer.price"
+                                "value" : "employmentPackage.offer.price"
                               },
                               "required" : {
                                 "type" : "constant",
@@ -962,7 +962,7 @@
                             "propertyValues" : {
                               "repeatedCollection" : {
                                 "type" : "variable",
-                                "value" : "employmentPackage_offer.candidateIds"
+                                "value" : "employmentPackage.offer.candidateIds"
                               },
                               "hidden" : {
                                 "type" : "constant",
@@ -1120,6 +1120,30 @@
                                     "dimension" : {
                                       "type" : "constant",
                                       "value" : 12
+                                    },
+                                    "assign" : {
+                                      "type" : "constant",
+                                      "value" : false
+                                    },
+                                    "url" : {
+                                      "type" : "interpolation"
+                                    },
+                                    "responseStatusCode" : {
+                                      "type" : "variable"
+                                    },
+                                    "dataFromSuccess" : {
+                                      "type" : "variable"
+                                    },
+                                    "closeOnSuccess" : {
+                                      "type" : "constant",
+                                      "value" : false
+                                    },
+                                    "dataFromError" : {
+                                      "type" : "variable"
+                                    },
+                                    "modalId" : {
+                                      "type" : "constant",
+                                      "value" : ""
                                     }
                                   },
                                   "reference" : "b438d0b3-d334-4401-8e21-6af554e7aaae",
@@ -1183,7 +1207,7 @@
                               },
                               "collectionToModify" : {
                                 "type" : "variable",
-                                "value" : "employmentPackage_offer.candidateIds"
+                                "value" : "employmentPackage.offer.candidateIds"
                               },
                               "valueToAdd" : {
                                 "type" : "expression"
@@ -1421,13 +1445,6 @@
       ],
       "exposed" : false
     },
-    "employmentPackage_employmentItem" : {
-      "type" : "url",
-      "value" : [
-        "{{employmentPackage|lazyRef:'employmentItem'}}"
-      ],
-      "exposed" : false
-    },
     "employmentPackage" : {
       "type" : "url",
       "value" : [
@@ -1453,10 +1470,9 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "if( $data.employmentPackage && $data.employmentPackage_offer && $data.employmentPackage_employmentItem && $data.employmentPackage.numOfCandidates == new Set($data.employmentPackage_offer.candidateIds).size ){",
+        "if( $data.employmentPackage && $data.employmentPackage.numOfCandidates == new Set($data.employmentPackage.offer.candidateIds).size ){",
         "\t//attach lazy references variables to parent variables",
-        "\t$data.employmentPackage.offer = $data.employmentPackage_offer;",
-        "\t$data.employmentPackage.employmentItem = $data.employmentPackage_employmentItem;",
+        "",
         "\treturn {",
         "\t\t//map employmentPackage variable to expected task contract input",
         "\t\temploymentPackageInput: {",
@@ -1511,13 +1527,6 @@
       ],
       "exposed" : false
     },
-    "employmentPackage_offer" : {
-      "type" : "url",
-      "value" : [
-        "{{employmentPackage|lazyRef:'offer'}}"
-      ],
-      "exposed" : false
-    },
     "groupInfo" : {
       "type" : "url",
       "value" : [
@@ -1535,7 +1544,7 @@
     "enoughCandidatesSelected" : {
       "type" : "expression",
       "value" : [
-        "return $data.employmentPackage_offer.candidateIds.length === $data.employmentPackage.numOfCandidates;"
+        "return $data.employmentPackage.offer.candidateIds.length === $data.employmentPackage.numOfCandidates;"
       ],
       "exposed" : false
     },

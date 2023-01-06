@@ -88,8 +88,8 @@
             <fields>
                 <field type="DOUBLE" length="255" name="maxBudget" nullable="false" collection="false"/>
                 <field type="INTEGER" length="255" name="numOfCandidates" nullable="false" collection="false"/>
-                <relationField type="COMPOSITION" reference="com.company.model.Offer" fetchType="LAZY" name="offer" nullable="true" collection="false"/>
-                <relationField type="COMPOSITION" reference="com.company.model.EmploymentItem" fetchType="LAZY" name="employmentItem" nullable="true" collection="true"/>
+                <relationField type="COMPOSITION" reference="com.company.model.EmploymentItem" fetchType="EAGER" name="employmentItem" nullable="true" collection="true"/>
+                <relationField type="COMPOSITION" reference="com.company.model.Offer" fetchType="EAGER" name="offer" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
