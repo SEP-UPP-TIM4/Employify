@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "CreateOfferForCompanyForm",
   "name" : "CreateOfferForCompanyForm",
-  "lastUpdate" : 1673021881313,
+  "lastUpdate" : 1673127388013,
   "rows" : [
     [
       {
@@ -933,7 +933,7 @@
                               },
                               "text" : {
                                 "type" : "interpolation",
-                                "value" : "Candidate Ids"
+                                "value" : "Choose candidates"
                               },
                               "alignment" : {
                                 "type" : "constant",
@@ -942,6 +942,10 @@
                               "dimension" : {
                                 "type" : "constant",
                                 "value" : 12
+                              },
+                              "allowHTML" : {
+                                "type" : "constant",
+                                "value" : false
                               }
                             },
                             "reference" : "e1d75650-74cc-4483-8b25-610ff1061172",

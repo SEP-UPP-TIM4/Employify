@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "CreateInvoiceForm",
   "name" : "CreateInvoiceForm",
-  "lastUpdate" : 1672154757712,
+  "lastUpdate" : 1673126672712,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "6fd4b304-c1f1-4c81-8722-c16042e025a1",
+        "reference" : "90f40c02-e7d9-4cca-8b2a-45cdf7b2801c",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -50,7 +50,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "a006c733-f0c7-4748-bbcd-6c98deeea7b7",
+              "reference" : "1bd5680e-f9c7-411f-9c1d-b23fec0e5c50",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -98,50 +98,10 @@
                   "value" : 12
                 }
               },
-              "reference" : "9d63d8e2-da46-4274-8775-26c49ea8b130",
+              "reference" : "f1336127-1ba4-4010-916d-9563d3784686",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
-            }
-          ],
-          [
-            {
-              "type" : "component",
-              "dimension" : {
-                "xs" : 12,
-                "sm" : 12,
-                "md" : 12,
-                "lg" : 12
-              },
-              "propertyValues" : {
-                "cssClasses" : {
-                  "type" : "constant",
-                  "value" : ""
-                },
-                "hidden" : {
-                  "type" : "constant",
-                  "value" : false
-                },
-                "allowHTML" : {
-                  "type" : "constant",
-                  "value" : false
-                },
-                "text" : {
-                  "type" : "interpolation",
-                  "value" : "Company: {{companyName.value}}"
-                },
-                "level" : {
-                  "type" : "constant",
-                  "value" : "Level 2"
-                },
-                "alignment" : {
-                  "type" : "constant",
-                  "value" : "center"
-                }
-              },
-              "reference" : "d1935896-c4e5-4a52-ab76-9f04bbd63efc",
-              "hasValidationError" : false,
-              "id" : "pbTitle"
             }
           ]
         ]
@@ -154,7 +114,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "01e6e4a5-5858-43e1-8f9b-43beb83b9c70",
+        "reference" : "05f40e27-3649-4b1b-b5c5-0f639f1b14f4",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -163,7 +123,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "5c8b79ba-35df-405b-9599-4fea7fd1f78a",
+          "reference" : "757bad6f-48b6-4f23-abd5-5032a9ed3ffb",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -202,7 +162,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "f0919ca1-d601-408a-8f04-b558c4ca46a8",
+                "reference" : "7591e166-c0df-4dc0-8187-490dce953691",
                 "hasValidationError" : false,
                 "id" : "pbTitle",
                 "description" : ""
@@ -234,7 +194,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "ca3568f9-4b00-4728-a04d-ecc4d2c9e5a6",
+                "reference" : "97a7aadc-d8ec-420a-890c-07a894660ddc",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -281,7 +241,7 @@
                           "value" : 12
                         }
                       },
-                      "reference" : "52957c1e-9244-429d-9bd5-536cd1b67286",
+                      "reference" : "5b0d38b1-0f36-4e49-b7ce-05134303c43e",
                       "hasValidationError" : false,
                       "id" : "pbText",
                       "description" : ""
@@ -330,7 +290,7 @@
                           "value" : 12
                         }
                       },
-                      "reference" : "d2171d76-8211-429e-a75e-9f2cc7f04bbc",
+                      "reference" : "3a436b8a-01e3-4e38-8431-e031d1a6757a",
                       "hasValidationError" : false,
                       "id" : "pbText",
                       "description" : ""
@@ -375,7 +335,7 @@
                           "value" : false
                         }
                       },
-                      "reference" : "71fccba7-7918-4142-bb0c-8dd136183ffd",
+                      "reference" : "70ce3f92-cd73-4328-805a-b3a1a78474f1",
                       "hasValidationError" : false,
                       "id" : "pbTitle",
                       "description" : ""
@@ -393,7 +353,7 @@
                       "propertyValues" : {
                         "repeatedCollection" : {
                           "type" : "variable",
-                          "value" : "employmentPackage_employmentItem"
+                          "value" : "employmentPackage.employmentItem"
                         },
                         "hidden" : {
                           "type" : "constant",
@@ -408,7 +368,7 @@
                           "value" : 12
                         }
                       },
-                      "reference" : "8b0646bf-70a7-475d-813b-ccdbc39cbc95",
+                      "reference" : "2d5d580d-6bf6-44d3-a889-f7578159fff1",
                       "hasValidationError" : false,
                       "id" : "pbContainer",
                       "rows" : [
@@ -455,7 +415,7 @@
                                 "value" : 12
                               }
                             },
-                            "reference" : "5692b167-102a-4cdd-bb2a-eab8c6105f72",
+                            "reference" : "5052af9a-2ba1-4390-9538-01d8bddf0a9f",
                             "hasValidationError" : false,
                             "id" : "pbText",
                             "description" : ""
@@ -504,7 +464,7 @@
                                 "value" : 12
                               }
                             },
-                            "reference" : "ed9b2c1d-1b26-4641-8534-7ad344caa300",
+                            "reference" : "10a5e1eb-4c32-4cae-b470-98a7becba3e4",
                             "hasValidationError" : false,
                             "id" : "pbText",
                             "description" : ""
@@ -553,7 +513,7 @@
                                 "value" : 12
                               }
                             },
-                            "reference" : "902d4347-66fb-424c-b944-200a373475c1",
+                            "reference" : "5e13861d-7764-41e5-a2bf-c393c5372859",
                             "hasValidationError" : false,
                             "id" : "pbText",
                             "description" : ""
@@ -597,7 +557,7 @@
                           "value" : 12
                         }
                       },
-                      "reference" : "4b635ba4-9d06-4bf8-b97f-a5d47a89ebd5",
+                      "reference" : "60beec57-7506-49b1-9a82-a11b310afcee",
                       "hasValidationError" : false,
                       "id" : "pbTitle",
                       "description" : ""
@@ -629,7 +589,7 @@
                           "value" : 12
                         }
                       },
-                      "reference" : "de2b60cf-fc64-4da3-a956-78bf68b2bad0",
+                      "reference" : "98060d5c-dfcb-464a-b70e-4e700fa6ba6e",
                       "hasValidationError" : false,
                       "id" : "pbContainer",
                       "rows" : [
@@ -684,7 +644,7 @@
                               },
                               "value" : {
                                 "type" : "variable",
-                                "value" : "employmentPackage_offer.price"
+                                "value" : "employmentPackage.offer.price"
                               },
                               "required" : {
                                 "type" : "constant",
@@ -713,7 +673,7 @@
                                 "value" : 1
                               }
                             },
-                            "reference" : "5e9990b8-0004-414a-b3fe-434e7a4cdfd1",
+                            "reference" : "52e8cc33-0eb6-4005-82c1-76c82ad6e26a",
                             "hasValidationError" : false,
                             "id" : "pbInput",
                             "description" : ""
@@ -752,9 +712,13 @@
                               "dimension" : {
                                 "type" : "constant",
                                 "value" : 12
+                              },
+                              "allowHTML" : {
+                                "type" : "constant",
+                                "value" : false
                               }
                             },
-                            "reference" : "29a5b4fd-1932-4959-8607-fd0afc7f7332",
+                            "reference" : "68ca3791-0d58-4f07-a5da-7b37decbdce2",
                             "hasValidationError" : false,
                             "id" : "pbTitle",
                             "description" : ""
@@ -772,7 +736,7 @@
                             "propertyValues" : {
                               "repeatedCollection" : {
                                 "type" : "variable",
-                                "value" : "employmentPackage_offer.candidateIds"
+                                "value" : "employmentPackage.offer.candidateIds"
                               },
                               "hidden" : {
                                 "type" : "constant",
@@ -787,7 +751,7 @@
                                 "value" : 12
                               }
                             },
-                            "reference" : "878f428b-ee52-42a8-ab28-89e55ebc345d",
+                            "reference" : "96958da9-d06f-4126-b016-189addd61a4b",
                             "hasValidationError" : false,
                             "id" : "pbContainer",
                             "rows" : [
@@ -871,66 +835,13 @@
                                       "value" : 1
                                     }
                                   },
-                                  "reference" : "f847e797-5ec8-4954-8527-ba8225b4c1b0",
+                                  "reference" : "6ab15596-b5f9-4577-9bdc-3e897a9236e2",
                                   "hasValidationError" : false,
                                   "id" : "pbInput",
                                   "description" : ""
                                 }
                               ]
                             ]
-                          }
-                        ],
-                        [
-                          {
-                            "type" : "component",
-                            "dimension" : {
-                              "md" : 12,
-                              "sm" : 12,
-                              "xs" : 12,
-                              "lg" : 12
-                            },
-                            "propertyValues" : {
-                              "labelHidden" : {
-                                "type" : "constant",
-                                "value" : false
-                              },
-                              "hidden" : {
-                                "type" : "constant",
-                                "value" : false
-                              },
-                              "cssClasses" : {
-                                "type" : "constant",
-                                "value" : ""
-                              },
-                              "disabled" : {
-                                "type" : "constant",
-                                "value" : true
-                              },
-                              "label" : {
-                                "type" : "interpolation",
-                                "value" : "Accepted"
-                              },
-                              "dimension" : {
-                                "type" : "constant",
-                                "value" : 12
-                              },
-                              "value" : {
-                                "type" : "variable",
-                                "value" : "employmentPackage_offer.accepted"
-                              },
-                              "required" : {
-                                "type" : "constant",
-                                "value" : false
-                              },
-                              "allowHTML" : {
-                                "type" : "constant",
-                                "value" : false
-                              }
-                            },
-                            "reference" : "dc6c24b8-3f93-45db-8761-11d8a3de0319",
-                            "hasValidationError" : false,
-                            "id" : "pbCheckbox",
-                            "description" : ""
                           }
                         ]
                       ]
@@ -966,7 +877,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Create Invoice"
+                    "value" : "Create invoice"
                   },
                   "dataToSend" : {
                     "type" : "expression",
@@ -1035,7 +946,7 @@
                     "value" : ""
                   }
                 },
-                "reference" : "181ea0f3-1472-426a-90db-575c304a171d",
+                "reference" : "3a154f35-22a1-4493-adcc-5aed7b1f4c5e",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -1087,7 +998,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "aa965337-4c30-4e12-982d-ecb3427751a1",
+                "reference" : "206db99a-9d7e-4428-8c02-42ee384b9dda",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -1100,14 +1011,14 @@
   ],
   "assets" : [
     {
-      "id" : "66956770-db1a-4a0f-b526-2790a3cb08f0",
+      "id" : "e314ed7b-5c0f-4f21-830c-5578827a3d21",
       "name" : "style.css",
       "type" : "css",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "86e65cd2-c7e9-4750-b223-4939d760133c",
+      "id" : "8fb7568c-6071-451a-99a2-0dc5b841c9ca",
       "name" : "localization.json",
       "type" : "json",
       "order" : 0,
@@ -1120,13 +1031,6 @@
       "type" : "url",
       "value" : [
         "../API/bpm/userTask/{{taskId}}"
-      ],
-      "exposed" : false
-    },
-    "employmentPackage_employmentItem" : {
-      "type" : "url",
-      "value" : [
-        "{{employmentPackage|lazyRef:'employmentItem'}}"
       ],
       "exposed" : false
     },
@@ -1155,10 +1059,7 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "if( $data.employmentPackage && $data.employmentPackage_offer && $data.employmentPackage_employmentItem ){",
-        "\t//attach lazy references variables to parent variables",
-        "\t$data.employmentPackage.offer = $data.employmentPackage_offer;",
-        "\t$data.employmentPackage.employmentItem = $data.employmentPackage_employmentItem;",
+        "if( $data.employmentPackage ){",
         "\treturn {",
         "\t\t//map employmentPackage variable to expected task contract input",
         "\t\temploymentPackageInput: {",
@@ -1186,24 +1087,10 @@
         "id"
       ],
       "exposed" : false
-    },
-    "employmentPackage_offer" : {
-      "type" : "url",
-      "value" : [
-        "{{employmentPackage|lazyRef:'offer'}}"
-      ],
-      "exposed" : false
-    },
-    "companyName" : {
-      "type" : "url",
-      "value" : [
-        "../API/bpm/caseVariable/{{task.caseId}}/companyName"
-      ],
-      "exposed" : false
     }
   },
   "hasValidationError" : false,
-  "uuid" : "78cef55e-81ab-494d-9d57-838be9e3fd8e",
+  "uuid" : "903c0231-7174-4f9c-9518-1abebf14e45a",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }

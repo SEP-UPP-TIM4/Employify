@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "ReviewOfferForm",
   "name" : "ReviewOfferForm",
-  "lastUpdate" : 1673017758770,
+  "lastUpdate" : 1673126437235,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "b33ccb74-b52f-4fd1-8f8f-672f14d501bd",
+        "reference" : "62f64d03-de47-4ddb-904b-e0915fbe4a42",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -50,7 +50,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "94c5989d-b2bc-4b31-b315-033e6f61aa88",
+              "reference" : "a16e765e-b7c9-45d0-b4ef-3000dfe5606e",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -98,7 +98,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "89a59be5-5312-43c2-bbff-0cf2789e3509",
+              "reference" : "d9fa7cb3-68b7-48a4-8505-86ae8724d218",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -113,17 +113,8 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : {
-          "cssClasses" : {
-            "type" : "constant",
-            "value" : ""
-          },
-          "hidden" : {
-            "type" : "constant",
-            "value" : false
-          }
-        },
-        "reference" : "6f40e805-0ee6-462a-adaf-d9bf8d316c8b",
+        "propertyValues" : { },
+        "reference" : "08f805d1-a5d3-43bb-a94d-aac35d20528e",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -132,7 +123,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "83a06791-de61-4110-9a71-08befbc7d47a",
+          "reference" : "e2e9cb00-80d5-4778-97ce-735ff1e280cc",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -171,7 +162,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "0aa3e98c-a050-4f4a-8fb4-88511e372aef",
+                "reference" : "534e4759-dc31-40aa-857d-dcc4c08da93a",
                 "hasValidationError" : false,
                 "id" : "pbTitle",
                 "description" : ""
@@ -203,7 +194,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "b2d52da4-bada-409f-925d-68a6c37265c0",
+                "reference" : "d3193c04-ad76-477e-be2d-3537d1150ec5",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -287,7 +278,7 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "0e83f90b-996a-4ef6-a814-8ccb406163ea",
+                      "reference" : "26ee5898-4625-4c42-a2c7-ab0451ea12b3",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -373,7 +364,7 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "3d8fe2fc-4da6-4843-bb03-9bce36bf9fc0",
+                      "reference" : "3e4596c8-5b44-4de5-b341-3c3c37a76257",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -418,7 +409,7 @@
                           "value" : false
                         }
                       },
-                      "reference" : "8b71d927-3988-43d0-9c69-51bc784d9f00",
+                      "reference" : "f1181fd2-e222-4618-9231-50fcf7241135",
                       "hasValidationError" : false,
                       "id" : "pbTitle",
                       "description" : ""
@@ -436,7 +427,7 @@
                       "propertyValues" : {
                         "repeatedCollection" : {
                           "type" : "variable",
-                          "value" : "employmentPackage_employmentItem"
+                          "value" : "employmentPackage.employmentItem"
                         },
                         "hidden" : {
                           "type" : "constant",
@@ -451,7 +442,7 @@
                           "value" : 12
                         }
                       },
-                      "reference" : "4e685388-04b7-49d6-9f8c-2023f01d674c",
+                      "reference" : "da840fee-f3c6-497d-92db-2eaf831c811f",
                       "hasValidationError" : false,
                       "id" : "pbContainer",
                       "rows" : [
@@ -535,7 +526,7 @@
                                 "value" : 1
                               }
                             },
-                            "reference" : "b3cd8f24-7de9-4098-bed2-ed76c915f2d1",
+                            "reference" : "3a7ad106-0645-4406-9e24-e85b4372e084",
                             "hasValidationError" : false,
                             "id" : "pbInput",
                             "description" : ""
@@ -621,7 +612,7 @@
                                 "value" : 1
                               }
                             },
-                            "reference" : "35f561fa-ced6-435b-bc94-5faba39d2a89",
+                            "reference" : "59ef2fe8-cea8-42c4-8c23-c311e34067df",
                             "hasValidationError" : false,
                             "id" : "pbInput",
                             "description" : ""
@@ -707,7 +698,7 @@
                                 "value" : 1
                               }
                             },
-                            "reference" : "17eb815e-e222-481f-82c3-4f093a0b9143",
+                            "reference" : "09fa8e8e-15bf-4f0b-9dca-88df6c15d2cd",
                             "hasValidationError" : false,
                             "id" : "pbInput",
                             "description" : ""
@@ -723,7 +714,7 @@
                         "md" : 12,
                         "sm" : 12,
                         "xs" : 12,
-                        "lg" : 6
+                        "lg" : 12
                       },
                       "propertyValues" : {
                         "hidden" : {
@@ -749,13 +740,9 @@
                         "dimension" : {
                           "type" : "constant",
                           "value" : 12
-                        },
-                        "allowHTML" : {
-                          "type" : "constant",
-                          "value" : false
                         }
                       },
-                      "reference" : "1476d8f3-7866-4dd9-a940-6157d5c92e30",
+                      "reference" : "06c06fcb-1355-4c8b-b3d9-b90563200ecd",
                       "hasValidationError" : false,
                       "id" : "pbTitle",
                       "description" : ""
@@ -787,7 +774,7 @@
                           "value" : 12
                         }
                       },
-                      "reference" : "9601df08-e882-4048-b9fe-8bf77b2300f6",
+                      "reference" : "21ab2e7a-03bb-421b-a4d1-1c0b0b81b848",
                       "hasValidationError" : false,
                       "id" : "pbContainer",
                       "rows" : [
@@ -842,7 +829,7 @@
                               },
                               "value" : {
                                 "type" : "variable",
-                                "value" : "employmentPackage_offer.price"
+                                "value" : "employmentPackage.offer.price"
                               },
                               "required" : {
                                 "type" : "constant",
@@ -871,7 +858,7 @@
                                 "value" : 1
                               }
                             },
-                            "reference" : "22f02bbd-67f8-487e-9b4e-b43abb7a24e3",
+                            "reference" : "5fa09236-db25-4eae-8c83-8ce622dd8f0c",
                             "hasValidationError" : false,
                             "id" : "pbInput",
                             "description" : ""
@@ -910,9 +897,13 @@
                               "dimension" : {
                                 "type" : "constant",
                                 "value" : 12
+                              },
+                              "allowHTML" : {
+                                "type" : "constant",
+                                "value" : false
                               }
                             },
-                            "reference" : "809f09a9-615d-4a9d-892c-e11ad2926f80",
+                            "reference" : "ab12987a-c407-4b29-8d6a-5642e3c622e4",
                             "hasValidationError" : false,
                             "id" : "pbTitle",
                             "description" : ""
@@ -930,7 +921,7 @@
                             "propertyValues" : {
                               "repeatedCollection" : {
                                 "type" : "variable",
-                                "value" : "employmentPackage_offer.candidateIds"
+                                "value" : "employmentPackage.offer.candidateIds"
                               },
                               "hidden" : {
                                 "type" : "constant",
@@ -945,7 +936,7 @@
                                 "value" : 12
                               }
                             },
-                            "reference" : "6554c293-9bd0-4787-a8c6-1d74117fb9ee",
+                            "reference" : "74f2d165-d5fd-4921-b116-44bc89b0bd4d",
                             "hasValidationError" : false,
                             "id" : "pbContainer",
                             "rows" : [
@@ -1029,7 +1020,7 @@
                                       "value" : 1
                                     }
                                   },
-                                  "reference" : "1cdcfa19-cab3-4eea-a7c7-618cedc0927c",
+                                  "reference" : "cadde9ce-28dc-465a-b9aa-79fea2720103",
                                   "hasValidationError" : false,
                                   "id" : "pbInput",
                                   "description" : ""
@@ -1037,61 +1028,61 @@
                               ]
                             ]
                           }
+                        ],
+                        [
+                          {
+                            "type" : "component",
+                            "dimension" : {
+                              "md" : 12,
+                              "sm" : 12,
+                              "xs" : 12,
+                              "lg" : 12
+                            },
+                            "propertyValues" : {
+                              "labelHidden" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "hidden" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "cssClasses" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "disabled" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "label" : {
+                                "type" : "interpolation",
+                                "value" : "Accept Offer"
+                              },
+                              "dimension" : {
+                                "type" : "constant",
+                                "value" : 12
+                              },
+                              "value" : {
+                                "type" : "variable",
+                                "value" : "employmentPackage.offer.accepted"
+                              },
+                              "required" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "allowHTML" : {
+                                "type" : "constant",
+                                "value" : false
+                              }
+                            },
+                            "reference" : "6b4613ea-04b2-49b5-aba0-0793128de16f",
+                            "hasValidationError" : false,
+                            "id" : "pbCheckbox",
+                            "description" : ""
+                          }
                         ]
                       ]
-                    }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "md" : 12,
-                        "sm" : 12,
-                        "xs" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "disabled" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Accepted"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "employmentPackage_offer.accepted"
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "allowHTML" : {
-                          "type" : "constant",
-                          "value" : false
-                        }
-                      },
-                      "reference" : "93ff2b37-dd09-4918-a59c-fd861ed34036",
-                      "hasValidationError" : false,
-                      "id" : "pbCheckbox",
-                      "description" : ""
                     }
                   ]
                 ]
@@ -1170,9 +1161,30 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable"
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable"
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
                   }
                 },
-                "reference" : "2c802cd8-da0b-4563-acfe-747ac16f218c",
+                "reference" : "081094a6-6533-4b64-97f5-7b84d90afaa2",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -1222,9 +1234,17 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 4
                   }
                 },
-                "reference" : "98db0471-2541-4bd4-8d45-fccbed82633e",
+                "reference" : "aab90c65-d078-44e4-a781-6e8e94a39efd",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -1237,14 +1257,14 @@
   ],
   "assets" : [
     {
-      "id" : "b858eef8-f242-4aaa-9152-c57dbb7df4bf",
+      "id" : "b7840d5d-f51f-4dce-86e6-8f1240240534",
       "name" : "localization.json",
       "type" : "json",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "9fca2110-415b-4437-bb8c-0ca1324a13e2",
+      "id" : "0f88f3a9-90d8-4ba5-879f-62e4189d43f3",
       "name" : "style.css",
       "type" : "css",
       "order" : 0,
@@ -1257,13 +1277,6 @@
       "type" : "url",
       "value" : [
         "../API/bpm/userTask/{{taskId}}"
-      ],
-      "exposed" : false
-    },
-    "employmentPackage_employmentItem" : {
-      "type" : "url",
-      "value" : [
-        "{{employmentPackage|lazyRef:'employmentItem'}}"
       ],
       "exposed" : false
     },
@@ -1292,9 +1305,7 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "if( $data.employmentPackage && $data.employmentPackage_employmentItem ){",
-        "\t//attach lazy references variables to parent variables",
-        "\t$data.employmentPackage.employmentItem = $data.employmentPackage_employmentItem;",
+        "if( $data.employmentPackage ){",
         "\treturn {",
         "\t\t//map employmentPackage variable to expected task contract input",
         "\t\temploymentPackageInput: {",
@@ -1333,7 +1344,7 @@
     }
   },
   "hasValidationError" : false,
-  "uuid" : "3ab2d53c-33ee-4941-ac73-0d512e9af292",
+  "uuid" : "b8d2e7f1-f6f1-4908-a1fd-d946900dbe51",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }
