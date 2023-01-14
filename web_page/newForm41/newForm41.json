@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.3",
-  "id" : "newForm4",
-  "name" : "newForm4",
-  "lastUpdate" : 1673645297539,
+  "id" : "newForm41",
+  "name" : "newForm41",
+  "lastUpdate" : 1673632407557,
   "rows" : [
     [
       {
@@ -10,23 +10,56 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : {
-          "cssClasses" : {
-            "type" : "constant",
-            "value" : ""
-          },
-          "hidden" : {
-            "type" : "constant",
-            "value" : false
-          },
-          "repeatedCollection" : {
-            "type" : "variable"
-          }
-        },
-        "reference" : "24781b49-12ad-4e46-8f26-4be4109b9944",
+        "propertyValues" : { },
+        "reference" : "095eb446-b8d2-4402-b9b3-dd4968c4f9fa",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "md" : 12,
+                "sm" : 12,
+                "xs" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 1"
+                },
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "{{ task.displayName }}"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "center"
+                },
+                "dimension" : {
+                  "type" : "constant",
+                  "value" : 12
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : false
+                }
+              },
+              "reference" : "3143d921-667e-411c-91c6-e1f147f43cb9",
+              "hasValidationError" : false,
+              "id" : "pbTitle",
+              "description" : ""
+            }
+          ],
           [
             {
               "type" : "component",
@@ -58,18 +91,30 @@
                 },
                 "text" : {
                   "type" : "interpolation",
-                  "value" : "{{ task.displayDescription }}"
+                  "value" : "I aggree to terms and conditions"
                 },
                 "alignment" : {
                   "type" : "constant",
-                  "value" : "left"
+                  "value" : "center"
                 },
                 "dimension" : {
                   "type" : "constant",
                   "value" : 12
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
                 }
               },
-              "reference" : "892db514-d6b1-49c2-a246-24bfe7a57cf9",
+              "reference" : "f217b43d-7962-4a00-99cd-a14c3f406b5e",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -84,17 +129,8 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : {
-          "cssClasses" : {
-            "type" : "constant",
-            "value" : ""
-          },
-          "hidden" : {
-            "type" : "constant",
-            "value" : false
-          }
-        },
-        "reference" : "1ae7755a-ddd9-4b04-9da5-e6c9d85124fc",
+        "propertyValues" : { },
+        "reference" : "d4a82631-0eaa-4acf-8412-90ed7368a2cb",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -103,7 +139,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "a02aa879-e4f8-4ea7-9293-13948764b081",
+          "reference" : "eac59d71-275e-4953-8796-a2e0fc75defb",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -111,36 +147,53 @@
               {
                 "type" : "component",
                 "dimension" : {
-                  "xs" : 12,
-                  "sm" : 12,
                   "md" : 12,
+                  "sm" : 12,
+                  "xs" : 12,
                   "lg" : 12
                 },
                 "propertyValues" : {
-                  "cssClasses" : {
+                  "labelHidden" : {
                     "type" : "constant",
-                    "value" : ""
+                    "value" : false
                   },
                   "hidden" : {
                     "type" : "constant",
                     "value" : false
                   },
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "disabled" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "One Time Payment Input"
+                  },
+                  "dimension" : {
+                    "type" : "constant",
+                    "value" : 12
+                  },
                   "value" : {
-                    "type" : "constant",
-                    "value" : "This is the initial value"
+                    "type" : "variable",
+                    "value" : "formInput.oneTimePaymentInput"
                   },
-                  "color" : {
+                  "required" : {
                     "type" : "constant",
-                    "value" : "RebeccaPurple"
+                    "value" : false
                   },
-                  "background" : {
+                  "allowHTML" : {
                     "type" : "constant",
-                    "value" : "Yellow"
+                    "value" : false
                   }
                 },
-                "reference" : "4bb4b395-12c2-45dc-af82-afe2085c74e6",
+                "reference" : "ce323b82-0846-43bb-b118-2274cc7e6d1d",
                 "hasValidationError" : false,
-                "id" : "customTextBasedOnURLForSubscription"
+                "id" : "pbCheckbox",
+                "description" : ""
               }
             ],
             [
@@ -216,30 +269,9 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
-                  },
-                  "assign" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "url" : {
-                    "type" : "interpolation"
-                  },
-                  "responseStatusCode" : {
-                    "type" : "variable"
-                  },
-                  "dataFromSuccess" : {
-                    "type" : "variable"
-                  },
-                  "closeOnSuccess" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "modalId" : {
-                    "type" : "constant",
-                    "value" : ""
                   }
                 },
-                "reference" : "e759789d-3f47-4494-a028-7791150b206d",
+                "reference" : "50559659-c5d0-4716-b070-183f4423a6cd",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -291,7 +323,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "d8d1ac92-78c6-4496-b139-12d223a5405d",
+                "reference" : "ec7c7af5-6d75-476f-a1c5-e10da99b7a39",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -304,14 +336,14 @@
   ],
   "assets" : [
     {
-      "id" : "9da9b39d-1567-4776-9c36-36b45c193275",
+      "id" : "3a6c12c2-a6ee-43bf-b444-f403a6961f4c",
       "name" : "style.css",
       "type" : "css",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "455b7bcd-6b05-4c93-a5f8-93d2a61dc8f7",
+      "id" : "7487956c-0fcc-48ba-87ba-07aa8764b3e6",
       "name" : "localization.json",
       "type" : "json",
       "order" : 0,
@@ -324,6 +356,15 @@
       "type" : "url",
       "value" : [
         "../API/bpm/userTask/{{taskId}}"
+      ],
+      "exposed" : false
+    },
+    "formInput" : {
+      "type" : "json",
+      "value" : [
+        "{\r",
+        "  \"oneTimePaymentInput\" : true\r",
+        "}"
       ],
       "exposed" : false
     },
@@ -346,7 +387,7 @@
       "type" : "expression",
       "value" : [
         "return {",
-        "",
+        "\toneTimePaymentInput: $data.formInput.oneTimePaymentInput",
         "}"
       ],
       "exposed" : false
@@ -367,7 +408,7 @@
     }
   },
   "hasValidationError" : false,
-  "uuid" : "97503f74-a188-4a87-ab19-5cc952068fcd",
+  "uuid" : "90c03cde-acda-43c3-8e43-d2c623ce4770",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }

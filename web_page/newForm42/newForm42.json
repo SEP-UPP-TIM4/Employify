@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.3",
-  "id" : "newForm4",
-  "name" : "newForm4",
-  "lastUpdate" : 1673645297539,
+  "id" : "newForm42",
+  "name" : "newForm42",
+  "lastUpdate" : 1673633174365,
   "rows" : [
     [
       {
@@ -10,23 +10,52 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : {
-          "cssClasses" : {
-            "type" : "constant",
-            "value" : ""
-          },
-          "hidden" : {
-            "type" : "constant",
-            "value" : false
-          },
-          "repeatedCollection" : {
-            "type" : "variable"
-          }
-        },
-        "reference" : "24781b49-12ad-4e46-8f26-4be4109b9944",
+        "propertyValues" : { },
+        "reference" : "0934aecf-8770-45a9-ab13-26ff12fed583",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "md" : 12,
+                "sm" : 12,
+                "xs" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 1"
+                },
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "{{ task.displayName }}"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "center"
+                },
+                "dimension" : {
+                  "type" : "constant",
+                  "value" : 12
+                }
+              },
+              "reference" : "c2b99fbb-04fe-40b9-a4c0-7428858f21a6",
+              "hasValidationError" : false,
+              "id" : "pbTitle",
+              "description" : ""
+            }
+          ],
           [
             {
               "type" : "component",
@@ -58,18 +87,30 @@
                 },
                 "text" : {
                   "type" : "interpolation",
-                  "value" : "{{ task.displayDescription }}"
+                  "value" : "I aggree to terms and conditions"
                 },
                 "alignment" : {
                   "type" : "constant",
-                  "value" : "left"
+                  "value" : "center"
                 },
                 "dimension" : {
                   "type" : "constant",
                   "value" : 12
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
                 }
               },
-              "reference" : "892db514-d6b1-49c2-a246-24bfe7a57cf9",
+              "reference" : "0cbcdb3b-0b54-4aab-9cdf-5335fb86d08d",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -84,17 +125,8 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : {
-          "cssClasses" : {
-            "type" : "constant",
-            "value" : ""
-          },
-          "hidden" : {
-            "type" : "constant",
-            "value" : false
-          }
-        },
-        "reference" : "1ae7755a-ddd9-4b04-9da5-e6c9d85124fc",
+        "propertyValues" : { },
+        "reference" : "e6f649e4-00ff-43d1-ac5b-2a00195be594",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -103,7 +135,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "a02aa879-e4f8-4ea7-9293-13948764b081",
+          "reference" : "5d86a80f-94ad-46f2-b1d3-7e8021dee4b8",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -111,9 +143,9 @@
               {
                 "type" : "component",
                 "dimension" : {
-                  "xs" : 12,
-                  "sm" : 12,
                   "md" : 12,
+                  "sm" : 12,
+                  "xs" : 12,
                   "lg" : 12
                 },
                 "propertyValues" : {
@@ -125,22 +157,55 @@
                     "type" : "constant",
                     "value" : false
                   },
+                  "disabled" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "required" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "Payment Type Input"
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 1
+                  },
+                  "placeholder" : {
+                    "type" : "interpolation"
+                  },
+                  "availableValues" : {
+                    "type" : "expression",
+                    "value" : "paymentTypes"
+                  },
+                  "displayedKey" : {
+                    "type" : "constant"
+                  },
+                  "returnedKey" : {
+                    "type" : "constant"
+                  },
                   "value" : {
-                    "type" : "constant",
-                    "value" : "This is the initial value"
-                  },
-                  "color" : {
-                    "type" : "constant",
-                    "value" : "RebeccaPurple"
-                  },
-                  "background" : {
-                    "type" : "constant",
-                    "value" : "Yellow"
+                    "type" : "variable",
+                    "value" : "formInput.paymentTypeInput"
                   }
                 },
-                "reference" : "4bb4b395-12c2-45dc-af82-afe2085c74e6",
+                "reference" : "fa511b21-d7e2-4a49-9563-ddbd2f239b31",
                 "hasValidationError" : false,
-                "id" : "customTextBasedOnURLForSubscription"
+                "id" : "pbSelect"
               }
             ],
             [
@@ -216,30 +281,9 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
-                  },
-                  "assign" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "url" : {
-                    "type" : "interpolation"
-                  },
-                  "responseStatusCode" : {
-                    "type" : "variable"
-                  },
-                  "dataFromSuccess" : {
-                    "type" : "variable"
-                  },
-                  "closeOnSuccess" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "modalId" : {
-                    "type" : "constant",
-                    "value" : ""
                   }
                 },
-                "reference" : "e759789d-3f47-4494-a028-7791150b206d",
+                "reference" : "f99762ad-92e6-445f-974a-feefdaeb3413",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -291,7 +335,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "d8d1ac92-78c6-4496-b139-12d223a5405d",
+                "reference" : "d4f0e8f3-564b-4d5b-90a8-050405134b5b",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -304,14 +348,14 @@
   ],
   "assets" : [
     {
-      "id" : "9da9b39d-1567-4776-9c36-36b45c193275",
+      "id" : "b5ed30e3-2a05-4c85-bd5e-cf7e0f348637",
       "name" : "style.css",
       "type" : "css",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "455b7bcd-6b05-4c93-a5f8-93d2a61dc8f7",
+      "id" : "f670dd31-e55b-448d-a317-7ebf9fe2d34f",
       "name" : "localization.json",
       "type" : "json",
       "order" : 0,
@@ -324,6 +368,15 @@
       "type" : "url",
       "value" : [
         "../API/bpm/userTask/{{taskId}}"
+      ],
+      "exposed" : false
+    },
+    "formInput" : {
+      "type" : "json",
+      "value" : [
+        "{\r",
+        "  \"paymentTypeInput\" : \"\"\r",
+        "}"
       ],
       "exposed" : false
     },
@@ -346,7 +399,7 @@
       "type" : "expression",
       "value" : [
         "return {",
-        "",
+        "\tpaymentTypeInput: $data.formInput.paymentTypeInput",
         "}"
       ],
       "exposed" : false
@@ -364,10 +417,17 @@
         "id"
       ],
       "exposed" : false
+    },
+    "paymentTypes" : {
+      "type" : "json",
+      "value" : [
+        "[\"One time payment\", \"Monthly subscription\", \"Yearly subscription\"]"
+      ],
+      "exposed" : false
     }
   },
   "hasValidationError" : false,
-  "uuid" : "97503f74-a188-4a87-ab19-5cc952068fcd",
+  "uuid" : "c771904b-124f-4f48-8dd0-d7401835a707",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }
