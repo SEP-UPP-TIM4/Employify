@@ -39,7 +39,7 @@ function PbButtonCtrl($scope, $http, $location, $log, $window, localStorageServi
              //window.location.href = this.responseText;
          }
     };
-    xhttp.open("POST", "http://localhost:8081/AUTH-SERVICE/api/v1/payment-request", true);
+    xhttp.open("POST", "http://192.168.43.208:8081/AUTH-SERVICE/api/v1/payment-request", true);
     xhttp.setRequestHeader("Content-Type", "application/json");
     xhttp.send(JSON.stringify({
     "apiKey": "daskdj",

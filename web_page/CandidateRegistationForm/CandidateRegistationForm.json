@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "CandidateRegistationForm",
   "name" : "CandidateRegistationForm",
-  "lastUpdate" : 1673130977459,
+  "lastUpdate" : 1673633126801,
   "rows" : [
     [
       {
@@ -10,7 +10,16 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : { },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
         "reference" : "5874e80a-e9d7-46c9-96d9-51069d0cc485",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
@@ -2160,194 +2169,6 @@
                       "reference" : "c1d8095c-9129-4927-8acc-093f36dbacd5",
                       "hasValidationError" : false,
                       "id" : "pbButton",
-                      "description" : ""
-                    }
-                  ]
-                ]
-              }
-            ],
-            [
-              {
-                "type" : "container",
-                "dimension" : {
-                  "md" : 12,
-                  "sm" : 12,
-                  "xs" : 12,
-                  "lg" : 12
-                },
-                "propertyValues" : {
-                  "repeatedCollection" : {
-                    "type" : "variable"
-                  },
-                  "hidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "cssClasses" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "dimension" : {
-                    "type" : "constant",
-                    "value" : 12
-                  }
-                },
-                "reference" : "892fe314-8c8c-40d8-9bf8-21c49f143956",
-                "hasValidationError" : false,
-                "id" : "pbContainer",
-                "rows" : [
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "md" : 12,
-                        "sm" : 12,
-                        "xs" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 4
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Cv Input"
-                        },
-                        "placeholder" : {
-                          "type" : "constant",
-                          "value" : "Browse to upload a new file..."
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "formInput.cvInput"
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "url" : {
-                          "type" : "constant",
-                          "value" : "../API/formFileUpload"
-                        }
-                      },
-                      "reference" : "64962a66-2b6f-44bb-aff5-d9c098ce8b86",
-                      "hasValidationError" : false,
-                      "id" : "pbUpload",
-                      "description" : ""
-                    }
-                  ]
-                ]
-              }
-            ],
-            [
-              {
-                "type" : "container",
-                "dimension" : {
-                  "md" : 12,
-                  "sm" : 12,
-                  "xs" : 12,
-                  "lg" : 12
-                },
-                "propertyValues" : {
-                  "repeatedCollection" : {
-                    "type" : "variable"
-                  },
-                  "hidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "cssClasses" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "dimension" : {
-                    "type" : "constant",
-                    "value" : 12
-                  }
-                },
-                "reference" : "869cb670-9471-4bfe-8acd-95a64122fd1f",
-                "hasValidationError" : false,
-                "id" : "pbContainer",
-                "rows" : [
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "md" : 12,
-                        "sm" : 12,
-                        "xs" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 4
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Recommendation Letter Input"
-                        },
-                        "placeholder" : {
-                          "type" : "constant",
-                          "value" : "Browse to upload a new file..."
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "formInput.recommendationLetterInput"
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "url" : {
-                          "type" : "constant",
-                          "value" : "../API/formFileUpload"
-                        }
-                      },
-                      "reference" : "d0e9a88f-33eb-44d2-a2a2-179d1f6e0d12",
-                      "hasValidationError" : false,
-                      "id" : "pbUpload",
                       "description" : ""
                     }
                   ]

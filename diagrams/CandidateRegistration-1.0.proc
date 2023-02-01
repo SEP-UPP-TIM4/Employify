@@ -3,7 +3,7 @@
   <process:MainProcess xmi:id="_8CABwHMvEe2Nouoe8jRiJg" name="CandidateRegistration" bonitaModelVersion="7.12.0-004">
     <elements xmi:type="process:Pool" xmi:id="_8CAo0HMvEe2Nouoe8jRiJg" name="Candidate registration" displayName="Candidate registration">
       <elements xmi:type="process:Lane" xmi:id="_8CAo0XMvEe2Nouoe8jRiJg" name="Guest lane" actor="_JqIrYHMwEe2Nouoe8jRiJg">
-        <elements xmi:type="process:StartEvent" xmi:id="_8CAo0nMvEe2Nouoe8jRiJg" name="Start" outgoing="_8CAo53MvEe2Nouoe8jRiJg">
+        <elements xmi:type="process:StartEvent" xmi:id="_8CAo0nMvEe2Nouoe8jRiJg" name="Start" outgoing="_pbaHYJNrEe2oGMisthuDMg">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_8CAo03MvEe2Nouoe8jRiJg" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_8CAo1HMvEe2Nouoe8jRiJg" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_8CAo1XMvEe2Nouoe8jRiJg" name="" content="" returnTypeFixed="true"/>
@@ -18,8 +18,8 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_LnV6IXOMEe2motgchP84dQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_LnV6I3OMEe2motgchP84dQ" name="" content="" returnTypeFixed="true"/>
           <operations xmi:type="expression:Operation" xmi:id="_QMNjcIOmEe25kqp9-nf7bQ">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_QMNjcYOmEe25kqp9-nf7bQ" name="candidateCv" content="candidateCv" type="DOCUMENT_REF_TYPE">
-              <referencedElements xmi:type="process:Document" xmi:id="_QzgM8IOmEe25kqp9-nf7bQ" name="candidateCv"/>
+            <leftOperand xmi:type="expression:Expression" xmi:id="_QMNjcYOmEe25kqp9-nf7bQ" name="generatedCv" content="generatedCv" type="DOCUMENT_REF_TYPE">
+              <referencedElements xmi:type="process:Document" xmi:id="_SVDIcJNuEe2oGMisthuDMg" name="generatedCv"/>
             </leftOperand>
             <rightOperand xmi:type="expression:Expression" xmi:id="_QMNjcoOmEe25kqp9-nf7bQ" name="remakedCvInput" content="remakedCvInput" type="TYPE_CONTRACT_INPUT" returnType="org.bonitasoft.engine.bpm.contract.FileInputValue">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_RNQJsIOmEe25kqp9-nf7bQ" name="remakedCvInput" type="FILE">
@@ -194,41 +194,6 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_DoRfZ3TMEe2RYfPgSB9enw" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_DoRfZnTMEe2RYfPgSB9enw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:ScriptTask" xmi:id="_S-ozUIOcEe25kqp9-nf7bQ" name="Save documents" outgoing="_S-0ZgIOcEe25kqp9-nf7bQ" incoming="_8CAo53MvEe2Nouoe8jRiJg">
-          <dynamicLabel xmi:type="expression:Expression" xmi:id="_S-qBcYOcEe25kqp9-nf7bQ" name="" content="" returnTypeFixed="true"/>
-          <dynamicDescription xmi:type="expression:Expression" xmi:id="_S-qBcIOcEe25kqp9-nf7bQ" name="" content="" returnTypeFixed="true"/>
-          <stepSummary xmi:type="expression:Expression" xmi:id="_S-qBcoOcEe25kqp9-nf7bQ" name="" content="" returnTypeFixed="true"/>
-          <connectors xmi:type="process:Connector" xmi:id="_uHaXcIOcEe25kqp9-nf7bQ" name="Save documents" definitionId="scripting-groovy-script" event="ON_FINISH" definitionVersion="1.0.1">
-            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_uHaXcYOcEe25kqp9-nf7bQ" definitionId="scripting-groovy-script" version="1.0.1" modelVersion="7.12.0-004">
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_uHaXcoOcEe25kqp9-nf7bQ" key="script">
-                <expression xmi:type="expression:Expression" xmi:id="_uHaXc4OcEe25kqp9-nf7bQ" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
-              </parameters>
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_uHaXdIOcEe25kqp9-nf7bQ" key="variables">
-                <expression xmi:type="expression:Expression" xmi:id="_uHaXdYOcEe25kqp9-nf7bQ" returnType="java.util.List" returnTypeFixed="true"/>
-              </parameters>
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_uHaXdoOcEe25kqp9-nf7bQ" key="fakeScriptExpression">
-                <expression xmi:type="expression:Expression" xmi:id="_uHaXd4OcEe25kqp9-nf7bQ" name="newScript()" content="import java.io.File;&#xD;&#xA;import java.io.FileNotFoundException;&#xD;&#xA;import java.io.FileOutputStream;&#xD;&#xA;import java.io.IOException;&#xD;&#xA;import java.io.OutputStream;&#xD;&#xA;import java.time.LocalDateTime;&#xD;&#xA;import java.time.temporal.ChronoUnit;&#xD;&#xA;&#xD;&#xA;byte[] dataCv = apiAccessor.getProcessAPI().getDocumentContent(candidateCv.getId().toString());&#xD;&#xA;byte[] dataRl = apiAccessor.getProcessAPI().getDocumentContent(candidateRecommendationLetter.getId().toString());&#xD;&#xA;OutputStream outCv;&#xD;&#xA;OutputStream outRl;&#xD;&#xA;try {&#xD;&#xA;&#x9;outCv = new FileOutputStream(new File(&quot;workspace\\Employify\\documents\\&quot; + registrationReguest.username + &quot;-cv.docx&quot;));&#xD;&#xA;&#x9;outCv.write(dataCv);&#xD;&#xA;&#x9;outCv.close();&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;outRl = new FileOutputStream(new File(&quot;workspace\\Employify\\documents\\&quot; + registrationReguest.username + &quot;-rl.docx&quot;));&#xD;&#xA;&#x9;outRl.write(dataRl);&#xD;&#xA;&#x9;outRl.close();&#xD;&#xA;} catch (FileNotFoundException e) {&#xD;&#xA;&#x9;// TODO Auto-generated catch block&#xD;&#xA;&#x9;e.printStackTrace();&#xD;&#xA;}&#xD;&#xA;&#x9;&#x9;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object" returnTypeFixed="true">
-                  <referencedElements xmi:type="expression:Expression" xmi:id="_Spk98IPLEe26xNzFpAL45A" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
-                  <referencedElements xmi:type="process:Document" xmi:id="_Spk98YPLEe26xNzFpAL45A" name="candidateCv"/>
-                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_SpllAIPLEe26xNzFpAL45A" name="registrationReguest" dataType="_8CApA3MvEe2Nouoe8jRiJg" className="com.company.model.CandidateRegistrationRequest"/>
-                  <referencedElements xmi:type="process:Document" xmi:id="_SpllAYPLEe26xNzFpAL45A" name="candidateRecommendationLetter"/>
-                </expression>
-              </parameters>
-            </configuration>
-            <outputs xmi:type="expression:Operation" xmi:id="_uHaXfIOcEe25kqp9-nf7bQ">
-              <leftOperand xmi:type="expression:Expression" xmi:id="_uHaXfYOcEe25kqp9-nf7bQ"/>
-              <rightOperand xmi:type="expression:Expression" xmi:id="_uHaXfoOcEe25kqp9-nf7bQ" name="result" content="result" type="CONNECTOR_OUTPUT_TYPE" returnType="java.lang.Object">
-                <referencedElements xmi:type="definition:Output" xmi:id="_uHa-gIOcEe25kqp9-nf7bQ" name="result" type="java.lang.Object"/>
-              </rightOperand>
-              <operator xmi:type="expression:Operator" xmi:id="_uHa-gYOcEe25kqp9-nf7bQ" type="ASSIGNMENT"/>
-            </outputs>
-          </connectors>
-          <loopCondition xmi:type="expression:Expression" xmi:id="_S-qBc4OcEe25kqp9-nf7bQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
-          <loopMaximum xmi:type="expression:Expression" xmi:id="_S-qBdIOcEe25kqp9-nf7bQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
-          <cardinalityExpression xmi:type="expression:Expression" xmi:id="_S-qBdYOcEe25kqp9-nf7bQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
-          <iteratorExpression xmi:type="expression:Expression" xmi:id="_S-qBd4OcEe25kqp9-nf7bQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
-          <completionCondition xmi:type="expression:Expression" xmi:id="_S-qBdoOcEe25kqp9-nf7bQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
-        </elements>
         <elements xmi:type="process:XORGateway" xmi:id="_Vlk_YIOnEe25kqp9-nf7bQ" name="Check number of accepted votes?" outgoing="_OWox8HOMEe2motgchP84dQ _3UBHEHPcEe2rY-pzSPyxIQ _EnR6oHPiEe2rY-pzSPyxIQ" incoming="_wZ1nAHOLEe2motgchP84dQ">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_v57X4XOLEe2motgchP84dQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_v57X4HOLEe2motgchP84dQ" name="" content="" returnTypeFixed="true"/>
@@ -279,11 +244,11 @@
                 <expression xmi:type="expression:Expression" xmi:id="_J8aWWYPHEe26xNzFpAL45A" returnType="java.util.List" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_J8aWWoPHEe26xNzFpAL45A" key="fakeScriptExpression">
-                <expression xmi:type="expression:Expression" xmi:id="_J8aWW4PHEe26xNzFpAL45A" name="newScript()" content="import java.io.File;&#xD;&#xA;import java.io.FileNotFoundException;&#xD;&#xA;import java.io.FileOutputStream;&#xD;&#xA;import java.io.IOException;&#xD;&#xA;import java.io.OutputStream;&#xD;&#xA;import java.time.LocalDateTime;&#xD;&#xA;import java.time.temporal.ChronoUnit;&#xD;&#xA;&#xD;&#xA;byte[] dataCv = apiAccessor.getProcessAPI().getDocumentContent(candidateCv.getId().toString());&#xD;&#xA;byte[] dataRl = apiAccessor.getProcessAPI().getDocumentContent(candidateRecommendationLetter.getId().toString());&#xD;&#xA;OutputStream outCv;&#xD;&#xA;OutputStream outRl;&#xD;&#xA;try {&#xD;&#xA;&#x9;outCv = new FileOutputStream(new File(&quot;workspace\\Employify\\documents\\&quot; + registrationReguest.username + &quot;-cv.docx&quot;));&#xD;&#xA;&#x9;outCv.write(dataCv);&#xD;&#xA;&#x9;outCv.close();&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;outRl = new FileOutputStream(new File(&quot;workspace\\Employify\\documents\\&quot; + registrationReguest.username + &quot;-rl.docx&quot;));&#xD;&#xA;&#x9;outRl.write(dataRl);&#xD;&#xA;&#x9;outRl.close();&#xD;&#xA;} catch (FileNotFoundException e) {&#xD;&#xA;&#x9;// TODO Auto-generated catch block&#xD;&#xA;&#x9;e.printStackTrace();&#xD;&#xA;}&#xD;&#xA;&#x9;&#x9;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object" returnTypeFixed="true">
-                  <referencedElements xmi:type="process:Document" xmi:id="_J8aWXIPHEe26xNzFpAL45A" name="candidateCv"/>
-                  <referencedElements xmi:type="expression:Expression" xmi:id="_J8aWXYPHEe26xNzFpAL45A" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
-                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_J8aWXoPHEe26xNzFpAL45A" name="registrationReguest" dataType="_8CApA3MvEe2Nouoe8jRiJg" className="com.company.model.CandidateRegistrationRequest"/>
-                  <referencedElements xmi:type="process:Document" xmi:id="_J8aWX4PHEe26xNzFpAL45A" name="candidateRecommendationLetter"/>
+                <expression xmi:type="expression:Expression" xmi:id="_J8aWW4PHEe26xNzFpAL45A" name="newScript()" content="import java.io.File;&#xD;&#xA;import java.io.FileNotFoundException;&#xD;&#xA;import java.io.FileOutputStream;&#xD;&#xA;import java.io.IOException;&#xD;&#xA;import java.io.OutputStream;&#xD;&#xA;import java.time.LocalDateTime;&#xD;&#xA;import java.time.temporal.ChronoUnit;&#xD;&#xA;&#xD;&#xA;byte[] dataCv = apiAccessor.getProcessAPI().getDocumentContent(generatedCv.getId().toString());&#xD;&#xA;byte[] dataRl = apiAccessor.getProcessAPI().getDocumentContent(generatedCoverLetter.getId().toString());&#xD;&#xA;OutputStream outCv;&#xD;&#xA;OutputStream outRl;&#xD;&#xA;try {&#xD;&#xA;&#x9;outCv = new FileOutputStream(new File(&quot;workspace\\Employify\\documents\\&quot; + registrationReguest.username + &quot;-cv.docx&quot;));&#xD;&#xA;&#x9;outCv.write(dataCv);&#xD;&#xA;&#x9;outCv.close();&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;outRl = new FileOutputStream(new File(&quot;workspace\\Employify\\documents\\&quot; + registrationReguest.username + &quot;-rl.docx&quot;));&#xD;&#xA;&#x9;outRl.write(dataRl);&#xD;&#xA;&#x9;outRl.close();&#xD;&#xA;} catch (FileNotFoundException e) {&#xD;&#xA;&#x9;// TODO Auto-generated catch block&#xD;&#xA;&#x9;e.printStackTrace();&#xD;&#xA;}&#xD;&#xA;&#x9;&#x9;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_aZ6MMJNtEe2oGMisthuDMg" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_aZ6MMZNtEe2oGMisthuDMg" name="registrationReguest" dataType="_8CApA3MvEe2Nouoe8jRiJg" className="com.company.model.CandidateRegistrationRequest"/>
+                  <referencedElements xmi:type="process:Document" xmi:id="_aZ6MMpNtEe2oGMisthuDMg" name="generatedCv"/>
+                  <referencedElements xmi:type="process:Document" xmi:id="_aZ6MM5NtEe2oGMisthuDMg" name="generatedCoverLetter"/>
                 </expression>
               </parameters>
             </configuration>
@@ -322,7 +287,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_qEVPJoTyEe2ibehnRno__A" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_qEVPJYTyEe2ibehnRno__A" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:ServiceTask" xmi:id="_tMVasIeLEe2KXYT3HJsGhw" name="GenerateCV" outgoing="_40EMcI7WEe2fJfVMNV8koQ" incoming="_S-0ZgIOcEe25kqp9-nf7bQ">
+        <elements xmi:type="process:ServiceTask" xmi:id="_tMVasIeLEe2KXYT3HJsGhw" name="GenerateCV" outgoing="_40EMcI7WEe2fJfVMNV8koQ" incoming="_pbaHYJNrEe2oGMisthuDMg">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_tMZFEYeLEe2KXYT3HJsGhw" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_tMZFEIeLEe2KXYT3HJsGhw" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_tMZFEoeLEe2KXYT3HJsGhw" name="" content="" returnTypeFixed="true"/>
@@ -376,11 +341,10 @@
                 <expression xmi:type="expression:Expression" xmi:id="_oa4ElIeQEe2KXYT3HJsGhw" returnType="java.util.List" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_oa4ElYeQEe2KXYT3HJsGhw" key="fakeScriptExpression">
-                <expression xmi:type="expression:Expression" xmi:id="_oa4EloeQEe2KXYT3HJsGhw" name="newScript()" content="import java.io.File;&#xD;&#xA;import java.io.FileNotFoundException;&#xD;&#xA;import java.io.FileOutputStream;&#xD;&#xA;import java.io.IOException;&#xD;&#xA;import java.io.OutputStream;&#xD;&#xA;import java.time.LocalDateTime;&#xD;&#xA;import java.time.temporal.ChronoUnit;&#xD;&#xA;&#xD;&#xA;byte[] dataCv = apiAccessor.getProcessAPI().getDocumentContent(generatedCv.getId().toString());&#xD;&#xA;byte[] dataRl = apiAccessor.getProcessAPI().getDocumentContent(candidateRecommendationLetter.getId().toString());&#xD;&#xA;OutputStream outCv;&#xD;&#xA;OutputStream outRl;&#xD;&#xA;try {&#xD;&#xA;&#x9;outCv = new FileOutputStream(new File(&quot;workspace\\Employify\\documents\\&quot; + registrationReguest.username + &quot;-generated-cv.docx&quot;));&#xD;&#xA;&#x9;outCv.write(dataCv);&#xD;&#xA;&#x9;outCv.close();&#xD;&#xA;&#xD;&#xA;} catch (FileNotFoundException e) {&#xD;&#xA;&#x9;// TODO Auto-generated catch block&#xD;&#xA;&#x9;e.printStackTrace();&#xD;&#xA;}" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object" returnTypeFixed="true">
-                  <referencedElements xmi:type="expression:Expression" xmi:id="_oa4El4eQEe2KXYT3HJsGhw" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
-                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_oa4EmIeQEe2KXYT3HJsGhw" name="registrationReguest" dataType="_8CApA3MvEe2Nouoe8jRiJg" className="com.company.model.CandidateRegistrationRequest"/>
-                  <referencedElements xmi:type="process:Document" xmi:id="_oa4EmYeQEe2KXYT3HJsGhw" name="generatedCv"/>
-                  <referencedElements xmi:type="process:Document" xmi:id="_oa4EmoeQEe2KXYT3HJsGhw" name="candidateRecommendationLetter"/>
+                <expression xmi:type="expression:Expression" xmi:id="_oa4EloeQEe2KXYT3HJsGhw" name="newScript()" content="import java.io.File;&#xD;&#xA;import java.io.FileNotFoundException;&#xD;&#xA;import java.io.FileOutputStream;&#xD;&#xA;import java.io.IOException;&#xD;&#xA;import java.io.OutputStream;&#xD;&#xA;import java.time.LocalDateTime;&#xD;&#xA;import java.time.temporal.ChronoUnit;&#xD;&#xA;&#xD;&#xA;byte[] dataCv = apiAccessor.getProcessAPI().getDocumentContent(generatedCv.getId().toString());&#xD;&#xA;OutputStream outCv;&#xD;&#xA;try {&#xD;&#xA;&#x9;outCv = new FileOutputStream(new File(&quot;workspace\\Employify\\documents\\&quot; + registrationReguest.username + &quot;-cv.docx&quot;));&#xD;&#xA;&#x9;outCv.write(dataCv);&#xD;&#xA;&#x9;outCv.close();&#xD;&#xA;&#xD;&#xA;} catch (FileNotFoundException e) {&#xD;&#xA;&#x9;// TODO Auto-generated catch block&#xD;&#xA;&#x9;e.printStackTrace();&#xD;&#xA;}" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_jH7sQJNtEe2oGMisthuDMg" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_jH7sQZNtEe2oGMisthuDMg" name="registrationReguest" dataType="_8CApA3MvEe2Nouoe8jRiJg" className="com.company.model.CandidateRegistrationRequest"/>
+                  <referencedElements xmi:type="process:Document" xmi:id="_jH7sQpNtEe2oGMisthuDMg" name="generatedCv"/>
                 </expression>
               </parameters>
             </configuration>
@@ -452,10 +416,10 @@
                 <expression xmi:type="expression:Expression" xmi:id="_ah5mxY7cEe2fJfVMNV8koQ" returnType="java.util.List" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ah5mxo7cEe2fJfVMNV8koQ" key="fakeScriptExpression">
-                <expression xmi:type="expression:Expression" xmi:id="_ah5mx47cEe2fJfVMNV8koQ" name="newScript()" content="import java.io.File;&#xD;&#xA;import java.io.FileNotFoundException;&#xD;&#xA;import java.io.FileOutputStream;&#xD;&#xA;import java.io.IOException;&#xD;&#xA;import java.io.OutputStream;&#xD;&#xA;import java.time.LocalDateTime;&#xD;&#xA;import java.time.temporal.ChronoUnit;&#xD;&#xA;&#xD;&#xA;byte[] dataCoverLetter = apiAccessor.getProcessAPI().getDocumentContent(generatedCoverLetter.getId().toString());&#xD;&#xA;OutputStream outCoverLetter;&#xD;&#xA;try {&#xD;&#xA;&#x9;outCoverLetter = new FileOutputStream(new File(&quot;workspace\\Employify\\documents\\&quot; + registrationReguest.username + &quot;-generated-cover-letter.docx&quot;));&#xD;&#xA;&#x9;outCoverLetter.write(dataCoverLetter);&#xD;&#xA;&#x9;outCoverLetter.close();&#xD;&#xA;&#xD;&#xA;} catch (FileNotFoundException e) {&#xD;&#xA;&#x9;// TODO Auto-generated catch block&#xD;&#xA;&#x9;e.printStackTrace();&#xD;&#xA;}" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object" returnTypeFixed="true">
-                  <referencedElements xmi:type="expression:Expression" xmi:id="_ah5myI7cEe2fJfVMNV8koQ" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
-                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_ah5myY7cEe2fJfVMNV8koQ" name="registrationReguest" dataType="_8CApA3MvEe2Nouoe8jRiJg" className="com.company.model.CandidateRegistrationRequest"/>
-                  <referencedElements xmi:type="process:Document" xmi:id="_ah5myo7cEe2fJfVMNV8koQ" name="generatedCoverLetter"/>
+                <expression xmi:type="expression:Expression" xmi:id="_ah5mx47cEe2fJfVMNV8koQ" name="newScript()" content="import java.io.File;&#xD;&#xA;import java.io.FileNotFoundException;&#xD;&#xA;import java.io.FileOutputStream;&#xD;&#xA;import java.io.IOException;&#xD;&#xA;import java.io.OutputStream;&#xD;&#xA;import java.time.LocalDateTime;&#xD;&#xA;import java.time.temporal.ChronoUnit;&#xD;&#xA;&#xD;&#xA;byte[] dataCoverLetter = apiAccessor.getProcessAPI().getDocumentContent(generatedCoverLetter.getId().toString());&#xD;&#xA;OutputStream outCoverLetter;&#xD;&#xA;try {&#xD;&#xA;&#x9;outCoverLetter = new FileOutputStream(new File(&quot;workspace\\Employify\\documents\\&quot; + registrationReguest.username + &quot;-rl.docx&quot;));&#xD;&#xA;&#x9;outCoverLetter.write(dataCoverLetter);&#xD;&#xA;&#x9;outCoverLetter.close();&#xD;&#xA;&#xD;&#xA;} catch (FileNotFoundException e) {&#xD;&#xA;&#x9;// TODO Auto-generated catch block&#xD;&#xA;&#x9;e.printStackTrace();&#xD;&#xA;}" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_0MRB4JNrEe2oGMisthuDMg" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_0MRB4ZNrEe2oGMisthuDMg" name="registrationReguest" dataType="_8CApA3MvEe2Nouoe8jRiJg" className="com.company.model.CandidateRegistrationRequest"/>
+                  <referencedElements xmi:type="process:Document" xmi:id="_0MRB4pNrEe2oGMisthuDMg" name="generatedCoverLetter"/>
                 </expression>
               </parameters>
             </configuration>
@@ -603,7 +567,7 @@
             <condition xmi:type="expression:Expression" xmi:id="_yLZAAHOSEe2motgchP84dQ" name="7 Days 00:00:00" content="604800000L" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long"/>
           </BoundaryIntermediateEvents>
           <formMapping xmi:type="process:FormMapping" xmi:id="_qqe_iXMzEe2Nouoe8jRiJg">
-            <targetForm xmi:type="expression:Expression" xmi:id="_ZF5pQHNFEe2oauLEblQ05A" name="AcceptRegistrationRequestForm" content="1d5dc466-4d83-451f-9f2b-6b07f8d830fc" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_cgJYkJNwEe2oGMisthuDMg" name="AcceptRegistrationRequestForm" content="1d5dc466-4d83-451f-9f2b-6b07f8d830fc" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <filters xmi:type="process:ActorFilter" xmi:id="_zqNBAHOKEe2motgchP84dQ" name="executor" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_zqNBAXOKEe2motgchP84dQ" definitionId="bonita-actorfilter-single-user" version="1.0.0">
@@ -736,10 +700,6 @@
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_8CAo5XMvEe2Nouoe8jRiJg">
         <targetForm xmi:type="expression:Expression" xmi:id="_8CAo5nMvEe2Nouoe8jRiJg" name="CandidateRegistationForm" content="b680c694-50e1-4839-8f01-451d3335fcf2" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </overviewFormMapping>
-      <connections xmi:type="process:SequenceFlow" xmi:id="_8CAo53MvEe2Nouoe8jRiJg" target="_S-ozUIOcEe25kqp9-nf7bQ" source="_8CAo0nMvEe2Nouoe8jRiJg">
-        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_8CAo6HMvEe2Nouoe8jRiJg"/>
-        <condition xmi:type="expression:Expression" xmi:id="_8CAo6XMvEe2Nouoe8jRiJg" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
-      </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_wZ1nAHOLEe2motgchP84dQ" target="_Vlk_YIOnEe25kqp9-nf7bQ" source="_qqeYcHMzEe2Nouoe8jRiJg">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_wZ2OEHOLEe2motgchP84dQ"/>
         <condition xmi:type="expression:Expression" xmi:id="_UDlBI4OnEe25kqp9-nf7bQ" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
@@ -784,10 +744,6 @@
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_DthykHVrEe2fxqd-qC8K7w"/>
         <condition xmi:type="expression:Expression" xmi:id="_DthykXVrEe2fxqd-qC8K7w" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
-      <connections xmi:type="process:SequenceFlow" xmi:id="_S-0ZgIOcEe25kqp9-nf7bQ" target="_tMVasIeLEe2KXYT3HJsGhw" source="_S-ozUIOcEe25kqp9-nf7bQ">
-        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_S-0ZgYOcEe25kqp9-nf7bQ"/>
-        <condition xmi:type="expression:Expression" xmi:id="_S-0ZgoOcEe25kqp9-nf7bQ" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
-      </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_eOtRDIOqEe25kqp9-nf7bQ" target="_qqeYcHMzEe2Nouoe8jRiJg" source="_eOtRAIOqEe25kqp9-nf7bQ">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_eOtRDYOqEe25kqp9-nf7bQ"/>
         <condition xmi:type="expression:Expression" xmi:id="_eOtRDoOqEe25kqp9-nf7bQ" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
@@ -820,6 +776,10 @@
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_-9mWgY7WEe2fJfVMNV8koQ"/>
         <condition xmi:type="expression:Expression" xmi:id="_-9mWgo7WEe2fJfVMNV8koQ" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_pbaHYJNrEe2oGMisthuDMg" target="_tMVasIeLEe2KXYT3HJsGhw" source="_8CAo0nMvEe2Nouoe8jRiJg">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_pbeY0JNrEe2oGMisthuDMg"/>
+        <condition xmi:type="expression:Expression" xmi:id="_pbe_4JNrEe2oGMisthuDMg" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
       <actors xmi:type="process:Actor" xmi:id="_JqIrYHMwEe2Nouoe8jRiJg" name="guest" initiator="true"/>
       <actors xmi:type="process:Actor" xmi:id="_pk6OcHVrEe2fxqd-qC8K7w" name="employee"/>
       <contract xmi:type="process:Contract" xmi:id="_8CAo63MvEe2Nouoe8jRiJg">
@@ -850,8 +810,6 @@
             <inputs xmi:type="process:ContractInput" xmi:id="_VhSCF47bEe2fJfVMNV8koQ" name="endYear" type="INTEGER"/>
           </inputs>
         </inputs>
-        <inputs xmi:type="process:ContractInput" xmi:id="_xVPbsI7cEe2fJfVMNV8koQ" name="cvInput" type="FILE" dataReference="candidateCv"/>
-        <inputs xmi:type="process:ContractInput" xmi:id="_3Q_BYI7cEe2fJfVMNV8koQ" name="recommendationLetterInput" type="FILE" dataReference="candidateRecommendationLetter"/>
         <constraints xmi:type="process:ContractConstraint" xmi:id="_VhSCGI7bEe2fJfVMNV8koQ" expression="registrationReguestInput?.firstName != null" errorMessage="firstName is mandatory for CandidateRegistrationRequest" name="mandatory_registrationReguestInput_firstName">
           <inputNames>registrationReguestInput</inputNames>
         </constraints>
@@ -895,16 +853,6 @@
           <inputNames>registrationReguestInput</inputNames>
         </constraints>
       </contract>
-      <documents xmi:type="process:Document" xmi:id="_6JTRcIObEe25kqp9-nf7bQ" name="candidateCv" documentType="CONTRACT" contractInput="_xVPbsI7cEe2fJfVMNV8koQ">
-        <mimeType xmi:type="expression:Expression" xmi:id="_6JTRcYObEe25kqp9-nf7bQ" name="" content="" returnTypeFixed="true"/>
-        <url xmi:type="expression:Expression" xmi:id="_6JTRcoObEe25kqp9-nf7bQ" name="" content="" returnTypeFixed="true"/>
-        <initialMultipleContent xmi:type="expression:Expression" xmi:id="_6JTRc4ObEe25kqp9-nf7bQ" name="" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List" returnTypeFixed="true"/>
-      </documents>
-      <documents xmi:type="process:Document" xmi:id="_7yzl4IObEe25kqp9-nf7bQ" name="candidateRecommendationLetter" documentType="CONTRACT" contractInput="_3Q_BYI7cEe2fJfVMNV8koQ">
-        <mimeType xmi:type="expression:Expression" xmi:id="_7yzl4YObEe25kqp9-nf7bQ" name="" content="" returnTypeFixed="true"/>
-        <url xmi:type="expression:Expression" xmi:id="_7yzl4oObEe25kqp9-nf7bQ" name="" content="" returnTypeFixed="true"/>
-        <initialMultipleContent xmi:type="expression:Expression" xmi:id="_7yzl44ObEe25kqp9-nf7bQ" name="" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List" returnTypeFixed="true"/>
-      </documents>
       <documents xmi:type="process:Document" xmi:id="_CIaMAIeMEe2KXYT3HJsGhw" name="cvTemplate" defaultValueIdOfDocumentStore="cvTemplate.docx" documentType="INTERNAL">
         <mimeType xmi:type="expression:Expression" xmi:id="_CIaMAYeMEe2KXYT3HJsGhw" name="" content="" returnTypeFixed="true"/>
         <url xmi:type="expression:Expression" xmi:id="_CIaMAoeMEe2KXYT3HJsGhw" name="" content="" returnTypeFixed="true"/>
@@ -967,7 +915,7 @@
               <children xmi:type="notation:DecorationNode" xmi:id="_8CApD3MvEe2Nouoe8jRiJg" type="5024">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_8CApEHMvEe2Nouoe8jRiJg" y="5"/>
               </children>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8CApEXMvEe2Nouoe8jRiJg" x="42" y="40"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8CApEXMvEe2Nouoe8jRiJg" x="53" y="124"/>
             </children>
             <children xmi:type="notation:Shape" xmi:id="_oZRbwHM8Ee2oauLEblQ05A" type="3003" element="_oZAWAHM8Ee2oauLEblQ05A" fontName="Segoe UI">
               <children xmi:type="notation:DecorationNode" xmi:id="_oZRbwnM8Ee2oauLEblQ05A" type="5025">
@@ -998,10 +946,6 @@
             <children xmi:type="notation:Shape" xmi:id="_DoVw0HTMEe2RYfPgSB9enw" type="3027" element="_DoMm4HTMEe2RYfPgSB9enw" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
               <children xmi:type="notation:DecorationNode" xmi:id="_DoWX4HTMEe2RYfPgSB9enw" type="5017"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DoVw0XTMEe2RYfPgSB9enw" x="1125" y="109" width="120" height="60"/>
-            </children>
-            <children xmi:type="notation:Shape" xmi:id="_S-rPkIOcEe25kqp9-nf7bQ" type="3028" element="_S-ozUIOcEe25kqp9-nf7bQ" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
-              <children xmi:type="notation:DecorationNode" xmi:id="_S-rPkoOcEe25kqp9-nf7bQ" type="5018"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_S-rPkYOcEe25kqp9-nf7bQ" x="118" y="30"/>
             </children>
             <children xmi:type="notation:Shape" xmi:id="_Vlk_ZIOnEe25kqp9-nf7bQ" type="3008" element="_Vlk_YIOnEe25kqp9-nf7bQ" fontName="Segoe UI">
               <children xmi:type="notation:DecorationNode" xmi:id="_Vlk_ZoOnEe25kqp9-nf7bQ" type="5026">
@@ -1072,13 +1016,6 @@
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8CApG3MvEe2Nouoe8jRiJg" width="1497" height="250"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_8CApHHMvEe2Nouoe8jRiJg"/>
-    <edges xmi:type="notation:Connector" xmi:id="_8CApHXMvEe2Nouoe8jRiJg" type="4001" element="_8CAo53MvEe2Nouoe8jRiJg" source="_8CApDnMvEe2Nouoe8jRiJg" target="_S-rPkIOcEe25kqp9-nf7bQ" roundedBendpointsRadius="10" routing="Rectilinear">
-      <children xmi:type="notation:DecorationNode" xmi:id="_8CApHnMvEe2Nouoe8jRiJg" type="6001">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_8CApH3MvEe2Nouoe8jRiJg" y="-10"/>
-      </children>
-      <styles xmi:type="notation:FontStyle" xmi:id="_8CApIHMvEe2Nouoe8jRiJg" fontName="Segoe UI"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_8CApIXMvEe2Nouoe8jRiJg" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
-    </edges>
     <edges xmi:type="notation:Connector" xmi:id="_wZ21IHOLEe2motgchP84dQ" type="4001" element="_wZ1nAHOLEe2motgchP84dQ" source="_qqe_jHMzEe2Nouoe8jRiJg" target="_Vlk_ZIOnEe25kqp9-nf7bQ" roundedBendpointsRadius="10" routing="Rectilinear">
       <children xmi:type="notation:DecorationNode" xmi:id="_wZ21I3OLEe2motgchP84dQ" type="6001">
         <layoutConstraint xmi:type="notation:Location" xmi:id="_wZ21JHOLEe2motgchP84dQ" y="-10"/>
@@ -1152,13 +1089,6 @@
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_DtjAsnVrEe2fxqd-qC8K7w" points="[-18, 0, -591, 314]$[-18, 15, -591, 329]$[576, 15, 3, 329]$[576, -295, 3, 19]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Dtk14HVrEe2fxqd-qC8K7w" id="(1.0,1.0)"/>
     </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_S-0Zg4OcEe25kqp9-nf7bQ" type="4001" element="_S-0ZgIOcEe25kqp9-nf7bQ" source="_S-rPkIOcEe25kqp9-nf7bQ" target="_tNAwIIeLEe2KXYT3HJsGhw" roundedBendpointsRadius="10" routing="Rectilinear">
-      <children xmi:type="notation:DecorationNode" xmi:id="_S-21wIOcEe25kqp9-nf7bQ" type="6001">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_S-21wYOcEe25kqp9-nf7bQ" y="-10"/>
-      </children>
-      <styles xmi:type="notation:FontStyle" xmi:id="_S-0ZhIOcEe25kqp9-nf7bQ" fontName="Segoe UI"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_S-0ZhYOcEe25kqp9-nf7bQ" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
-    </edges>
     <edges xmi:type="notation:Connector" xmi:id="_eOtRD4OqEe25kqp9-nf7bQ" type="4001" element="_eOtRDIOqEe25kqp9-nf7bQ" source="_eOtRCYOqEe25kqp9-nf7bQ" target="_qqe_jHMzEe2Nouoe8jRiJg" roundedBendpointsRadius="10" routing="Rectilinear">
       <children xmi:type="notation:DecorationNode" xmi:id="_eOtREoOqEe25kqp9-nf7bQ" type="6001">
         <layoutConstraint xmi:type="notation:Location" xmi:id="_eOtRE4OqEe25kqp9-nf7bQ" y="-10"/>
@@ -1226,6 +1156,14 @@
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-9m9ko7WEe2fJfVMNV8koQ" points="[0, -2, -64, 0]$[65, -2, 1, 0]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-9oLsI7WEe2fJfVMNV8koQ" id="(1.0,0.62)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-9oLsY7WEe2fJfVMNV8koQ" id="(0.0,0.4418604651162791)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_pbg1EJNrEe2oGMisthuDMg" type="4001" element="_pbaHYJNrEe2oGMisthuDMg" source="_8CApDnMvEe2Nouoe8jRiJg" target="_tNAwIIeLEe2KXYT3HJsGhw" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_pbhcIJNrEe2oGMisthuDMg" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_pbhcIZNrEe2oGMisthuDMg" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_pbg1EZNrEe2oGMisthuDMg" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_pbg1EpNrEe2oGMisthuDMg" points="[-2, -2, -93, -1]$[35, -2, -56, -1]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_pbiqQJNrEe2oGMisthuDMg" id="(1.0,0.8)"/>
     </edges>
   </notation:Diagram>
 </xmi:XMI>

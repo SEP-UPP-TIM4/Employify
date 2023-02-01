@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "AcceptRegistrationRequestForm",
   "name" : "AcceptRegistrationRequestForm",
-  "lastUpdate" : 1672133838099,
+  "lastUpdate" : 1673635536593,
   "rows" : [
     [
       {
@@ -1849,7 +1849,7 @@
                   },
                   "document" : {
                     "type" : "variable",
-                    "value" : "context.candidateCv_ref"
+                    "value" : "context.generatedCv_ref"
                   },
                   "showPreview" : {
                     "type" : "constant",
@@ -1889,7 +1889,7 @@
                   },
                   "document" : {
                     "type" : "variable",
-                    "value" : "context.candidateRecommendationLetter_ref"
+                    "value" : "context.generatedCoverLetter_ref"
                   },
                   "showPreview" : {
                     "type" : "constant",
@@ -2043,6 +2043,27 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable"
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable"
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
                   }
                 },
                 "reference" : "8efe89ce-c179-41ac-a9ef-b63163d3f1f8",
@@ -2164,6 +2185,7 @@
         "\t//attach lazy references variables to parent variables",
         "\t$data.registrationReguest.education = $data.registrationReguest_education;",
         "\t$data.registrationReguest.experience = $data.registrationReguest_experience;",
+        "\tconsole.log($data);",
         "\treturn {",
         "\t\t//map registrationReguest variable to expected task contract input",
         "\t\tregistrationReguestInput: {",
@@ -2191,7 +2213,7 @@
         "\t\t\t\tendYear: it.endYear !== undefined ? it.endYear : null",
         "\t\t\t}))",
         "\t\t},",
-        "\t\tstatus: $data.formInput.status",
+        "\t\tstatus: $data.status",
         "\t}",
         "}"
       ],

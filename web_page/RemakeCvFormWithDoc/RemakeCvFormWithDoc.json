@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "RemakeCvFormWithDoc",
   "name" : "RemakeCvFormWithDoc",
-  "lastUpdate" : 1671898548873,
+  "lastUpdate" : 1673633567063,
   "rows" : [
     [
       {
@@ -185,7 +185,7 @@
                         },
                         "document" : {
                           "type" : "variable",
-                          "value" : "context.candidateCv_ref"
+                          "value" : "context.generatedCv_ref"
                         },
                         "showPreview" : {
                           "type" : "constant",
