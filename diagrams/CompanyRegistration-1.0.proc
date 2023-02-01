@@ -208,7 +208,7 @@
           <connectors xmi:type="process:Connector" xmi:id="_lEDFlJNrEe2B3LUi8shxQQ" name="SendPaymentInformation" definitionId="rest-post" event="ON_ENTER" ignoreErrors="true" definitionVersion="1.3.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_lEDFlZNrEe2B3LUi8shxQQ" definitionId="rest-post" version="1.3.0" modelVersion="7.12.0-004">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_lEDFlpNrEe2B3LUi8shxQQ" key="url">
-                <expression xmi:type="expression:Expression" xmi:id="_lEDFl5NrEe2B3LUi8shxQQ" name="http://localhost:8081/AUTH-SERVICE/api/v1/payment-request" content="http://localhost:8081/AUTH-SERVICE/api/v1/payment-request" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_lEDFl5NrEe2B3LUi8shxQQ" name="https://localhost:8081/AUTH-SERVICE/api/v1/payment-request" content="https://localhost:8081/AUTH-SERVICE/api/v1/payment-request" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_lEDFmJNrEe2B3LUi8shxQQ" key="contentType">
                 <expression xmi:type="expression:Expression" xmi:id="_lEDFmZNrEe2B3LUi8shxQQ" name="application/json" content="application/json" returnTypeFixed="true"/>
@@ -223,14 +223,14 @@
                 <expression xmi:type="expression:TableExpression" xmi:id="_lEDFn5NrEe2B3LUi8shxQQ"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_lEDFoJNrEe2B3LUi8shxQQ" key="body">
-                <expression xmi:type="expression:Expression" xmi:id="_lEDFoZNrEe2B3LUi8shxQQ" name="&lt;pattern-expression>" content="{&#xD;&#xA;    &quot;apiKey&quot;: &quot;d182493a-42f4-4fb6-a73a-bf5898790ffd&quot;,&#xD;&#xA;    &quot;amount&quot;: ${amount},&#xD;&#xA;    &quot;successUrl&quot;: &quot;http://localhost:42524/bonita/portal/resource/taskInstance/Premium%20Employment/1.0/StartPayment/content/?id=${activityInstanceId}&amp;app=userAppBonita&amp;displayConfirmation=false&amp;code=200&quot;,&#xD;&#xA;    &quot;errorUrl&quot;: &quot;http://localhost:42524/bonita/portal/resource/taskInstance/Premium%20Employment/1.0/StartPayment/content/?id=${activityInstanceId}&amp;app=userAppBonita&amp;displayConfirmation=false&amp;code=400&quot;,&#xD;&#xA;    &quot;failedUrl&quot;: &quot;http://localhost:42524/bonita/portal/resource/taskInstance/Premium%20Employment/1.0/StartPayment/content/?id=${activityInstanceId}&amp;app=userAppBonita&amp;displayConfirmation=false&amp;code=500&quot;&#xD;&#xA;}" type="TYPE_PATTERN" returnTypeFixed="true">
-                  <referencedElements xmi:type="expression:Expression" xmi:id="_kOVeYJOTEe2B3LUi8shxQQ" name="amount" content="amount" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-                    <referencedElements xmi:type="expression:Expression" xmi:id="_kOVeYZOTEe2B3LUi8shxQQ" name="amount" content="amount" type="TYPE_VARIABLE" returnType="java.lang.Double">
-                      <referencedElements xmi:type="process:Data" xmi:id="_kOVeYpOTEe2B3LUi8shxQQ" name="amount" dataType="_aM9BwHPtEe2MJvlrpy3Ydg"/>
+                <expression xmi:type="expression:Expression" xmi:id="_lEDFoZNrEe2B3LUi8shxQQ" name="&lt;pattern-expression>" content="{&#xD;&#xA;    &quot;apiKey&quot;: &quot;3cf29de9-140e-48f6-ba05-d012f968ae13&quot;,&#xD;&#xA;    &quot;amount&quot;: ${amount},&#xD;&#xA;    &quot;successUrl&quot;: &quot;http://localhost:42524/bonita/portal/resource/taskInstance/Premium%20Employment/1.0/StartPayment/content/?id=${activityInstanceId}&amp;app=userAppBonita&amp;displayConfirmation=false&amp;code=200&quot;,&#xD;&#xA;    &quot;errorUrl&quot;: &quot;http://localhost:42524/bonita/portal/resource/taskInstance/Premium%20Employment/1.0/StartPayment/content/?id=${activityInstanceId}&amp;app=userAppBonita&amp;displayConfirmation=false&amp;code=400&quot;,&#xD;&#xA;    &quot;failedUrl&quot;: &quot;http://localhost:42524/bonita/portal/resource/taskInstance/Premium%20Employment/1.0/StartPayment/content/?id=${activityInstanceId}&amp;app=userAppBonita&amp;displayConfirmation=false&amp;code=500&quot;&#xD;&#xA;}" type="TYPE_PATTERN" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_oSBTEKI1Ee2ISY5Yd4X6tw" name="amount" content="amount" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                    <referencedElements xmi:type="expression:Expression" xmi:id="_oSBTEaI1Ee2ISY5Yd4X6tw" name="amount" content="amount" type="TYPE_VARIABLE" returnType="java.lang.Double">
+                      <referencedElements xmi:type="process:Data" xmi:id="_oSBTEqI1Ee2ISY5Yd4X6tw" name="amount" dataType="_aM9BwHPtEe2MJvlrpy3Ydg"/>
                     </referencedElements>
                   </referencedElements>
-                  <referencedElements xmi:type="expression:Expression" xmi:id="_kOVeY5OTEe2B3LUi8shxQQ" name="activityInstanceId" content="activityInstanceId" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-                    <referencedElements xmi:type="expression:Expression" xmi:id="_kOVeZJOTEe2B3LUi8shxQQ" name="activityInstanceId" content="activityInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long" returnTypeFixed="true"/>
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_oSBTE6I1Ee2ISY5Yd4X6tw" name="activityInstanceId" content="activityInstanceId" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                    <referencedElements xmi:type="expression:Expression" xmi:id="_oSBTFKI1Ee2ISY5Yd4X6tw" name="activityInstanceId" content="activityInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long" returnTypeFixed="true"/>
                   </referencedElements>
                 </expression>
               </parameters>
@@ -241,16 +241,16 @@
                 <expression xmi:type="expression:Expression" xmi:id="_lEDFqpNrEe2B3LUi8shxQQ" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_lEDFq5NrEe2B3LUi8shxQQ" key="TLS">
-                <expression xmi:type="expression:Expression" xmi:id="_lEDFrJNrEe2B3LUi8shxQQ" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_lEDFrJNrEe2B3LUi8shxQQ" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_lEDFrZNrEe2B3LUi8shxQQ" key="hostname_verifier">
                 <expression xmi:type="expression:Expression" xmi:id="_lEDFrpNrEe2B3LUi8shxQQ" content="" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_lEDFr5NrEe2B3LUi8shxQQ" key="trust_store_file">
-                <expression xmi:type="expression:Expression" xmi:id="_lEDFsJNrEe2B3LUi8shxQQ" content="" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_lEDFsJNrEe2B3LUi8shxQQ" name="trust_store_file()" content="'C:\\Users\\ShowRunner\\Desktop\\SEP-UPP-UDD\\PSP\\api-gateway\\src\\main\\resources\\keystore\\root.jks'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_lEDFsZNrEe2B3LUi8shxQQ" key="trust_store_password">
-                <expression xmi:type="expression:Expression" xmi:id="_lEDFspNrEe2B3LUi8shxQQ" content="" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_lEDFspNrEe2B3LUi8shxQQ" name="password" content="password" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_lEDFs5NrEe2B3LUi8shxQQ" key="key_store_file">
                 <expression xmi:type="expression:Expression" xmi:id="_lEDFtJNrEe2B3LUi8shxQQ" content="" returnTypeFixed="true"/>
@@ -280,7 +280,7 @@
                 <expression xmi:type="expression:Expression" xmi:id="_lEDFxJNrEe2B3LUi8shxQQ" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_lEDFxZNrEe2B3LUi8shxQQ" key="proxy_protocol">
-                <expression xmi:type="expression:Expression" xmi:id="_lEDFxpNrEe2B3LUi8shxQQ" name="HTTP" content="HTTP" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_lEDFxpNrEe2B3LUi8shxQQ" name="HTTPS" content="HTTPS" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_lEDFx5NrEe2B3LUi8shxQQ" key="proxy_host">
                 <expression xmi:type="expression:Expression" xmi:id="_lEDFyJNrEe2B3LUi8shxQQ" content="" returnTypeFixed="true"/>
@@ -386,7 +386,7 @@
                 <expression xmi:type="expression:TableExpression" xmi:id="_wrKYD5N-Ee2B3LUi8shxQQ">
                   <expressions xmi:type="expression:ListExpression" xmi:id="_3rl_8JOhEe2B3LUi8shxQQ">
                     <expressions xmi:type="expression:Expression" xmi:id="_3rl_8ZOhEe2B3LUi8shxQQ" name="Authorization" content="Authorization"/>
-                    <expressions xmi:type="expression:Expression" xmi:id="_3rl_8pOhEe2B3LUi8shxQQ" name="d182493a-42f4-4fb6-a73a-bf5898790ffd" content="d182493a-42f4-4fb6-a73a-bf5898790ffd"/>
+                    <expressions xmi:type="expression:Expression" xmi:id="_3rl_8pOhEe2B3LUi8shxQQ" name="b5e66cbc-8551-4c5a-b1d1-83fe352c18ea" content="b5e66cbc-8551-4c5a-b1d1-83fe352c18ea"/>
                   </expressions>
                 </expression>
               </parameters>
@@ -550,19 +550,19 @@
                 <expression xmi:type="expression:TableExpression" xmi:id="_e-hrS5OLEe2B3LUi8shxQQ"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_e-hrTJOLEe2B3LUi8shxQQ" key="body">
-                <expression xmi:type="expression:Expression" xmi:id="_e-hrTZOLEe2B3LUi8shxQQ" name="&lt;pattern-expression>" content="{&#xD;&#xA;    &quot;apiKey&quot;: &quot;d182493a-42f4-4fb6-a73a-bf5898790ffd&quot;,&#xD;&#xA;&#x9;&quot;frequency&quot;: &quot;${subscriptionFrequency}&quot;,&#xD;&#xA;    &quot;amount&quot;: ${subscriptionAmount},&#xD;&#xA;    &quot;successUrl&quot;: &quot;http://localhost:42524/bonita/portal/resource/taskInstance/Premium%20Employment/1.0/StartPayment/content/?id=${activityInstanceId}&amp;app=userAppBonita&amp;displayConfirmation=false&amp;code=200&quot;,&#xD;&#xA;    &quot;errorUrl&quot;: &quot;http://localhost:42524/bonita/portal/resource/taskInstance/Premium%20Employment/1.0/StartPayment/content/?id=${activityInstanceId}&amp;app=userAppBonita&amp;displayConfirmation=false&amp;code=400&quot;,&#xD;&#xA;    &quot;failedUrl&quot;: &quot;http://localhost:42524/bonita/portal/resource/taskInstance/Premium%20Employment/1.0/StartPayment/content/?id=${activityInstanceId}&amp;app=userAppBonita&amp;displayConfirmation=false&amp;code=500&quot;&#xD;&#xA;}" type="TYPE_PATTERN" returnTypeFixed="true">
-                  <referencedElements xmi:type="expression:Expression" xmi:id="_6WCN8JOWEe2B3LUi8shxQQ" name="subscriptionFrequency" content="subscriptionFrequency" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-                    <referencedElements xmi:type="expression:Expression" xmi:id="_6WCN8ZOWEe2B3LUi8shxQQ" name="subscriptionFrequency" content="subscriptionFrequency" type="TYPE_VARIABLE">
-                      <referencedElements xmi:type="process:Data" xmi:id="_6WCN8pOWEe2B3LUi8shxQQ" name="subscriptionFrequency" dataType="_aM9BwXPtEe2MJvlrpy3Ydg"/>
+                <expression xmi:type="expression:Expression" xmi:id="_e-hrTZOLEe2B3LUi8shxQQ" name="&lt;pattern-expression>" content="{&#xD;&#xA;    &quot;apiKey&quot;: &quot;b5e66cbc-8551-4c5a-b1d1-83fe352c18ea&quot;,&#xD;&#xA;&#x9;&quot;frequency&quot;: &quot;${subscriptionFrequency}&quot;,&#xD;&#xA;    &quot;amount&quot;: ${subscriptionAmount},&#xD;&#xA;    &quot;successUrl&quot;: &quot;http://localhost:42524/bonita/portal/resource/taskInstance/Premium%20Employment/1.0/StartPayment/content/?id=${activityInstanceId}&amp;app=userAppBonita&amp;displayConfirmation=false&amp;code=200&quot;,&#xD;&#xA;    &quot;errorUrl&quot;: &quot;http://localhost:42524/bonita/portal/resource/taskInstance/Premium%20Employment/1.0/StartPayment/content/?id=${activityInstanceId}&amp;app=userAppBonita&amp;displayConfirmation=false&amp;code=400&quot;,&#xD;&#xA;    &quot;failedUrl&quot;: &quot;http://localhost:42524/bonita/portal/resource/taskInstance/Premium%20Employment/1.0/StartPayment/content/?id=${activityInstanceId}&amp;app=userAppBonita&amp;displayConfirmation=false&amp;code=500&quot;&#xD;&#xA;}" type="TYPE_PATTERN" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_hLiIgJUDEe2u7L2itIdQzw" name="subscriptionFrequency" content="subscriptionFrequency" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                    <referencedElements xmi:type="expression:Expression" xmi:id="_hLiIgZUDEe2u7L2itIdQzw" name="subscriptionFrequency" content="subscriptionFrequency" type="TYPE_VARIABLE">
+                      <referencedElements xmi:type="process:Data" xmi:id="_hLiIgpUDEe2u7L2itIdQzw" name="subscriptionFrequency" dataType="_aM9BwXPtEe2MJvlrpy3Ydg"/>
                     </referencedElements>
                   </referencedElements>
-                  <referencedElements xmi:type="expression:Expression" xmi:id="_6WCN85OWEe2B3LUi8shxQQ" name="subscriptionAmount" content="subscriptionAmount" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-                    <referencedElements xmi:type="expression:Expression" xmi:id="_6WCN9JOWEe2B3LUi8shxQQ" name="subscriptionAmount" content="subscriptionAmount" type="TYPE_VARIABLE" returnType="java.lang.Double">
-                      <referencedElements xmi:type="process:Data" xmi:id="_6WCN9ZOWEe2B3LUi8shxQQ" name="subscriptionAmount" dataType="_aM9BwHPtEe2MJvlrpy3Ydg"/>
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_hLiIg5UDEe2u7L2itIdQzw" name="subscriptionAmount" content="subscriptionAmount" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                    <referencedElements xmi:type="expression:Expression" xmi:id="_hLiIhJUDEe2u7L2itIdQzw" name="subscriptionAmount" content="subscriptionAmount" type="TYPE_VARIABLE" returnType="java.lang.Double">
+                      <referencedElements xmi:type="process:Data" xmi:id="_hLiIhZUDEe2u7L2itIdQzw" name="subscriptionAmount" dataType="_aM9BwHPtEe2MJvlrpy3Ydg"/>
                     </referencedElements>
                   </referencedElements>
-                  <referencedElements xmi:type="expression:Expression" xmi:id="_6WCN9pOWEe2B3LUi8shxQQ" name="activityInstanceId" content="activityInstanceId" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-                    <referencedElements xmi:type="expression:Expression" xmi:id="_6WCN95OWEe2B3LUi8shxQQ" name="activityInstanceId" content="activityInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long" returnTypeFixed="true"/>
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_hLiIhpUDEe2u7L2itIdQzw" name="activityInstanceId" content="activityInstanceId" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                    <referencedElements xmi:type="expression:Expression" xmi:id="_hLiIh5UDEe2u7L2itIdQzw" name="activityInstanceId" content="activityInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long" returnTypeFixed="true"/>
                   </referencedElements>
                 </expression>
               </parameters>
